@@ -1,3 +1,7 @@
+"""
+Reads 'files.txt' for files to download
+Writes to 'download_cmds.txt' bash commands to download individual kaggle files
+"""
 import os
 from pathlib import Path
 
