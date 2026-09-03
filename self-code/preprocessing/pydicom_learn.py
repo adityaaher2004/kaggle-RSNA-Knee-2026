@@ -10,15 +10,18 @@ from pathlib import Path
 # Get an example dataset as a FileDataset instance
 # ds = examples.ct
 
-file_path = Path("C:/Users/adity/Downloads/RSNA/DATA/series_data/train_series/1.2.826.0.1.3680043.8.498.10004945927472656027199792075652399585/1.2.826.0.1.3680043.8.498.72137122913943091996840828871969421711.dcm")
+ds = dcmread("series2test4.dcm")
+# print(str(ds))
 
-ds = dcmread("test.dcm")
-print(ds.file_meta)
-
+for k, v in ds.items():
+    if k != "Pixel Datassssssss":
+        print(k)
+        # print(v)
+    print("-")
 # Convert the pixel data to an ndarray
 arr = pixel_array(ds)
 
 # Display the pixel data using matplotlib
-plt.imshow(arr, cmap="gray")
-plt.show()
+# plt.imshow(arr, cmap="gray")
+# plt.show()
 
