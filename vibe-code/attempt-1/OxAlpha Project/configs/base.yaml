@@ -1,0 +1,19 @@
+# SPEC: S0, S4, S7, S8, S9 -- values here are authoritative [cfg]; edit specs.txt in same commit.
+seed: 42
+paths:
+  data_root: ../../../../../DATA
+  volumes: ${paths.data_root}/rsna-knee-mri-processed-3d-volumes
+  work: ./work
+labels: [ACL, MCL, Medial Meniscus, Lateral Meniscus, Medial OA, Lateral OA, PF OA, Effusion, Synovitis, "Baker's", Contusion, Fracture]
+groups: {ligament: [ACL, MCL], meniscus: [Medial Meniscus, Lateral Meniscus], cartilage: [Medial OA, Lateral OA, PF OA], joint: [Effusion, Synovitis], popliteal: ["Baker's"], bone: [Contusion, Fracture]}
+data: {slices: 24, size: 224, s_max: 8, aug: {scale: [0.85, 1.0], rot: 10, series_drop: 0.15, slice_drop: 0.1, flip: false}}
+slice: {backbone: tf_efficientnet_b0.ns_jft_in1k, d: 512, drop: 0.2, freeze_epochs: 3}
+mil: {attn_dim: 256, entropy_w: 0.01}
+series: {layers: 2, heads: 8, ff: 1024, drop: 0.1}
+head: {bottleneck: 64, drop: 0.2}
+weak: {w_weak: 0.5, min_precision: 0.9, min_pos: 5}
+dedup: {minhash_threshold: 0.8, feat_cos: 0.98}
+folds: {n: 5}
+loss: {l_diag: 1.0, l_kd: 0.5, l_feat: 0.1, l_itc: 0.2, l_aux: 0.1, l_attn: 0.05, tau: 3.0, asl: {gamma_neg: 4, gamma_pos: 0, clip: 0.05}, warmup_epochs: [2, 6]}
+train: {opt: adamw, wd: 0.05, lr_backbone: 1.0e-4, lr_head: 5.0e-4, lld: 0.8, warmup_epochs: 2, epochs: {A: 40, B: 25, C1: 25, C2: 25}, micro_batch: 2, accum: 8, clip: 1.0, amp: fp16, ema: 0.999}
+text: {model: xlm-roberta-base, max_len: 256, z_dim: 768, p_text_drop: 0.3, itc_dim: 256, itc_temp: 0.07}

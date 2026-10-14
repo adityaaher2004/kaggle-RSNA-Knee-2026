@@ -1,0 +1,3473 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://oxalpha.com/chat
+Subject: Chat with Ox Alpha - Stealth Reasoning Model
+Date: Thu, 01 Oct 2026 05:56:28 GMT
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----"
+
+
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: text/html
+Content-ID: <frame-6BB7E95A87C738BDB174947EF72DF9F5@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://oxalpha.com/chat
+
+<!DOCTYPE html><html lang=3D"en" data-theme=3D"light"><head><meta http-equi=
+v=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, maximum-scale=3D1, user-scalable=3Dno, viewport-fit=3Dcover">
+    <meta name=3D"csrf-token" content=3D"godsHRWCNbo51lDgG6qv9sev9YQZu1hpxV=
+O0JNxM">
+    <title>Chat with Ox Alpha - Stealth Reasoning Model</title>
+    <meta name=3D"description" content=3D"Chat with Ox Alpha online for fre=
+e. The stealth reasoning model with a 1M-token context =E2=80=94 no registr=
+ation, no hidden costs.">
+    <meta name=3D"keywords" content=3D"ox alpha chat, chat with ox alpha, s=
+tealth ai model, free ai chatbot, ox alpha online, ai chat no login">
+
+    <meta property=3D"og:type" content=3D"website">
+    <meta property=3D"og:site_name" content=3D"Ox Alpha">
+    <meta property=3D"og:title" content=3D"Chat with Ox Alpha - Stealth Rea=
+soning Model">
+    <meta property=3D"og:description" content=3D"Chat with Ox Alpha online =
+for free. The stealth reasoning model with a 1M-token context =E2=80=94 no =
+registration, no hidden costs.">
+    <meta property=3D"og:url" content=3D"https://oxalpha.com/chat">
+    <meta property=3D"og:image" content=3D"https://oxalpha.com/oxalpha.png"=
+>
+    <meta property=3D"og:locale" content=3D"en">
+    <meta name=3D"twitter:card" content=3D"summary_large_image">
+    <meta name=3D"twitter:title" content=3D"Chat with Ox Alpha - Stealth Re=
+asoning Model">
+    <meta name=3D"twitter:description" content=3D"Chat with Ox Alpha online=
+ for free. The stealth reasoning model with a 1M-token context =E2=80=94 no=
+ registration, no hidden costs.">
+    <meta name=3D"twitter:image" content=3D"https://oxalpha.com/oxalpha.png=
+">
+
+    <link rel=3D"icon" type=3D"image/png" href=3D"https://oxalpha.com/favic=
+on-96x96.png" sizes=3D"96x96">
+    <link rel=3D"icon" type=3D"image/svg+xml" href=3D"https://oxalpha.com/f=
+avicon.svg">
+    <link rel=3D"shortcut icon" href=3D"https://oxalpha.com/favicon.ico">
+    <link rel=3D"apple-touch-icon" sizes=3D"180x180" href=3D"https://oxalph=
+a.com/apple-touch-icon.png">
+    <meta name=3D"apple-mobile-web-app-title" content=3D"Ox Alpha">
+    <link rel=3D"manifest" href=3D"https://oxalpha.com/site.webmanifest">
+
+    <link rel=3D"stylesheet" href=3D"https://oxalpha.com/vendor/css/fonts.c=
+ss">
+    <link rel=3D"stylesheet" href=3D"https://oxalpha.com/vendor/css/highlig=
+ht-light.min.css" id=3D"hljs-theme">
+    <link rel=3D"stylesheet" href=3D"https://oxalpha.com/vendor/css/katex.m=
+in.css">
+    <link rel=3D"stylesheet" href=3D"https://oxalpha.com/chat-assets/chat.c=
+ss?v=3D32">
+</head>
+<body>
+    <div id=3D"root"><div class=3D"app"><div class=3D"sidebar-overlay "></d=
+iv><aside class=3D"sidebar "><div class=3D"sidebar-header"><div class=3D"si=
+debar-header-top"><a href=3D"https://oxalpha.com/" class=3D"sidebar-logo"><=
+img src=3D"https://oxalpha.com/chat-logo.svg" alt=3D"" style=3D"width: 30px=
+; height: 30px;" width=3D"30" height=3D"30"><span class=3D"sidebar-logo-tex=
+t">Ox Alpha</span></a><button class=3D"sidebar-collapse-btn" title=3D"Colla=
+pse"><svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" strok=
+e-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round"><polyline =
+points=3D"15 18 9 12 15 6"></polyline></svg></button><button type=3D"button=
+" class=3D"ox-drawer-close" aria-label=3D"Close menu"><svg viewBox=3D"0 0 2=
+4 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2.2" stroke-lin=
+ecap=3D"round"><line x1=3D"18" y1=3D"6" x2=3D"6" y2=3D"18"></line><line x1=
+=3D"6" y1=3D"6" x2=3D"18" y2=3D"18"></line></svg></button></div><button cla=
+ss=3D"new-chat-btn"><svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"curr=
+entColor" stroke-width=3D"2" width=3D"14" height=3D"14"><line x1=3D"12" y1=
+=3D"5" x2=3D"12" y2=3D"19"></line><line x1=3D"5" y1=3D"12" x2=3D"19" y2=3D"=
+12"></line></svg><span class=3D"new-chat-label">New Chat</span></button></d=
+iv><div class=3D"sidebar-chats"><div><div class=3D"chat-group-label">Older<=
+/div><div class=3D"chat-item active"><span class=3D"chat-item-title">Task: =
+The attached document is the autho</span><button class=3D"chat-item-delete"=
+ title=3D"Delete">=C3=97</button></div></div></div><div class=3D"sidebar-bo=
+ttom"><button class=3D"settings-trigger"><svg viewBox=3D"0 0 24 24" fill=3D=
+"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"round" =
+stroke-linejoin=3D"round"><circle cx=3D"12" cy=3D"12" r=3D"3"></circle><pat=
+h d=3D"M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1=
+.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65=
+ 0 00-1.08-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1=
+.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 00=
+4.68 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 =
+0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1=
+.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 =
+1.82V9c.26.6.85 1 1.51 1H21a2 2 0 010 4h-.09c-.66 0-1.25.4-1.51 1z"></path>=
+</svg><span class=3D"settings-label">Settings</span></button></div></aside>=
+<div class=3D"chat-area"><div class=3D"top-bar"><div class=3D"top-bar-inner=
+"><button class=3D"mobile-burger"><svg viewBox=3D"0 0 24 24" fill=3D"none" =
+stroke=3D"currentColor" stroke-width=3D"2"><line x1=3D"3" y1=3D"6" x2=3D"21=
+" y2=3D"6"></line><line x1=3D"3" y1=3D"12" x2=3D"21" y2=3D"12"></line><line=
+ x1=3D"3" y1=3D"18" x2=3D"21" y2=3D"18"></line></svg></button><div class=3D=
+"model-pills-wrap"><button class=3D"model-pill active"><span class=3D"dot" =
+style=3D"background: currentcolor;"></span>Ox Alpha</button></div><button c=
+lass=3D"model-dropdown-trigger"><span class=3D"dot" style=3D"background: rg=
+b(110, 86, 207);"></span>Ox Alpha<svg viewBox=3D"0 0 24 24" fill=3D"none" s=
+troke=3D"currentColor" stroke-width=3D"2.5"><polyline points=3D"6 9 12 15 1=
+8 9"></polyline></svg></button></div></div><button type=3D"button" class=3D=
+"ox-jump">Jump to latest <svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D=
+"currentColor" stroke-width=3D"2.5" stroke-linecap=3D"round" stroke-linejoi=
+n=3D"round"><polyline points=3D"6 9 12 15 18 9"></polyline></svg></button><=
+div class=3D"messages-wrap"><div class=3D"messages-col"><div class=3D"msg m=
+sg-user"><div class=3D"msg-bubble">Task: The attached document is the autho=
+ritative specification for this research task. Follow all requirements in i=
+t. Produce the requested research/design document, using current web resear=
+ch where specified. Do not merely summarize the attached document.</div><di=
+v class=3D"msg-avatar"><svg viewBox=3D"0 0 24 24" fill=3D"currentColor" wid=
+th=3D"16" height=3D"16"><path fill-rule=3D"evenodd" d=3D"M7.5 6a4.5 4.5 0 1=
+19 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437=
+.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.4=
+37-.695z" clip-rule=3D"evenodd"></path></svg></div><button type=3D"button" =
+class=3D"ox-edit-btn" aria-label=3D"Edit" title=3D"Edit"><svg viewBox=3D"0 =
+0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-li=
+necap=3D"round" stroke-linejoin=3D"round"><path d=3D"M12 20h9"></path><path=
+ d=3D"M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><=
+/div><div class=3D"msg msg-user"><div class=3D"msg-bubble">Task: The attach=
+ed document is the authoritative specification for this research task. Foll=
+ow all requirements in it. Produce the requested research/design document, =
+using current web research where specified. Do not merely summarize the att=
+ached document.</div><div class=3D"msg-avatar"><svg viewBox=3D"0 0 24 24" f=
+ill=3D"currentColor" width=3D"16" height=3D"16"><path fill-rule=3D"evenodd"=
+ d=3D"M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 011=
+6.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-=
+7.812-1.7a.75.75 0 01-.437-.695z" clip-rule=3D"evenodd"></path></svg></div>=
+<button type=3D"button" class=3D"ox-edit-btn" aria-label=3D"Edit" title=3D"=
+Edit"><svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stro=
+ke-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round"><path d=
+=3D"M12 20h9"></path><path d=3D"M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4=
+Z"></path></svg></button></div><div class=3D"msg msg-assistant"><div class=
+=3D"msg-content"><div class=3D"msg-model-label"><span class=3D"dot" style=
+=3D"background: rgb(110, 86, 207);"></span>Ox Alpha</div><div class=3D"pros=
+e"><h1>KNEE-MIL-KD: A Design Document for the RSNA Knee Abnormality Detecti=
+on Competition</h1>
+<p><strong>Multimodal teacher =E2=86=92 MRI-only student over a hierarchica=
+l Study =E2=86=92 Series =E2=86=92 Slice architecture</strong></p>
+<hr>
+<h2>0. Executive summary</h2>
+<p>The task is 12-label binary classification of knee MRI <strong>studies</=
+strong>, where radiology reports are available only during training. The ce=
+ntral design decision is therefore a <strong>LUPI (learning-using-privilege=
+d-information)</strong> setup: a multimodal (MRI + text) teacher is trained=
+ with reports, and an MRI-only student inherits the teacher's diagnostic kn=
+owledge via logit + feature distillation, with the image backbone itself be=
+ing a 2.5D CNN + attention-MIL + metadata-conditioned series attention. Giv=
+en the modest number of studies typical of RSNA-scale clinical datasets (th=
+ousands of studies, not millions), a <strong>2.5D ResNet/EffNet-style slice=
+ encoder beats 3D transformers</strong> in expected performance-per-GPU-hou=
+r; sophistication is spent on aggregation and knowledge transfer, not backb=
+one depth.</p>
+<hr>
+<h2>1. Problem decomposition</h2>
+<p>Formally:</p>
+<ul>
+<li>Study <em>i</em> has <em>m_i</em> series; series <em>j</em> has <em>n_i=
+j</em> slices.</li>
+<li>Labels: <strong>y =E2=88=88 {0,1}=C2=B9=C2=B2</strong> (ACL, MCL, media=
+l/lateral meniscus, medial/lateral/PF OA, effusion, synovitis, Baker's cyst=
+, contusion, fracture). Multi-label =E2=80=94 multiple can co-occur (e.g., =
+ACL tear + effusion + lateral meniscus tear is a classic triad).</li>
+<li>Train: (X, T, Y) =E2=80=94 MRI volumes, reports, labels. Test: X only.<=
+/li>
+</ul>
+<p>Key structural observations driving design:</p>
+<ol>
+<li><strong>Evidence is focal.</strong> An ACL tear is visible on a handful=
+ of sagittal slices. This mandates MIL, not global pooling.</li>
+<li><strong>Reports are noisy but information-dense.</strong> Reports descr=
+ibe findings <em>and</em> negatives ("no effusion") =E2=80=94 privileged si=
+gnal far richer than the 12 binary labels alone. But they are unstructured =
+and possibly multilingual; full NLP understanding is not required, <strong>=
+structured pathology extraction is preferable</strong> (=C2=A714).</li>
+<li><strong>Heterogeneous series.</strong> Fluid-sensitive (PD/T2 FS) vs fa=
+t-suppressed vs plane differ diagnostically per label: ACL/MCL/menisci =E2=
+=86=92 sagittal fluid-sensitive; OA =E2=86=92 coronal; Baker's cyst =E2=86=
+=92 axial/sagittal. Series aggregation should be <strong>metadata-condition=
+ed</strong>.</li>
+<li><strong>The metric is AUC-based</strong> (threshold-free ranking). Loss=
+es and calibration must optimize ranking, not accuracy.</li>
+</ol>
+<hr>
+<h2>2. Hierarchy analysis</h2>
+<div class=3D"code-block-header" data-dl=3D"1"><span>code</span><span class=
+=3D"code-copy-btn">Copy</span><span class=3D"code-dl-btn" role=3D"button" t=
+abindex=3D"0" title=3D"Download">Download</span></div><pre><code data-highl=
+ighted=3D"yes" class=3D"hljs language-scss">Study (<span class=3D"hljs-numb=
+er">1</span> row in train.csv, <span class=3D"hljs-number">12</span> labels=
+, report)
+ =E2=94=94=E2=94=80=E2=94=80 Series (plane, fluid-sensitive, fat-sup metada=
+ta)
+      =E2=94=94=E2=94=80=E2=94=80 Slices (DICOM, variable count, anisotropi=
+c spacing)
+</code></pre>
+<p>Implications:</p>
+<ul>
+<li><strong>Splitting must be at the study level.</strong> Series/slices of=
+ one patient are near-duplicates =E2=80=94 split leakage here inflates vali=
+dation catastrophically.</li>
+<li>Slice counts vary by ~3=E2=80=9310=C3=97; variable-length bag handling =
+is required (padding + masking or per-bag forward).</li>
+<li>Some series may be redundant or poor-quality (motion artifact, weird se=
+quences) =E2=80=94 a series-level gating/attention mechanism can learn to d=
+own-weight them.</li>
+</ul>
+<hr>
+<h2>3. Image encoder: comparison and choice</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2D CNN per slice</td>
+<td>Fast, huge pretraining pool</td>
+<td>No inter-slice context</td>
+<td>Weak alone</td>
+</tr>
+<tr>
+<td>2D foundation model (DINOv2/BiomedCLIP)</td>
+<td>Strong features, frozen-friendly</td>
+<td>Domain gap to MRI</td>
+<td>Good frozen init</td>
+</tr>
+<tr>
+<td><strong>2.5D CNN (3-stack input)</strong></td>
+<td>Cheap slice context, battle-tested in RSNA/MIDRC winners</td>
+<td>Limited volume context</td>
+<td><strong>Primary</strong></td>
+</tr>
+<tr>
+<td>3D CNN (MONAI, Med3D/RadImageNet)</td>
+<td>True volumetric</td>
+<td>Memory, overfits small N, anisotropy pain</td>
+<td>Ablation/ensemble</td>
+</tr>
+<tr>
+<td>3D Swin / Video ViT</td>
+<td>Strong global context</td>
+<td>Needs more data; anisotropic patching</td>
+<td>Only after baseline</td>
+</tr>
+<tr>
+<td>SSL MRI encoder (e.g., models pretrained on knee OA cohorts like MOST/O=
+AI =E2=80=94 models such as <strong>KNEE-MRI SSL</strong> or <strong>Merlin=
+/MedSLIP-style</strong> MRI encoders)</td>
+<td>Domain match</td>
+<td>Availability/weights uncertain</td>
+<td>Secondary</td>
+</tr>
+</tbody></table>
+<p><strong>Primary choice: 2.5D slice encoder.</strong> Each training sampl=
+e is a slice rendered with its =C2=B1k neighbors as 3 channels (k=3D1 =E2=
+=86=92 3-channel input; grayscale replicated if neighbors unavailable). Thi=
+s follows the well-established "2.5D" recipe from RSNA 2022 abdominal traum=
+a / RSNA cervical spine winning solutions and Chen et al.'s prostate/MRI 2.=
+5D work: it captures adjacent-slice continuity at ~3=C3=97 the cost of 2D w=
+hile avoiding 3D memory and spacing headaches.</p>
+<ul>
+<li>Backbone: <strong>ResNet-RS-50 / EfficientNet-B0/B2 or ConvNeXt-Tiny</s=
+trong>, pretrained on ImageNet, optionally re-pretrained on the unlabeled M=
+RI slices with self-supervised methods (SimMIM or MONAI's SSL bundle recipe=
+s) =E2=80=94 implemented only after the supervised baseline.</li>
+<li>Input: 320=C3=97320 (or 384), HU-free (MRI is intensity, not CT windowi=
+ng) =E2=86=92 per-series <strong>z-score normalization</strong> with robust=
+ clipping at 0.5/99.5 percentiles computed on the train split (store per-se=
+ries statistics =E2=80=94 test-time must use its own, so normalization must=
+ be scale-invariant, e.g., divide by series std).</li>
+<li>Augmentation: random affine (=C2=B110=C2=B0 rot, =C2=B110% scale), flip=
+ L/R <strong>only for plane-agnostic or with plane-aware care</strong> (med=
+ial vs lateral labels mean a horizontal flip must also swap medial/lateral =
+label semantics =E2=80=94 safer: no flip, or flip with label swapping for m=
+eniscus/OA labels), Gaussian noise/blur, intensity jitter, small random sli=
+ce-dropout. No heavy elastic deformation early.</li>
+</ul>
+<hr>
+<h2>4. Slice-level aggregation (MIL)</h2>
+<p>Bags: B_j =3D {x_j1 =E2=80=A6 x_jn}. Comparison:</p>
+<ul>
+<li><strong>Mean/max pooling</strong>: max pooling is surprisingly strong f=
+or focal findings but non-smooth gradients and unstable with noisy bags; me=
+an dilutes focal evidence.</li>
+<li><strong>Attention MIL (Ilse et al., 2018)</strong>: gated attention tan=
+h=E2=8A=95sigmoid =E2=80=94 the workhorse. Appropriate here.</li>
+<li><strong>DSMIL (Li et al., 2021)</strong>: dual-stream with instance-lev=
+el contrastive loss =E2=80=94 useful auxiliary signal (its "critical instan=
+ce" objective aligns with focal pathology).</li>
+<li><strong>CLAM (Lu et al., 2021)</strong>: designed for 100k-instance WSI=
+s; our bags are 20=E2=80=9360 slices, so the clustering machinery is unnece=
+ssary =E2=80=94 but CLAM's instance-level top-k pooling trick is cheap and =
+useful.</li>
+<li><strong>TransMIL (Shao et al., 2021)</strong>: full self-attention over=
+ instances =E2=80=94 fine at N=E2=89=A464 slices, worth an ablation.</li>
+</ul>
+<p><strong>Choice: gated attention MIL with a sparse top-k regularizer.</st=
+rong> Attention scores a =3D softmax(w=C2=B7tanh(Vx) =E2=8A=99 sigmoid(Ux))=
+ over slices; aggregate z_j =3D =CE=A3 a_i h(x_i). Add an auxiliary supervi=
+sion trick unique to this task: the <strong>multimodal teacher's attention =
+over slices is distilled into the student's attention</strong> (attention d=
+istillation, =C2=A79) =E2=80=94 this is the highest-value MIL refinement be=
+cause it injects report-derived localization ("effusion seen in suprapatell=
+ar recess") into slice weighting.</p>
+<p>Implementation note: cap bags at N_s =3D 64 slices (uniform temporal sam=
+pling of the sorted volume); report padding mask.</p>
+<h2>5. Series-level aggregation</h2>
+<p>For each series j: z_j =3D f(V_j, M_j) vs f(V_j) only? <strong>Metadata-=
+conditioned is preferable and cheap</strong>: concatenate plane/fluid/fat-s=
+up embeddings (each ~8-d learned embedding) into the MIL query vector, so t=
+he series aggregator learns plane-specific attention (sagittal =E2=86=92 li=
+gament hunting; coronal =E2=86=92 cartilage/joint space). Then:</p>
+<ul>
+<li><strong>Metadata-conditioned attention pooling over series</strong> (de=
+fault), with learned modality/plane tokens added to each series embedding b=
+efore a 2-layer transformer block (TransMIL-lite) =E2=80=94 series count pe=
+r study is small (typically 3=E2=80=9310), so a shallow transformer is near=
+ly free and captures cross-plane reasoning (e.g., axial confirms Baker's cy=
+st seen on sagittal).</li>
+</ul>
+<p>Final: z_study =3D 1-layer transformer + attention pooling over {z_1=E2=
+=80=A6z_m} =E2=86=92 d=3D512 vector.</p>
+<hr>
+<h2>6. Multimodal training system (privileged information)</h2>
+<p>This is a <strong>teacher=E2=80=93student LUPI design</strong>, not a fu=
+sion-at-inference design.</p>
+<p><strong>Teacher</strong> (train-time only):</p>
+<ul>
+<li>Image branch =3D student's full hierarchical encoder (shared or separat=
+e weights; shared backbone with a separate head is cheaper and regularizes =
+the student).</li>
+<li>Text branch: <strong>XLM-RoBERTa-base</strong> (multilingual safety; re=
+ports may not be English). Fine-tune with a small LR (1e-5). Structured ext=
+raction head first (=C2=A714) rather than raw report fusion.</li>
+<li>Fusion: concatenation [z_image =E2=80=96 z_text] =E2=86=92 2-layer MLP =
+=E2=86=92 12 logits; plus a <strong>contrastive image=E2=80=93text alignmen=
+t loss</strong> (InfoNCE over the batch, following GLoRIA/ConVIRT/BiomedCLI=
+P) so z_image itself absorbs text semantics =E2=80=94 this is what makes th=
+e transfer survive when text is removed.</li>
+</ul>
+<p><strong>Student</strong> =3D image branch + 12-label head, trained with:=
+</p>
+<ol>
+<li><strong>Label supervision</strong>: weighted BCE on the 12 labels.</li>
+<li><strong>Logit distillation</strong>: KL(p_T^=CF=84 =E2=80=96 p_S^=CF=84=
+), =CF=84=3D2=E2=80=934 per class-tuned.</li>
+<li><strong>Feature distillation</strong>: =E2=80=96z_S =E2=88=92 proj(z_im=
+age^T)=E2=80=96=C2=B2 (with a 1=C3=971 projector so dims match) =E2=80=94 M=
+SE.</li>
+<li><strong>Attention distillation</strong>: KL between teacher series-leve=
+l attention and student series-level attention (and optionally slice-level)=
+ =E2=80=94 transfers "where to look."</li>
+<li><strong>Contrastive ITC</strong> on the image branch: pulls MRI embeddi=
+ngs toward text embeddings of their own study vs others in batch.</li>
+</ol>
+<p>Comparison: logit KD is the most reliable single transfer mechanism (est=
+ablished literature); feature KD helps representation alignment but is sens=
+itive to projection choice; ITC is valuable primarily because it shapes the=
+ <em>encoder</em>, not just the head; attention distillation is the most ta=
+sk-specific and worth an explicit ablation.</p>
+<p><strong>Teacher quality control</strong>: if the teacher is barely bette=
+r than the labels-only baseline (plausible =E2=80=94 the 12 labels already =
+summarize the reports), distillation value collapses. Gate stage 2 on the t=
+eacher beating the stage-1 baseline by a meaningful margin (&gt;0.005 macro=
+-AUC OOF). If not, fall back to a report-derived <strong>auxiliary multi-la=
+bel text-pseudo-target</strong> scheme: train the student with BCE against =
+both ground-truth labels and text-extracted finding indicators (multi-task =
+regularization) =E2=80=94 a simpler LUPI proxy.</p>
+<hr>
+<h2>7. Loss design</h2>
+<p>Per-label class frequencies vary enormously (fracture: rare; effusion: c=
+ommon). Proposal:</p>
+<div class=3D"code-block-header" data-dl=3D"1"><span>code</span><span class=
+=3D"code-copy-btn">Copy</span><span class=3D"code-dl-btn" role=3D"button" t=
+abindex=3D"0" title=3D"Download">Download</span></div><pre><code data-highl=
+ighted=3D"yes" class=3D"hljs language-ini"><span class=3D"hljs-attr">L</spa=
+n> =3D =CE=BB<span class=3D"hljs-number">1</span>=C2=B7L_asym + =CE=BB<span=
+ class=3D"hljs-number">2</span>=C2=B7L_KD_logit + =CE=BB<span class=3D"hljs=
+-number">3</span>=C2=B7L_KD_feat + =CE=BB<span class=3D"hljs-number">4</spa=
+n>=C2=B7L_ITC + =CE=BB<span class=3D"hljs-number">5</span>=C2=B7L_aux
+</code></pre>
+<ul>
+<li><strong>L_asym</strong>: asymmetric loss (Ben-Baruch et al., ICCV 2021)=
+ with per-class =CE=B3+/=CE=B3=E2=88=92 =E2=80=94 better than plain focal f=
+or multi-label AUC because it suppresses easy negatives aggressively while =
+preserving ranking of hard positives. Alternative: <strong>weighted BCE</st=
+rong> as the safe baseline. Avoid plain BCE for rare classes.</li>
+<li>L_aux: series-level auxiliary tasks (=C2=A713) =E2=80=94 plane classifi=
+cation, fluid/fat-sup prediction from image (cheap, guaranteed-available fr=
+om series metadata).</li>
+<li><strong>=CE=BB selection</strong>: stage-wise. Stage 1 (baseline): =CE=
+=BB1=3D1, rest 0. Stage 2: introduce KD terms with =CE=BB2=E2=89=881, =CE=
+=BB3=E2=89=880.5, =CE=BB4=E2=89=880.1; tune on OOF macro-AUC via a small gr=
+id or Optuna over the OOF folds of one split only; final selection on the 5=
+-fold OOF ensemble. Do not tune =CE=BB's on the leaderboard.</li>
+</ul>
+<hr>
+<h2>8. Label structure =E2=80=94 is a GNN justified?</h2>
+<p>Co-occurrence is strong and anatomically motivated: ACL=E2=86=94meniscus=
+=E2=86=94contusion (bone bruise pattern), effusion=E2=86=94synovitis=E2=86=
+=94almost any internal derangement, OA labels correlated by compartment.</p=
+>
+<p>Options ranked by expected value:</p>
+<ol>
+<li><strong>Label-embedding classifier head (low-rank label representation)=
+</strong>: predict a 12=E2=86=92k(=E2=89=886)-dim bottleneck then per-label=
+ projections, i.e., a shared label embedding matrix; essentially free, ofte=
+n gains ~0.002=E2=80=930.005 AUC on imbalanced labels. <strong>Implement.</=
+strong></li>
+<li><strong>Label co-occurrence as a prior on loss weighting / post-hoc cal=
+ibration</strong> =E2=80=94 cheap.</li>
+<li><strong>GCN over a label graph</strong> (as in ML-GCN, Chen et al., CVP=
+R 2019): given only ~12 labels and no verified dataset statistics of co-occ=
+urrence strength, the graph must be hand-designed from anatomy. With N stud=
+ies in the low thousands, a GCN head is <strong>not justified as a first ad=
+dition</strong> =E2=80=94 the label-embedding head captures most of the sam=
+e correlation. Re-evaluate only if the low-rank head shows residual per-lab=
+el error correlation that the embedding cannot fix. <strong>Defer.</strong>=
+</li>
+</ol>
+<hr>
+<h2>9. Anatomy-aware modeling</h2>
+<p>Highest-value, lowest-cost option: <strong>pathology-specific attention =
+heads</strong> =E2=80=94 instead of one attention query per series, use 12 =
+(or ~6 grouped: ligament, meniscus, cartilage/OA, fluid/synovium, cyst, bon=
+e) attention heads and route each to its label's classifier. This encodes "=
+ACL attention =E2=89=A0 effusion attention" without any segmentation masks.=
+ Recommended.</p>
+<p>Anatomical coordinate embeddings (slice position within volume normalize=
+d to [0,1], three orthogonal-aware encodings) appended to slice features =
+=E2=80=94 cheap, helps the model know a slice is in the intercondylar notch=
+ region vs patellofemoral. <strong>Recommended.</strong></p>
+<p>Segmentation-assisted features (total knee replacement of s. KL grading =
+pipelines) requires masks that this dataset does not provide; training a se=
+gmenter is a research project, not a competition move. <strong>Rejected.</s=
+trong></p>
+<hr>
+<h2>10. Auxiliary tasks (only with guaranteed-available signals)</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Supervision source</th>
+<th>Worth it?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Plane classification</td>
+<td>series metadata</td>
+<td>Yes =E2=80=94 forces plane-aware features</td>
+</tr>
+<tr>
+<td>Fluid-sensitive / fat-sup prediction</td>
+<td>series metadata</td>
+<td>Yes =E2=80=94 cheap, self-supervised-flavored</td>
+</tr>
+<tr>
+<td>Slice position regression</td>
+<td>DICOM</td>
+<td>Yes =E2=80=94 trivial</td>
+</tr>
+<tr>
+<td>Report finding extraction as multi-task labels</td>
+<td>NLP extraction of train reports (weak labels)</td>
+<td>After baseline; main LUPI channel</td>
+</tr>
+<tr>
+<td>Pathology localization</td>
+<td><strong>No ground truth</strong></td>
+<td>Only via teacher attention distillation</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>11. Radiology NLP</h2>
+<ul>
+<li><strong>Model</strong>: XLM-R-base (multilingual robustness); if report=
+s are verified English-only, ClinicalBERT/PubMedBERT is slightly better for=
+ medical text. Do not verify-by-assumption: detect language per report (fas=
+tText/lingua) and inspect; keep XLM-R as the safe default.</li>
+<li><strong>Prefer structured extraction over free-text fusion.</strong> Bu=
+ild a keyword/regex + model-hybrid extractor mapping report sentences =E2=
+=86=92 per-structure per-finding indicators (present/absent/uncertain) for =
+the 12 targets plus free-text negatives. This directly addresses negation (=
+"intact ACL", "no joint effusion") and uncertainty ("? meniscal tear", "can=
+not exclude"), which raw XLM-R embeddings handle unreliably in clinical, po=
+ssibly non-English prose. The extracted per-label sentiment (=E2=88=921/0/+=
+1) becomes (a) teacher supervision enrichment and (b) pseudo-label auxiliar=
+y targets. Full report understanding (radNLP SOTA) is unnecessary because t=
+he 12 labels already define the output space.</li>
+<li>Validate the extractor manually on ~100 reports; measure extraction F1 =
+per label before trusting it.</li>
+</ul>
+<hr>
+<h2>12. DICOM pipeline</h2>
+<p>Libraries: <strong>pydicom</strong> (header/pixels), <strong>SimpleITK o=
+r MONAI transforms</strong> (resampling/normalization), OpenCV only for res=
+ize.</p>
+<p>Pipeline per series:</p>
+<ol>
+<li>Load all SOPs with pydicom; handle transfer syntaxes (JPEG lossless var=
+iants, deflated) via GDCM/Pillow handlers; fallback decode guard.</li>
+<li><strong>Sort by ImagePositionPatient projected onto the slice normal</s=
+trong> n =3D row=C3=97col from ImageOrientationPatient =E2=80=94 <em>never =
+filename order</em> (filenames can be scrambled, and some series have non-i=
+nteger or reversed orderings). Handle multi-frame DICOM (check NumberOfFram=
+es).</li>
+<li>Resample spacing: keep native in-plane spacing; enforce consistent slic=
+e step by resampling along z to a fixed effective thickness (e.g., 1.0=E2=
+=80=931.5 mm) only for 3D models; for the 2.5D slice model, simply sample 6=
+4 evenly spaced sorted slices.</li>
+<li>Normalize: per-series percentile-clip (0.5=E2=80=9399.5) =E2=86=92 z-sc=
+ore.</li>
+<li>Crop: center-crop/auto-crop to the knee bounding box (threshold-based b=
+ounding box of nonzero signal) =E2=86=92 resize 320=C2=B2.</li>
+<li>Sanity checks per study: orientation consistency across series (cosine =
+of normals), duplicate SOPInstanceUIDs, missing pixel data =E2=80=94 log &a=
+mp; exclude/repair; never let one corrupt study poison a training run.</li>
+</ol>
+<p>Cache decoded, sorted volumes as .npy/zarr (uint8 after scaling) keyed b=
+y SeriesInstanceUID =E2=80=94 the single biggest throughput win.</p>
+<hr>
+<h2>13. Validation strategy</h2>
+<ul>
+<li><strong>5-fold GroupKFold by StudyInstanceUID</strong> (equivalently pa=
+tient; assume StudyInstanceUID =E2=89=88 patient encounter). Verify no pati=
+ent/series overlap across folds; additionally hash-dedupe studies with near=
+-identical pixel data (repeated acquisitions) and keep them in the same fol=
+d.</li>
+<li><strong>Multi-label stratification</strong>: iterative stratification (=
+Sechidis et al.; <code>iterative-stratification</code> package) on the 12 l=
+abels, grouped by study, to stabilize rare-label representation per fold (f=
+racture especially).</li>
+<li>All preprocessing statistics (normalization percentiles, label co-occur=
+rence priors, NLP extraction vocab) computed per training fold only.</li>
+<li>Report per-label OOF AUC + macro-AUC + micro-AUC; OOF predictions retai=
+ned for ensembling, threshold analysis, and error analysis.</li>
+<li><strong>Experiment table</strong> (each row: OOF macro-AUC, worst-label=
+ AUC, params, train hours):<ol>
+<li>Global 3D CNN, BCE (floor)</li>
+<li>2.5D MIL baseline (gated attention, mean-pool series), wBCE</li>
+<li><ul>
+<li>metadata-conditioned attention + transformer series agg</li>
+</ul>
+</li>
+<li><ul>
+<li>asym loss + label-embedding head</li>
+</ul>
+</li>
+<li>Teacher (multimodal)</li>
+<li>Student + logit KD</li>
+<li><ul>
+<li>feature KD</li>
+</ul>
+</li>
+<li><ul>
+<li>attention KD + ITC</li>
+</ul>
+</li>
+<li>3D Swin variant (ensemble diversity)</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2>14. Evaluation &amp; calibration</h2>
+<p>Metric: mean of 12 per-label ROC-AUCs (threshold-free). Therefore:</p>
+<ul>
+<li>Accuracy/F1 at 0.5 is misaligned =E2=80=94 optimize <strong>ranking</st=
+rong> (AUC-sensitive losses: asymmetric loss explicitly targets hard-exampl=
+e ranking).</li>
+<li>Calibration matters only for downstream thresholding/debugging, not the=
+ leaderboard; still report ECE per label for medical credibility, and calib=
+rate with Platt scaling on OOF if any thresholded deliverable is needed.</l=
+i>
+<li>Watch macro vs micro: a single common-label (effusion) improvement can =
+mask a rare-label (fracture) collapse =E2=80=94 always inspect the per-labe=
+l table and the <strong>worst-label AUC</strong> as the tie-breaking model-=
+selection signal.</li>
+<li>Ensembles: probability averaging (after per-label rank/Platt harmonizat=
+ion) vs logit averaging =E2=80=94 average <strong>per-label rank-normalized=
+ scores</strong> or sigmoid probabilities; rank averaging is robust to per-=
+label calibration drift across fold models.</li>
+</ul>
+<hr>
+<h2>15. Ensembling</h2>
+<ul>
+<li>5 folds =C3=97 2=E2=80=933 seeds (different slice sampling seeds), plus=
+ architecture diversity: 2.5D-B0 + 2.5D-ConvNeXt-T + one 3D variant if it p=
+roved competitive. Teacher and student can both be ensembled (teacher often=
+ still uses text; but only student is deployable =E2=80=94 ensemble student=
+s).</li>
+<li>Probability averaging across all models per label; prefer logit averagi=
+ng within same-architecture families (calibration-consistent) and probabili=
+ty/rank averaging across families.</li>
+</ul>
+<hr>
+<h2>16. Final architecture: <strong>KNEE-KDNet</strong></h2>
+<div class=3D"code-block-header" data-dl=3D"1"><span>code</span><span class=
+=3D"code-copy-btn">Copy</span><span class=3D"code-dl-btn" role=3D"button" t=
+abindex=3D"0" title=3D"Download">Download</span></div><pre><code data-highl=
+ighted=3D"yes" class=3D"hljs language-java">                        TRAININ=
+G ONLY
+                =E2=94=8C=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=90
+                =E2=94=82 Radiology <span class=3D"hljs-title function_">Re=
+port</span> <span class=3D"hljs-params">(multilingual)</span> =E2=94=82
+                =E2=94=94=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=98
+                            =E2=86=93
+                Language detector =E2=86=92 XLM-R-base
+                            =E2=86=93
+                Structured finding <span class=3D"hljs-title function_">ext=
+ractor</span> <span class=3D"hljs-params">(<span class=3D"hljs-number">12</=
+span>=C3=97{=E2=88=92<span class=3D"hljs-number">1</span>,<span class=3D"hl=
+js-number">0</span>,+<span class=3D"hljs-number">1</span>} + z_text =E2=88=
+=88 R^<span class=3D"hljs-number">768</span>)</span>
+                            =E2=86=93
+        =E2=94=8C=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=90
+        =E2=94=82 MULTIMODAL <span class=3D"hljs-title function_">TEACHER</=
+span> <span class=3D"hljs-params">(train only)</span>        =E2=94=82
+        =E2=94=82 [z_img =E2=80=96 z_text] =E2=86=92 MLP =E2=86=92 =CF=84 l=
+ogits      =E2=94=82
+        =E2=94=82 + InfoNCE(z_img, z_text)               =E2=94=82
+        =E2=94=94=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=98
+                            =E2=94=82 logit <span class=3D"hljs-title funct=
+ion_">KD</span> <span class=3D"hljs-params">(=CF=84=3D<span class=3D"hljs-n=
+umber">3</span>)</span>, feature KD,
+                            =E2=94=82 attention KD, ITC
+MRI study                   =E2=86=93
+ =E2=94=9C=E2=94=80=E2=94=80 m <span class=3D"hljs-title function_">series<=
+/span> <span class=3D"hljs-params">(plane, fluid, fat-sup metadata M_j)</sp=
+an>
+ =E2=94=82    =E2=94=9C=E2=94=80=E2=94=80 N_j <span class=3D"hljs-title fun=
+ction_">slices</span> <span class=3D"hljs-params">(sorted via ImagePosition=
+Patient)</span>
+ =E2=94=82    =E2=94=82     <span class=3D"hljs-number">2.5D</span> <span c=
+lass=3D"hljs-number">3</span>-channel stacks =E2=86=92 ConvNeXt-T/EffNet-B0
+ =E2=94=82    =E2=94=82     + <span class=3D"hljs-number">3D</span>-positio=
+n embedding          [B=C2=B7m =C3=97 N =C3=97 <span class=3D"hljs-number">=
+512</span>]
+ =E2=94=82    =E2=94=82     =E2=86=93
+ =E2=94=82    =E2=94=82   Gated attention <span class=3D"hljs-title functio=
+n_">MIL</span> <span class=3D"hljs-params">(metadata-conditioned query)</sp=
+an>
+ =E2=94=82    =E2=94=82     + <span class=3D"hljs-number">6</span> patholog=
+y-group attention heads   =E2=86=92 z_j =E2=88=88 R^<span class=3D"hljs-num=
+ber">512</span>
+ =E2=94=82    =E2=94=94=E2=94=80=E2=94=80 (repeat)
+ =E2=94=82
+ =E2=94=9C=E2=94=80=E2=94=80 <span class=3D"hljs-number">2</span>-layer tra=
+nsformer over {z_1..z_m} (+ modality tokens)
+ =E2=94=9C=E2=94=80=E2=94=80 metadata-conditioned series attention pooling
+ =E2=86=93
+ z_study =E2=88=88 R^<span class=3D"hljs-number">512</span>
+ =E2=86=93
+ Label-embedding <span class=3D"hljs-title function_">head</span> <span cla=
+ss=3D"hljs-params">(<span class=3D"hljs-number">512</span>=E2=86=92<span cl=
+ass=3D"hljs-number">64</span>=E2=86=92<span class=3D"hljs-number">12</span>=
+)</span>
+ =E2=86=93
+ <span class=3D"hljs-number">12</span> sigmoid logits
+</code></pre>
+<p><strong>Tensor dimensions</strong> (B=3D2 studies, m=3D6 series, N=3D64 =
+slices, C=3D3, H=3DW=3D320, d=3D512):</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Shape</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Slice input (padded)</td>
+<td>2 =C3=97 6 =C3=97 64 =C3=97 3 =C3=97 320 =C3=97 320 (float16)</td>
+</tr>
+<tr>
+<td>Slice features</td>
+<td>2 =C3=97 6 =C3=97 64 =C3=97 512</td>
+</tr>
+<tr>
+<td>Slice attention (per group g=3D6)</td>
+<td>2 =C3=97 6 =C3=97 6 =C3=97 64</td>
+</tr>
+<tr>
+<td>Series embeddings z_j</td>
+<td>2 =C3=97 6 =C3=97 512</td>
+</tr>
+<tr>
+<td>Modality tokens + transformer</td>
+<td>2 =C3=97 6 =C3=97 512 =E2=86=92 2 =C3=97 6 =C3=97 512</td>
+</tr>
+<tr>
+<td>Study embedding</td>
+<td>2 =C3=97 512</td>
+</tr>
+<tr>
+<td>Logits</td>
+<td>2 =C3=97 12</td>
+</tr>
+<tr>
+<td>Teacher text z_text</td>
+<td>2 =C3=97 768 =E2=86=92 fused 2 =C3=97 1280 =E2=86=92 2 =C3=97 12</td>
+</tr>
+</tbody></table>
+<p>Memory: with batch-of-bags flattened to 768 slices/fwd of 320=C2=B2 fp16=
+, use gradient accumulation over studies and mixed precision; ~14=E2=80=931=
+8 GB on a single A100/4090 =E2=80=94 realistic.</p>
+<hr>
+<h2>17. Project structure</h2>
+<div class=3D"code-block-header" data-dl=3D"1"><span>text</span><span class=
+=3D"code-copy-btn">Copy</span><span class=3D"code-dl-btn" role=3D"button" t=
+abindex=3D"0" title=3D"Download">Download</span></div><pre><code class=3D"l=
+anguage-text hljs language-plaintext" data-highlighted=3D"yes">project/
+=E2=94=9C=E2=94=80=E2=94=80 configs/            # YAML: fold, resolution, s=
+ampling, =CE=BB's
+=E2=94=9C=E2=94=80=E2=94=80 data/
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 dicom.py        # pydicom loading, =
+transfer syntax, sorting by IPP
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 preprocessing.py# cache .npy volume=
+s, normalization, cropping
+=E2=94=82   =E2=94=94=E2=94=80=E2=94=80 dataset.py      # study-level bag d=
+ataset, masks, metadata embeddings
+=E2=94=9C=E2=94=80=E2=94=80 models/
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 slice_encoder.py# 2.5D backbone + p=
+osition embedding
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 mil.py          # gated attention, =
+pathology-group heads
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 series_encoder.py# modality tokens =
++ transformer + attention pooling
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 text_encoder.py # XLM-R + structure=
+d extractor
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 fusion.py       # teacher fusion + =
+ITC head
+=E2=94=82   =E2=94=9C=E2=94=80=E2=94=80 teacher.py / student.py
+=E2=94=9C=E2=94=80=E2=94=80 losses/             # asymmetric, KD (logit/fea=
+t/attention), InfoNCE
+=E2=94=9C=E2=94=80=E2=94=80 training/           # loops, AMP, accumulation,=
+ scheduler
+=E2=94=9C=E2=94=80=E2=94=80 validation/         # grouped iterative stratif=
+ication, OOF tables
+=E2=94=9C=E2=94=80=E2=94=80 inference/          # sliding-slice inference, =
+TTA, ensembling
+=E2=94=94=E2=94=80=E2=94=80 notebooks/          # EDA, label co-occurrence,=
+ error analysis
+</code></pre>
+<hr>
+<h2>18. Failure modes and mitigations</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Failure mode</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Filename-order slice sorting</td>
+<td>Sort via ImagePositionPatient=C2=B7normal; unit tests</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Anisotropic spacing ignored</td>
+<td>Record SliceThickness/PixelSpacing; verify; sample by physical position=
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Multi-frame / exotic transfer syntax</td>
+<td>Explicit handler matrix; decode guard + drop-log</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Excessive slice sampling wastes compute</td>
+<td>Cap 64 slices; cache decoded volumes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Small lesion lost in downsampling</td>
+<td>Higher in-plane res (384) ablation; focal-slice sampling for top-k atte=
+ntion</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Report leakage into inference</td>
+<td>Hard architecture check: text branch absent in student/export; CI test =
+on exported model</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Multilingual NLP failure</td>
+<td>Language detection; XLM-R; extraction validation set</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Negation errors ("intact ACL" =E2=86=92 positive)</td>
+<td>Rule-based negation scope + manual audit of extracted labels</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Teacher overfits reports (memorizes style not findings)</td>
+<td>Teacher regularization; gate KD on OOF teacher gain</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Student fails to inherit text knowledge</td>
+<td>Ablate KD terms; fallback to text-pseudo-target multi-task</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Attention misread as explanation</td>
+<td>Never ship raw attention as interpretability; use OOF error analysis + =
+occlusion on samples</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Class imbalance (fracture)</td>
+<td>Asymmetric loss, per-class weights, iterative stratification, worst-lab=
+el monitoring</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Patient leakage via duplicate/repeat studies</td>
+<td>Study-level grouping + pixel-hash dedupe</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Scanner/site distribution shift</td>
+<td>Series-level normalization; augmentation; per-scanner AUC audit if meta=
+data available</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Intensity distribution shift at test</td>
+<td>Scale-invariant normalization (z-score, per-series)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>L/R flip destroying medial/lateral semantics</td>
+<td>No flip, or flip with label/feature swap; explicit ablation</td>
+</tr>
+<tr>
+<td>17</td>
+<td>OOM with full study batch</td>
+<td>Study-wise gradient accumulation; fp16; slice subsampling per step</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Over-complex 3D/ViT on small N</td>
+<td>Keep as ablation only behind a strong baseline</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>19. Implementation phasing</h2>
+<ol>
+<li><strong>Week 1=E2=80=932 (must):</strong> DICOM pipeline + volume cache=
+; grouped multi-label stratified CV; baseline MIL model, wBCE =E2=86=92 OOF=
+ macro-AUC. This is the number everything is judged against.</li>
+<li><strong>Week 3 (must):</strong> metadata-conditioned series attention +=
+ transformer aggregation; asymmetric loss; label-embedding head; aux tasks =
+(plane/fat-sup).</li>
+<li><strong>Week 4 (must):</strong> NLP extraction + XLM-R teacher; verify =
+teacher &gt; student baseline on OOF.</li>
+<li><strong>Week 5 (should):</strong> KD stack (logit =E2=86=92 feature =E2=
+=86=92 attention =E2=86=92 ITC), each gated on OOF gain.</li>
+<li><strong>Week 6+ (only if baseline strong):</strong> 3D Swin variant for=
+ ensemble diversity, SSL pretraining, label-GNN re-evaluation.</li>
+</ol>
+<p><strong>Literature anchors</strong> (adapted, per the adaptation notes a=
+bove): Ilse et al., <em>Attention-based Deep MIL</em>, ICML 2018 (adapted: =
+metadata-conditioned queries, group heads); Shao et al., <em>TransMIL</em>,=
+ NeurIPS 2021 (shallow variant over series); Lu et al., <em>CLAM</em>, Nat.=
+ BME 2021 (top-k instance pooling); Vapnik &amp; Vashist, <em>LUPI</em>, Ne=
+ural Networks 2009 (framing); Hinton et al., <em>Distillation</em>, 2015; C=
+hen et al., <em>ML-GCN</em>, CVPR 2019 (deferred); Ben-Baruch et al., <em>A=
+symmetric Loss</em>, ICCV 2021; ConVIRT/GLoRIA/BiomedCLIP for medical image=
+=E2=80=93text contrastive alignment; RSNA 2022=E2=80=932023 winning 2.5D pi=
+pelines (community-documented) for the slice-stacking recipe. All KD/MIL ad=
+aptations here should be verified by the ablation table (=C2=A713), not ass=
+umed.</p>
+<hr>
+<p><em>Bottom line: a strong 2.5D MIL baseline with leakage-free study-leve=
+l validation is the decisive artifact; the multimodal teacher and distillat=
+ion stack is the highest-expected-value refinement; 3D transformers, GNN la=
+bel heads, and segmentation-assisted features are explicitly deferred until=
+ the baseline justifies them.</em></p>
+</div><div class=3D"msg-actions" data-ox=3D"1"><button class=3D"msg-action-=
+btn"><svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" strok=
+e-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round" width=3D"1=
+4" height=3D"14"><rect x=3D"9" y=3D"9" width=3D"13" height=3D"13" rx=3D"2" =
+ry=3D"2"></rect><path d=3D"M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2=
+v1"></path></svg>Copy</button><span class=3D"ox-sep"></span><button type=3D=
+"button" class=3D"msg-action-btn ox-up" data-tip=3D"Good response" aria-lab=
+el=3D"Good response"><svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"cur=
+rentColor" stroke-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"r=
+ound"><path d=3D"M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9=
+a2 2 0 0 0-2-2.3H14z"></path><path d=3D"M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 =
+2-2h3"></path></svg></button><button type=3D"button" class=3D"msg-action-bt=
+n ox-down down" data-tip=3D"Bad response" aria-label=3D"Bad response"><svg =
+viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D=
+"2" stroke-linecap=3D"round" stroke-linejoin=3D"round"><path d=3D"M10 15v4a=
+3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z"></pat=
+h><path d=3D"M17 2h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg></butto=
+n><button type=3D"button" class=3D"msg-action-btn ox-retry" data-tip=3D"Reg=
+enerate" aria-label=3D"Regenerate"><svg viewBox=3D"0 0 24 24" fill=3D"none"=
+ stroke=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"round" stroke=
+-linejoin=3D"round"><polyline points=3D"23 4 23 10 17 10"></polyline><path =
+d=3D"M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></button></div></div=
+></div><div></div></div></div><div class=3D"input-area"><div class=3D"input=
+-col"><div class=3D"input-box"><label class=3D"ox-attach" title=3D"Attach a=
+n image or a text/code file" aria-label=3D"Attach an image or a text/code f=
+ile"><svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" strok=
+e-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round"><path d=3D=
+"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l=
+-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg><input type=3D"file" =
+accept=3D"image/jpeg,image/png,image/webp,image/gif,.html,.htm,.css,.js,.mj=
+s,.jsx,.ts,.tsx,.py,.php,.rb,.go,.rs,.java,.kt,.swift,.c,.h,.cpp,.hpp,.cs,.=
+sh,.bash,.zsh,.sql,.json,.yml,.yaml,.toml,.ini,.env,.md,.markdown,.txt,.csv=
+,.tsv,.xml,.svg,.log,.conf,.vue,.svelte,.lua,.r,.pl,.dart,.scala,.diff,.pat=
+ch" multiple=3D""></label><textarea placeholder=3D"Send a message..." rows=
+=3D"1"></textarea><button class=3D"send-btn" disabled=3D"" title=3D"Send"><=
+svg viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-widt=
+h=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round"><line x1=3D"12" =
+y1=3D"19" x2=3D"12" y2=3D"5"></line><polyline points=3D"5 12 12 5 19 12"></=
+polyline></svg></button></div><div class=3D"input-disclaimer">AI can make m=
+istakes. Verify important information.</div></div></div></div></div></div>
+
+       =20
+       =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+   =20
+
+    <!-- Google tag (gtag.js) -->
+   =20
+   =20
+
+
+
+</body></html>
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://oxalpha.com/chat-logo.svg
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<svg viewBox=3D"0 0 240 240" xmlns=3D"http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id=3D"bg-gradient" x1=3D"0%" y1=3D"0%" x2=3D"100%" y2=
+=3D"100%">
+      <stop offset=3D"0%" stop-color=3D"#f8f9fa" />
+      <stop offset=3D"100%" stop-color=3D"#e9ecef" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx=3D"120" cy=3D"120" r=3D"110" fill=3D"#000" />
+
+  <!-- B-2 Spirit stealth bomber - top view -->
+  <path d=3D"
+    M 120,70
+    L 70,130
+    L 50,150
+    L 65,160
+    L 120,130
+    L 175,160
+    L 190,150
+    L 170,130
+    Z"
+    fill=3D"#fff" stroke=3D"#fff"
+  />
+
+  <!-- Engine section -->
+  <path d=3D"
+    M 100,130
+    L 120,150
+    L 140,130
+    Z"
+    fill=3D"#fff" stroke=3D"#fff"
+  />
+</svg>=0A
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://oxalpha.com/chat-assets/chat.css?v=32
+
+@charset "utf-8";
+
+:root { --bg: #000000; --sidebar-bg: #0a0a0a; --surface: #111111; --surface=
+-hover: #1a1a1a; --border: #222222; --text-primary: #ffffff; --text-seconda=
+ry: #afafaf; --text-muted: #999; --accent: #ffffff; --accent-hover: #e0e0e0=
+; --accent-bg: rgba(255,255,255,0.08); --code-bg: #0a0a0a; --code-header-bg=
+: #141414; --code-inline-bg: rgba(255,255,255,0.08); --user-bubble-bg: #fff=
+fff; --user-bubble-text: #000000; --scrollbar-thumb: #333; --input-bg: #111=
+111; --danger: #8b8b8b; --font: 'Inter', system-ui, -apple-system, sans-ser=
+if; --mono: 'JetBrains Mono', 'Consolas', monospace; }
+
+[data-theme=3D"light"] { --bg: #ffffff; --sidebar-bg: #fafafa; --surface: #=
+f5f5f5; --surface-hover: #efefef; --border: #e0e0e0; --text-primary: #00000=
+0; --text-secondary: #666; --text-muted: #555; --accent: #000000; --accent-=
+hover: #333333; --accent-bg: rgba(0,0,0,0.05); --code-bg: #f5f5f5; --code-h=
+eader-bg: #ebebeb; --code-inline-bg: rgba(0,0,0,0.06); --user-bubble-bg: #0=
+00000; --user-bubble-text: #ffffff; --scrollbar-thumb: #ccc; --input-bg: #f=
+fffff; --danger: #787878; }
+
+*, ::before, ::after { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+html, body, #root { height: 100%; overflow: hidden; position: fixed; width:=
+ 100%; }
+
+body { font-family: var(--font); background: var(--bg); color: var(--text-p=
+rimary); font-size: 14px; line-height: 1.5; }
+
+a { color: var(--text-primary); text-decoration: none; }
+
+button { font-family: var(--font); cursor: pointer; border-width: medium; b=
+order-style: none; border-color: currentcolor; border-image: none; backgrou=
+nd: none; color: inherit; }
+
+::-webkit-scrollbar { width: 6px; }
+
+::-webkit-scrollbar-track { background: transparent; }
+
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radi=
+us: 3px; }
+
+.app { display: flex; height: 100dvh; }
+
+.sidebar { width: 260px; background: var(--sidebar-bg); border-right-width:=
+ medium; border-right-style: none; border-right-color: currentcolor; displa=
+y: flex; flex-direction: column; flex-shrink: 0; transition: width 0.2s; }
+
+.sidebar-header { padding: 12px 12px 8px; }
+
+.sidebar-header-top { display: flex; align-items: center; justify-content: =
+space-between; margin-bottom: 8px; }
+
+.sidebar-logo { display: flex; align-items: center; gap: 10px; font-size: 1=
+5px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em;=
+ font-family: var(--font); min-width: 0px; text-decoration: none; }
+
+.sidebar-logo svg { width: 28px; height: 28px; opacity: 0.5; flex-shrink: 0=
+; }
+
+.sidebar-logo img { border-radius: 50%; }
+
+.sidebar-logo-text { overflow: hidden; white-space: nowrap; }
+
+.sidebar-collapse-btn { width: 32px; height: 32px; border-radius: 8px; disp=
+lay: flex; align-items: center; justify-content: center; color: var(--text-=
+muted); transition: 0.12s; flex-shrink: 0; }
+
+.sidebar-collapse-btn:hover { color: var(--text-primary); background: var(-=
+-surface); }
+
+.sidebar-collapse-btn svg { width: 16px; height: 16px; }
+
+.new-chat-btn { display: flex; align-items: center; justify-content: center=
+; gap: 8px; width: 100%; padding: 10px 14px; background: var(--surface); bo=
+rder: 1px solid var(--border); border-radius: 10px; font-size: 14px; font-w=
+eight: 500; color: var(--text-primary); transition: 0.15s; letter-spacing: =
+0.01em; overflow: hidden; }
+
+.new-chat-btn:hover { background: var(--surface-hover); border-color: var(-=
+-text-muted); }
+
+.new-chat-btn svg { opacity: 0.5; flex-shrink: 0; }
+
+.new-chat-label { overflow: hidden; white-space: nowrap; }
+
+.sidebar-chats { flex: 1 1 0%; overflow-y: auto; padding: 4px 8px; }
+
+.chat-group-label { font-size: 11px; font-weight: 600; text-transform: uppe=
+rcase; letter-spacing: 0.04em; color: var(--text-muted); padding: 16px 10px=
+ 6px; border-bottom: 1px solid var(--border); margin-bottom: 2px; font-fami=
+ly: var(--font); overflow: hidden; white-space: nowrap; }
+
+.chat-item { display: flex; align-items: center; padding: 8px 10px; font-si=
+ze: 14px; color: var(--text-secondary); cursor: pointer; transition: 0.12s;=
+ gap: 8px; border-bottom-width: medium; border-bottom-style: none; border-b=
+ottom-color: currentcolor; border-radius: 8px; position: relative; }
+
+.chat-item:hover { color: var(--text-primary); background: var(--surface); =
+}
+
+.chat-item::after { display: none; }
+
+.chat-item.active { color: var(--text-primary); font-weight: 500; backgroun=
+d: var(--surface); }
+
+.chat-item.active::before { display: none; }
+
+.chat-item-title { flex: 1 1 0%; overflow: hidden; text-overflow: ellipsis;=
+ white-space: nowrap; font-family: var(--font); line-height: 1.3; }
+
+.chat-item-delete { opacity: 0; padding: 4px 6px; font-size: 13px; line-hei=
+ght: 1; color: var(--text-muted); border-radius: 6px; transition: 0.12s; fl=
+ex-shrink: 0; }
+
+.chat-item:hover .chat-item-delete { opacity: 1; }
+
+.chat-item-delete:hover { color: var(--danger); background: var(--surface-h=
+over); }
+
+.sidebar-bottom { border-top-width: medium; border-top-style: none; border-=
+top-color: currentcolor; padding: 8px; }
+
+.sidebar-bot-links { display: flex; flex-direction: column; gap: 6px; margi=
+n-bottom: 8px; }
+
+.sidebar-bot-btn { display: flex; align-items: center; justify-content: cen=
+ter; gap: 8px; width: 100%; padding: 9px 12px; border-radius: 10px; font-si=
+ze: 12px; font-weight: 600; text-decoration: none; color: rgb(255, 255, 255=
+); transition: filter 0.15s, transform 0.1s; overflow: hidden; white-space:=
+ nowrap; }
+
+.sidebar-bot-btn:hover { filter: brightness(1.15); color: rgb(255, 255, 255=
+); }
+
+.sidebar-bot-btn:active { transform: scale(0.98); }
+
+.sidebar-bot-btn--tg { background: rgb(34, 158, 217); }
+
+.sidebar-bot-btn--max { background: linear-gradient(90deg, rgb(57, 92, 244)=
+, rgb(151, 81, 214)); }
+
+.sidebar-bot-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.sidebar-bot-btn-text { overflow: hidden; white-space: nowrap; }
+
+.sidebar.collapsed .sidebar-bot-links { display: none; }
+
+.sidebar-app-links { display: flex; flex-direction: row; gap: 6px; margin-b=
+ottom: 8px; }
+
+.sidebar-app-btn { display: flex; align-items: center; gap: 10px; width: 10=
+0%; padding: 6px 8px; border-radius: 10px; font-size: 12px; text-decoration=
+: none; background: rgb(255, 255, 255); color: rgb(0, 0, 0); border-width: =
+medium; border-style: none; border-color: currentcolor; border-image: none;=
+ transition: filter 0.15s, transform 0.1s; overflow: hidden; white-space: n=
+owrap; }
+
+.sidebar-app-btn:hover { filter: brightness(0.93); color: rgb(0, 0, 0); }
+
+.sidebar-app-btn:active { transform: scale(0.98); }
+
+[data-theme=3D"light"] .sidebar-app-btn { background: rgb(0, 0, 0); color: =
+rgb(255, 255, 255); }
+
+[data-theme=3D"light"] .sidebar-app-btn:hover { filter: brightness(1.3); co=
+lor: rgb(255, 255, 255); }
+
+.sidebar-app-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.sidebar-app-btn-info { display: flex; flex-direction: column; overflow: hi=
+dden; }
+
+.sidebar-app-btn-sub { font-size: 10px; font-weight: 400; opacity: 0.7; lin=
+e-height: 1.2; }
+
+.sidebar-app-btn-title { font-size: 13px; font-weight: 600; line-height: 1.=
+3; }
+
+.sidebar.collapsed .sidebar-app-links { display: none; }
+
+.settings-trigger { display: flex; align-items: center; gap: 8px; width: 10=
+0%; padding: 8px 10px; font-size: 13px; color: var(--text-muted); border-ra=
+dius: 8px; transition: 0.12s; letter-spacing: 0.01em; overflow: hidden; }
+
+.settings-trigger:hover { color: var(--text-primary); background: var(--sur=
+face); }
+
+.settings-trigger svg { width: 15px; height: 15px; opacity: 0.6; flex-shrin=
+k: 0; }
+
+.settings-label { overflow: hidden; white-space: nowrap; }
+
+.sidebar.collapsed { width: 60px; }
+
+.sidebar.collapsed .sidebar-header { padding: 12px 8px 8px; }
+
+.sidebar.collapsed .sidebar-header-top { justify-content: center; margin-bo=
+ttom: 8px; }
+
+.sidebar.collapsed .sidebar-logo { display: none; }
+
+.sidebar.collapsed .sidebar-collapse-btn { width: 36px; height: 36px; }
+
+.sidebar.collapsed .new-chat-btn { padding: 10px; gap: 0px; border-radius: =
+10px; }
+
+.sidebar.collapsed .new-chat-label { display: none; }
+
+.sidebar.collapsed .sidebar-chats { padding: 4px; }
+
+.sidebar.collapsed .chat-group-label { font-size: 0px; padding: 12px 0px 4p=
+x; border-bottom-width: medium; border-bottom-style: none; border-bottom-co=
+lor: currentcolor; }
+
+.sidebar.collapsed .chat-item { padding: 8px 0px; justify-content: center; =
+border-radius: 8px; }
+
+.sidebar.collapsed .chat-item:hover { background: var(--surface); }
+
+.sidebar.collapsed .chat-item-title { width: 24px; flex: 0 0 auto; font-siz=
+e: 0px; }
+
+.sidebar.collapsed .chat-item-title::first-letter { font-size: 14px; }
+
+.sidebar.collapsed .chat-item.active::before { display: none; }
+
+.sidebar.collapsed .chat-item-delete { display: none; }
+
+.sidebar.collapsed .sidebar-bottom { padding: 4px; }
+
+.sidebar.collapsed .settings-trigger { justify-content: center; padding: 10=
+px 0px; border-radius: 8px; }
+
+.sidebar.collapsed .settings-label { display: none; }
+
+.settings-overlay { display: none; position: fixed; inset: 0px; background:=
+ rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); z-index: 500; align-items:=
+ center; justify-content: center; }
+
+.settings-overlay.open { display: flex; }
+
+.settings-modal { background: var(--bg); border: 1px solid var(--border); b=
+order-radius: 16px; width: 420px; max-width: calc(-32px + 100vw); overflow:=
+ hidden; box-shadow: rgba(0, 0, 0, 0.4) 0px 24px 80px; }
+
+.settings-modal-header { display: flex; align-items: center; justify-conten=
+t: space-between; padding: 20px 24px; border-bottom: 1px solid var(--border=
+); }
+
+.settings-modal-header h3 { font-size: 15px; font-weight: 600; letter-spaci=
+ng: -0.01em; }
+
+.settings-modal-close { width: 32px; height: 32px; border-radius: 8px; disp=
+lay: flex; align-items: center; justify-content: center; color: var(--text-=
+muted); transition: 0.12s; }
+
+.settings-modal-close:hover { background: var(--surface-hover); color: var(=
+--text-primary); }
+
+.settings-modal-close svg { width: 18px; height: 18px; }
+
+.settings-modal-body { padding: 8px 0px; }
+
+.settings-item { display: flex; align-items: center; justify-content: space=
+-between; padding: 14px 24px; transition: background 0.1s; }
+
+.settings-item:hover { background: var(--surface-hover); }
+
+.settings-item-left { display: flex; align-items: center; gap: 12px; }
+
+.settings-item-icon { width: 36px; height: 36px; border-radius: 10px; backg=
+round: var(--surface); border: 1px solid var(--border); display: flex; alig=
+n-items: center; justify-content: center; color: var(--text-secondary); fle=
+x-shrink: 0; }
+
+.settings-item-icon svg { width: 18px; height: 18px; }
+
+.settings-item-label { font-size: 13px; font-weight: 500; color: var(--text=
+-primary); }
+
+.settings-item-desc { font-size: 11px; color: var(--text-muted); margin-top=
+: 1px; }
+
+.theme-pills { display: flex; gap: 2px; background: var(--surface); border:=
+ 1px solid var(--border); border-radius: 8px; padding: 2px; }
+
+.theme-pill { padding: 6px 16px; border-radius: 6px; font-size: 12px; font-=
+weight: 500; color: var(--text-muted); transition: 0.12s; border-width: med=
+ium; border-style: none; border-color: currentcolor; border-image: none; }
+
+.theme-pill.active { background: var(--text-primary); color: var(--bg); box=
+-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px; }
+
+.settings-lang-select { appearance: none; background-size: ; background-att=
+achment: ; background-origin: ; background-clip: ; background-color: ; bord=
+er: 1px solid var(--border); border-radius: 8px; padding: 6px 32px 6px 12px=
+; font-family: var(--font); font-size: 12px; font-weight: 500; color: var(-=
+-text-primary); cursor: pointer; transition: border-color 0.12s; background=
+-image: url("data:image/svg+xml,%3Csvg width=3D'12' height=3D'12' viewBox=
+=3D'0 0 24 24' fill=3D'none' stroke=3D'%23999' stroke-width=3D'2.5' xmlns=
+=3D'http://www.w3.org/2000/svg'%3E%3Cpolyline points=3D'6 9 12 15 18 9'/%3E=
+%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px=
+ center; }
+
+.settings-lang-select:hover { border-color: var(--text-muted); }
+
+.settings-lang-select:focus { outline: none; border-color: var(--text-prima=
+ry); }
+
+.settings-modal-footer { padding: 16px 24px; border-top: 1px solid var(--bo=
+rder); }
+
+.clear-btn { width: 100%; padding: 10px; border-radius: 10px; font-size: 13=
+px; font-weight: 500; color: var(--text-secondary); border: 1px solid var(-=
+-border); transition: 0.15s; text-align: center; display: flex; align-items=
+: center; justify-content: center; gap: 8px; }
+
+.clear-btn svg { width: 16px; height: 16px; }
+
+.clear-btn:hover { border-color: var(--text-muted); color: var(--text-prima=
+ry); background: var(--surface-hover); }
+
+.clear-btn.confirm { background: var(--danger); color: rgb(255, 255, 255); =
+border-color: var(--danger); }
+
+.clear-btn.confirm:hover { opacity: 0.9; }
+
+.chat-area { flex: 1 1 0%; display: flex; flex-direction: column; min-width=
+: 0px; min-height: 0px; overflow: hidden; }
+
+.top-bar { padding: 10px 16px; border-bottom: 1px solid var(--border); disp=
+lay: flex; align-items: center; justify-content: center; gap: 6px; flex-shr=
+ink: 0; }
+
+.mobile-burger { display: none; padding: 6px; border-radius: 6px; flex-shri=
+nk: 0; }
+
+.mobile-burger:hover { background: var(--surface-hover); }
+
+.mobile-burger svg { width: 20px; height: 20px; }
+
+.top-bar-inner { position: relative; display: flex; align-items: center; ju=
+stify-content: center; gap: 6px; width: 100%; }
+
+.model-pills-wrap { display: flex; gap: 2px; background: var(--surface); bo=
+rder: 1px solid var(--border); border-radius: 10px; padding: 3px; }
+
+.model-pill { display: flex; align-items: center; gap: 5px; padding: 6px 14=
+px; border-radius: 8px; font-size: 12px; font-weight: 500; white-space: now=
+rap; border-width: medium; border-style: none; border-color: currentcolor; =
+border-image: none; color: var(--text-muted); transition: 0.12s; text-decor=
+ation: none; cursor: pointer; }
+
+.model-pill:hover { color: var(--text-primary); background: var(--surface-h=
+over); }
+
+.model-pill.active { background: var(--text-primary); color: var(--bg); box=
+-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px; cursor: default; }
+
+.model-pill .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink=
+: 0; }
+
+.model-dropdown-trigger { display: none; align-items: center; gap: 6px; pad=
+ding: 8px 16px; border: 1px solid var(--border); border-radius: 8px; font-s=
+ize: 13px; font-weight: 500; color: var(--text-primary); }
+
+.model-dropdown-trigger .dot { width: 6px; height: 6px; border-radius: 50%;=
+ }
+
+.model-dropdown-trigger svg { width: 12px; height: 12px; color: var(--text-=
+muted); }
+
+.model-dropdown { display: none; position: absolute; top: 100%; left: 50%; =
+transform: translateX(-50%); margin-top: 8px; background: var(--surface); b=
+order: 1px solid var(--border); border-radius: 10px; padding: 6px; min-widt=
+h: 200px; z-index: 50; box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 32px; }
+
+.model-dropdown.open { display: block; }
+
+.model-dropdown-item { display: flex; align-items: center; gap: 8px; paddin=
+g: 8px 12px; border-radius: 6px; font-size: 13px; color: var(--text-seconda=
+ry); transition: 0.12s; width: 100%; text-align: left; }
+
+.model-dropdown-item:hover { background: var(--surface-hover); color: var(-=
+-text-primary); }
+
+.model-dropdown-item.active { color: var(--text-primary); font-weight: 600;=
+ }
+
+.model-dropdown-item .dot { width: 6px; height: 6px; border-radius: 50%; fl=
+ex-shrink: 0; }
+
+.messages-wrap { flex: 1 1 0%; overflow-y: auto; padding: 24px 16px; min-he=
+ight: 0px; }
+
+.messages-col { max-width: 760px; margin: 0px auto; display: flex; flex-dir=
+ection: column; gap: 24px; }
+
+.msg { display: flex; gap: 12px; }
+
+.msg-user { justify-content: flex-end; }
+
+.msg-user .msg-bubble { background: var(--user-bubble-bg); color: var(--use=
+r-bubble-text); border-radius: 10px 10px 2px; padding: 10px 16px; max-width=
+: 75%; font-size: 14px; line-height: 1.6; white-space: pre-wrap; }
+
+.msg-user .msg-avatar { width: 28px; height: 28px; border-radius: 50%; back=
+ground: var(--text-primary); display: flex; align-items: center; justify-co=
+ntent: center; font-size: 11px; font-weight: 600; color: var(--bg); flex-sh=
+rink: 0; order: 1; }
+
+.msg-assistant { align-items: flex-start; }
+
+.msg-assistant .msg-content { max-width: 100%; position: relative; }
+
+.msg-model-label { font-size: 11px; font-weight: 600; font-family: var(--mo=
+no); color: var(--text-muted); margin-bottom: 6px; display: flex; align-ite=
+ms: center; gap: 6px; }
+
+.msg-model-label .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+.msg-actions { display: flex; align-items: center; gap: 4px; margin-top: 8p=
+x; }
+
+.msg-ru-ad { display: none; width: 100%; margin-top: 6px; padding: 0px; fon=
+t-size: 14px; color: var(--text-primary); line-height: 1.6; clear: both; }
+
+@media (max-width: 1024px) {
+  .msg-ru-ad { display: block; }
+}
+
+.msg-ru-ad .prose p { margin: 0px 0px 10px; }
+
+.msg-ru-ad-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.msg-ru-ad-btn { display: inline-flex; align-items: center; gap: 6px; paddi=
+ng: 7px 14px; border-radius: 8px; font-size: 12.5px; font-weight: 600; text=
+-decoration: none; color: rgb(255, 255, 255); transition: filter 0.15s, tra=
+nsform 0.1s; }
+
+.msg-ru-ad-btn:hover { filter: brightness(1.15); color: rgb(255, 255, 255);=
+ }
+
+.msg-ru-ad-btn:active { transform: scale(0.98); }
+
+.msg-ru-ad-btn--tg { background: rgb(34, 158, 217); }
+
+.msg-ru-ad-btn--max { background: linear-gradient(90deg, rgb(57, 92, 244), =
+rgb(151, 81, 214)); }
+
+.msg-ru-ad-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+.msg-action-btn { display: inline-flex; align-items: center; gap: 5px; padd=
+ing: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500; color=
+: var(--text-muted); background: none; border-width: medium; border-style: =
+none; border-color: currentcolor; border-image: none; cursor: pointer; tran=
+sition: 0.12s; }
+
+.msg-action-btn:hover { color: var(--text-primary); background: var(--surfa=
+ce-hover); }
+
+.typing-dots { display: flex; gap: 4px; padding: 8px 0px; }
+
+.typing-dots span { width: 6px; height: 6px; border-radius: 50%; background=
+: var(--text-muted); animation: 1.2s ease-in-out 0s infinite normal none ru=
+nning dotPulse; }
+
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {=20
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.empty-state { flex: 1 1 0%; display: flex; flex-direction: column; align-i=
+tems: center; justify-content: center; padding: 40px 16px; }
+
+.empty-inner { display: flex; flex-direction: column; align-items: center; =
+gap: 24px; width: 100%; max-width: 680px; }
+
+.empty-title { font-size: 22px; font-weight: 600; color: var(--text-primary=
+); }
+
+.empty-input-box { display: flex; align-items: flex-end; gap: 10px; backgro=
+und: var(--surface); border: 1px solid var(--border); border-radius: 20px; =
+padding: 16px 18px; width: 100%; transition: 0.2s; box-shadow: rgba(0, 0, 0=
+, 0.08) 0px 2px 12px; }
+
+.empty-input-box:focus-within { border-color: var(--text-muted); box-shadow=
+: rgba(0, 0, 0, 0.12) 0px 4px 20px; }
+
+.empty-input-box textarea { flex: 1 1 0%; border-width: medium; border-styl=
+e: none; border-color: currentcolor; border-image: none; background: transp=
+arent; resize: none; outline: none; font-family: var(--font); font-size: 16=
+px; color: var(--text-primary); line-height: 1.6; max-height: 160px; min-he=
+ight: 24px; padding: 0px; display: block; }
+
+.empty-input-box textarea::placeholder { color: var(--text-muted); }
+
+.empty-input-box .send-btn { width: 30px; height: 30px; }
+
+.empty-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: c=
+enter; }
+
+.empty-chip { padding: 8px 16px; border: 1px solid var(--border); border-ra=
+dius: 20px; font-size: 13px; color: var(--text-secondary); transition: 0.15=
+s; cursor: pointer; background: none; font-family: var(--font); }
+
+.empty-chip:hover { border-color: var(--text-primary); color: var(--text-pr=
+imary); background: var(--accent-bg); }
+
+.input-area { padding: 0px 16px 16px; flex-shrink: 0; }
+
+.input-col { max-width: 760px; margin: 0px auto; }
+
+.input-box { display: flex; align-items: flex-end; gap: 10px; background: v=
+ar(--surface); border: 1px solid var(--border); border-radius: 16px; paddin=
+g: 14px 16px; transition: 0.2s; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px=
+; }
+
+.input-box:focus-within { border-color: var(--text-muted); box-shadow: rgba=
+(0, 0, 0, 0.1) 0px 2px 12px; }
+
+.input-box textarea { flex: 1 1 0%; border-width: medium; border-style: non=
+e; border-color: currentcolor; border-image: none; background: transparent;=
+ resize: none; outline: none; font-family: var(--font); font-size: 16px; co=
+lor: var(--text-primary); line-height: 1.5; max-height: 160px; min-height: =
+24px; padding: 0px; display: block; }
+
+.input-box textarea::placeholder { color: var(--text-muted); }
+
+.send-btn { width: 30px; height: 30px; border-radius: 50%; background: var(=
+--text-primary); display: flex; align-items: center; justify-content: cente=
+r; flex-shrink: 0; transition: 0.15s; color: var(--bg); }
+
+.send-btn:disabled { opacity: 0.12; cursor: not-allowed; }
+
+.send-btn:not(:disabled):hover { opacity: 0.8; transform: scale(1.05); }
+
+.send-btn svg { width: 16px; height: 16px; }
+
+.stop-btn { width: 30px; height: 30px; border-radius: 50%; background: var(=
+--danger); display: flex; align-items: center; justify-content: center; fle=
+x-shrink: 0; color: rgb(255, 255, 255); transition: 0.15s; }
+
+.stop-btn:hover { opacity: 0.85; transform: scale(1.05); }
+
+.stop-btn svg { width: 14px; height: 14px; }
+
+.input-disclaimer { text-align: center; font-size: 11px; color: var(--text-=
+muted); margin-top: 10px; letter-spacing: 0.01em; }
+
+.msg-error { border: 1px solid var(--border); border-radius: 8px; padding: =
+10px 14px; font-size: 13px; color: var(--text-secondary); display: flex; al=
+ign-items: center; gap: 8px; }
+
+.msg-error button { padding: 4px 10px; border-radius: 4px; font-size: 12px;=
+ font-weight: 500; border: 1px solid; margin-left: auto; transition: 0.12s;=
+ }
+
+.msg-error button:hover { opacity: 0.8; }
+
+.prose { font-size: 15px; line-height: 1.7; color: var(--text-primary); ove=
+rflow-wrap: break-word; }
+
+.prose h1 { font-size: 1.4em; font-weight: 600; margin: 1.2em 0px 0.6em; }
+
+.prose h2 { font-size: 1.2em; font-weight: 600; margin: 1em 0px 0.5em; }
+
+.prose h3 { font-size: 1.05em; font-weight: 600; margin: 0.8em 0px 0.4em; }
+
+.prose p { margin: 0.6em 0px; }
+
+.prose ul, .prose ol { padding-left: 1.5em; margin: 0.5em 0px; }
+
+.prose li { margin: 0.2em 0px; }
+
+.prose blockquote { border-left: 3px solid var(--border); padding-left: 1em=
+; color: var(--text-secondary); margin: 0.8em 0px; }
+
+.prose table { border-collapse: collapse; width: 100%; margin: 0.8em 0px; f=
+ont-size: 0.9em; }
+
+.prose th, .prose td { border: 1px solid var(--border); padding: 6px 12px; =
+text-align: left; }
+
+.prose th { background: var(--surface); font-weight: 500; }
+
+.prose tr:nth-child(2n) td { background: var(--surface); }
+
+.prose code:not(pre code) { background: var(--code-inline-bg); padding: 1px=
+ 6px; border-radius: 4px; font-size: 0.88em; color: var(--text-primary); fo=
+nt-family: var(--mono); }
+
+.prose pre { background: var(--code-bg); border-radius: 8px; overflow: hidd=
+en; margin: 0.8em 0px; }
+
+.prose pre code { display: block; padding: 1em; overflow-x: auto; font-size=
+: 0.88em; line-height: 1.6; font-family: var(--mono); }
+
+.code-block-header { display: flex; justify-content: space-between; align-i=
+tems: center; padding: 6px 12px; background: var(--code-header-bg); font-si=
+ze: 12px; color: var(--text-secondary); font-family: var(--mono); }
+
+.code-copy-btn { padding: 2px 8px; border-radius: 4px; font-size: 11px; col=
+or: var(--text-muted); cursor: pointer; transition: color 0.12s; }
+
+.code-copy-btn:hover { color: var(--text-primary); }
+
+.code-block-header > span:first-child { margin-right: auto; }
+
+.typing-dots[data-ox-status] span { display: none; }
+
+.ox-status { font-family: var(--font); font-style: normal; font-size: 14.5p=
+x; font-weight: 500; line-height: 1.45; white-space: normal; max-width: min=
+(100%, 560px); background-image: ; background-position-x: ; background-posi=
+tion-y: ; background-repeat: ; background-attachment: ; background-origin: =
+; background-color: ; background-size: 250% 100%; background-clip: text; co=
+lor: transparent; -webkit-text-fill-color: transparent; animation: 2.2s lin=
+ear 0s infinite normal none running ox-shimmer; }
+
+@keyframes ox-shimmer {=20
+  0% { background-position: 150% 0px; }
+  100% { background-position: -150% 0px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ox-status { animation: auto ease 0s 1 normal none running none; backgrou=
+nd: none; color: var(--text-secondary); -webkit-text-fill-color: currentcol=
+or; }
+}
+
+.code-dl-btn { padding: 2px 8px; border-radius: 4px; font-size: 11px; color=
+: var(--text-muted); cursor: pointer; transition: color 0.12s; white-space:=
+ nowrap; user-select: none; }
+
+.code-dl-btn:hover, .code-dl-btn:focus-visible { color: var(--text-primary)=
+; outline: none; }
+
+.katex-display { margin: 0.8em 0px; overflow-x: auto; }
+
+.katex { font-size: 1em; }
+
+.sidebar-overlay { display: none; position: fixed; inset: 0px; background: =
+rgba(0, 0, 0, 0.6); z-index: 99; }
+
+@media (max-width: 768px) {
+  .sidebar { position: fixed; left: 0px; top: 0px; bottom: 0px; z-index: 10=
+0; transform: translateX(-100%); width: 280px; }
+  .sidebar.collapsed { width: 280px; }
+  .sidebar.open { transform: translateX(0px); }
+  .sidebar-overlay.open { display: block; }
+  .sidebar-collapse-btn { display: none; }
+  .mobile-burger { display: flex; align-items: center; }
+  .msg-user .msg-bubble { max-width: 90%; }
+  .top-bar { padding: 8px 12px; }
+  .top-bar-inner { justify-content: space-between; }
+  .model-pills-wrap { display: none; }
+  .model-dropdown-trigger { display: flex; }
+  .model-dropdown { left: auto; right: 0px; transform: none; }
+}
+
+.top-bar { display: none; }
+
+.model-pills-wrap, .model-dropdown-trigger, [class^=3D"model-dropdown"] { d=
+isplay: none !important; }
+
+@media (max-width: 768px) {
+  .top-bar { display: flex; border-bottom-width: medium; border-bottom-styl=
+e: none; border-bottom-color: currentcolor; padding: 8px 12px; }
+  .top-bar-inner { justify-content: flex-start; }
+}
+
+.empty-chips { display: none; }
+
+.sidebar-logo-text { display: none; }
+
+.msg-error a[href*=3D"aichat.org"] { display: none !important; }
+
+.msg-ru-ad, .msg-ru-ad-btns { display: none !important; }
+
+:root { --font: -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Disp=
+lay",Inter,"Helvetica Neue",Helvetica,Arial,sans-serif; --brand: #6e56cf; -=
+-brand-2: #9b8aff; --brand-glow: rgba(110,86,207,.22); }
+
+body { -webkit-font-smoothing: antialiased; letter-spacing: -0.005em; }
+
+.sidebar { width: 272px; }
+
+.sidebar-header { padding: 14px 12px 10px; }
+
+.sidebar-logo img { border-radius: 10px; }
+
+.new-chat-btn { border-radius: 12px; padding: 11px 14px; background: var(--=
+text-primary); color: var(--bg); border-width: medium; border-style: none; =
+border-color: currentcolor; border-image: none; font-weight: 600; letter-sp=
+acing: -0.01em; }
+
+.new-chat-btn:hover { background: var(--text-primary); opacity: 0.88; borde=
+r-color: transparent; }
+
+.new-chat-btn svg { opacity: 1; }
+
+.chat-group-label { border-bottom-width: medium; border-bottom-style: none;=
+ border-bottom-color: currentcolor; padding: 18px 12px 6px; font-size: 10.5=
+px; letter-spacing: 0.06em; }
+
+.chat-item { padding: 9px 12px; border-radius: 10px; font-size: 13.5px; }
+
+.chat-item.active { background: var(--surface); box-shadow: inset 0 0 0 1px=
+ var(--border); }
+
+.settings-trigger { border-radius: 10px; padding: 9px 12px; }
+
+.messages-wrap { padding: 36px 20px 12px; }
+
+.messages-col { gap: 30px; max-width: 780px; }
+
+.msg-user .msg-bubble { border-radius: 20px 20px 6px; padding: 12px 18px; f=
+ont-size: 15px; line-height: 1.6; box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2=
+px; }
+
+.msg-user .msg-avatar { display: none; }
+
+.msg-model-label { font-family: var(--font); font-size: 12.5px; font-weight=
+: 600; letter-spacing: 0px; color: var(--text-secondary); margin-bottom: 8p=
+x; }
+
+.msg-model-label .dot { width: 7px; height: 7px; box-shadow: 0 0 10px var(-=
+-brand-2); background: var(--brand) !important; }
+
+.msg-actions { margin-top: 10px; gap: 2px; }
+
+.msg-action-btn { border-radius: 8px; padding: 5px 10px; }
+
+.typing-dots span { background: var(--brand-2); }
+
+.input-area { padding: 0px 20px 18px; }
+
+.input-box, .empty-input-box { border-radius: 24px; padding: 14px 14px 14px=
+ 20px; background: var(--surface); border: 1px solid var(--border); box-sha=
+dow: rgba(0, 0, 0, 0.22) 0px 10px 36px; }
+
+[data-theme=3D"light"] .input-box, [data-theme=3D"light"] .empty-input-box =
+{ box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 36px; }
+
+.input-box:focus-within, .empty-input-box:focus-within { border-color: var(=
+--brand); box-shadow: 0 0 0 4px var(--brand-glow),0 10px 36px rgba(0,0,0,.2=
+2); }
+
+[data-theme=3D"light"] .input-box:focus-within, [data-theme=3D"light"] .emp=
+ty-input-box:focus-within { box-shadow: 0 0 0 4px var(--brand-glow),0 10px =
+36px rgba(0,0,0,.08); }
+
+.input-box textarea, .empty-input-box textarea { font-size: 16px; line-heig=
+ht: 1.55; }
+
+.send-btn, .empty-input-box .send-btn { width: 36px; height: 36px; backgrou=
+nd: var(--brand); color: rgb(255, 255, 255); }
+
+.send-btn:disabled { opacity: 0.28; background: var(--text-muted); }
+
+.send-btn:not(:disabled):hover { opacity: 1; background: var(--brand-2); tr=
+ansform: scale(1.06); }
+
+.stop-btn { width: 36px; height: 36px; background: var(--text-primary); col=
+or: var(--bg); }
+
+.input-disclaimer { font-size: 11.5px; margin-top: 12px; }
+
+.empty-state { padding: 40px 16px 80px; }
+
+.empty-inner { gap: 28px; max-width: 700px; }
+
+.empty-title { font-size: 32px; font-weight: 700; letter-spacing: -0.035em;=
+ background: linear-gradient(92deg, rgb(255, 255, 255) 0%, rgb(196, 181, 25=
+3) 60%, rgb(155, 138, 255) 100%) text; color: transparent; -webkit-text-fil=
+l-color: transparent; text-align: center; }
+
+[data-theme=3D"light"] .empty-title { background: linear-gradient(92deg, rg=
+b(0, 0, 0) 0%, rgb(79, 70, 229) 70%, rgb(110, 86, 207) 100%) text; }
+
+.prose { font-size: 15.5px; line-height: 1.75; }
+
+.prose p { margin: 0.7em 0px; }
+
+.prose pre { border-radius: 14px; border: 1px solid var(--border); }
+
+.prose pre code { padding: 1.1em 1.2em; font-size: 0.86em; }
+
+.code-block-header { padding: 8px 14px; border-bottom: 1px solid var(--bord=
+er); }
+
+.prose code:not(pre code) { border-radius: 6px; padding: 2px 7px; }
+
+.prose blockquote { border-left-color: var(--brand); }
+
+.prose th { background: var(--surface); }
+
+.prose table { border-radius: 10px; overflow: hidden; }
+
+.settings-modal { border-radius: 20px; }
+
+.theme-pill.active { background: var(--brand); color: rgb(255, 255, 255); }
+
+.settings-lang-select:focus { border-color: var(--brand); }
+
+.msg-error { border-radius: 14px; padding: 12px 16px; }
+
+@media (max-width: 768px) {
+  .messages-wrap { padding: 20px 14px 8px; }
+  .input-area { padding: 0px 12px 12px; }
+  .input-box, .empty-input-box { border-radius: 20px; padding: 12px 12px 12=
+px 16px; }
+  .empty-title { font-size: 26px; }
+}
+
+:root { --font: -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Disp=
+lay",Inter,"Helvetica Neue",Helvetica,Arial,sans-serif; --mono: "SF Mono",u=
+i-monospace,"JetBrains Mono",Menlo,Consolas,monospace; --bg: #000; --sideba=
+r-bg: #0a0a0c; --surface: #151518; --surface-hover: #1e1e22; --border: rgba=
+(255,255,255,.09); --text-primary: #f5f5f7; --text-secondary: #a1a1a6; --te=
+xt-muted: #6e6e73; --scrollbar-thumb: #2c2c30; --user-bubble-bg: linear-gra=
+dient(135deg,#7c66e6 0%,#5b46c9 100%); --user-bubble-text: #fff; --input-bg=
+: #151518; --code-bg: #0c0c0f; --code-header-bg: #141418; --code-inline-bg:=
+ rgba(255,255,255,.09); }
+
+[data-theme=3D"light"] { --bg: #fff; --sidebar-bg: #f5f5f7; --surface: #f5f=
+5f7; --surface-hover: #ebebf0; --border: rgba(0,0,0,.08); --text-primary: #=
+1d1d1f; --text-secondary: #6e6e73; --text-muted: #86868b; --scrollbar-thumb=
+: #d2d2d7; --user-bubble-bg: linear-gradient(135deg,#7c66e6 0%,#5b46c9 100%=
+); --user-bubble-text: #fff; --input-bg: #fff; --code-bg: #f5f5f7; --code-h=
+eader-bg: #ebebf0; --code-inline-bg: rgba(0,0,0,.06); }
+
+body { font-size: 15px; letter-spacing: -0.011em; font-feature-settings: "c=
+v01", "cv02", "cv03", "cv04", "cv11", "ss03"; -webkit-font-smoothing: antia=
+liased; text-rendering: optimizelegibility; }
+
+::-webkit-scrollbar { width: 5px; }
+
+::-webkit-scrollbar-thumb { border-radius: 980px; }
+
+.chat-area { position: relative; isolation: isolate; }
+
+.chat-area::before { content: ""; position: absolute; inset: 0px; z-index: =
+0; pointer-events: none; background: radial-gradient(760px 380px at 50% -8%=
+, rgba(110, 86, 207, 0.22), transparent 70%); }
+
+[data-theme=3D"light"] .chat-area::before { background: radial-gradient(760=
+px 380px at 50% -8%, rgba(110, 86, 207, 0.12), transparent 70%); }
+
+.chat-area > * { position: relative; z-index: 1; }
+
+.sidebar { background: var(--sidebar-bg); border-right: 1px solid var(--bor=
+der); transition: width 0.28s cubic-bezier(0.2, 0.65, 0.2, 1); }
+
+.sidebar.collapsed { width: 64px; }
+
+.sidebar-header { padding: 14px 12px 10px; }
+
+.sidebar-logo img { border-radius: 9px; }
+
+.new-chat-btn { background: var(--user-bubble-bg); color: rgb(255, 255, 255=
+); border-width: medium; border-style: none; border-color: currentcolor; bo=
+rder-image: none; border-radius: 12px; padding: 11px 14px; font-weight: 600=
+; box-shadow: rgba(110, 86, 207, 0.8) 0px 10px 24px -12px; transition: tran=
+sform 0.15s, filter 0.15s; }
+
+.new-chat-btn:hover { background: var(--user-bubble-bg); opacity: 1; filter=
+: brightness(1.08); transform: translateY(-1px); }
+
+.new-chat-btn:active { transform: scale(0.98); }
+
+.sidebar.collapsed .new-chat-btn { padding: 11px 0px; border-radius: 12px; =
+}
+
+.chat-group-label { font-size: 10.5px; letter-spacing: 0.07em; color: var(-=
+-text-muted); }
+
+.chat-item { border-radius: 10px; padding: 9px 12px; font-size: 13.5px; tra=
+nsition: background 0.15s, color 0.15s; }
+
+.chat-item.active { background: var(--surface); box-shadow: inset 0 0 0 1px=
+ var(--border); }
+
+.sidebar-collapse-btn, .settings-trigger { border-radius: 10px; }
+
+.messages-wrap { padding: 40px 20px 12px; }
+
+.messages-col { gap: 30px; max-width: 760px; }
+
+.msg { animation: 0.45s cubic-bezier(0.2, 0.65, 0.2, 1) 0s 1 normal both ru=
+nning msgIn; }
+
+@keyframes msgIn {=20
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.msg-user .msg-bubble { background: var(--user-bubble-bg); color: rgb(255, =
+255, 255); border-radius: 22px 22px 6px; padding: 12px 18px; font-size: 15p=
+x; line-height: 1.55; max-width: 70%; box-shadow: rgba(110, 86, 207, 0.9) 0=
+px 12px 30px -16px; letter-spacing: -0.01em; }
+
+.msg-user .msg-avatar { display: none; }
+
+.msg-assistant .msg-content { max-width: 100%; }
+
+.msg-model-label { font-family: var(--font); font-size: 12.5px; font-weight=
+: 600; letter-spacing: -0.005em; color: var(--text-secondary); margin-botto=
+m: 10px; gap: 7px; }
+
+.msg-model-label .dot { width: 7px; height: 7px; box-shadow: 0 0 10px var(-=
+-brand-2); background: var(--brand) !important; }
+
+.prose { font-size: 15.5px; line-height: 1.75; letter-spacing: -0.011em; }
+
+.prose p { margin: 0.75em 0px; }
+
+.prose pre { border-radius: 16px; border: 1px solid var(--border); box-shad=
+ow: rgba(0, 0, 0, 0.7) 0px 14px 40px -30px; }
+
+.prose pre code { padding: 1.1em 1.25em; font-size: 0.86em; line-height: 1.=
+6; }
+
+.code-block-header { padding: 9px 14px; border-bottom: 1px solid var(--bord=
+er); font-size: 11.5px; letter-spacing: 0.02em; }
+
+.prose code:not(pre code) { border-radius: 6px; padding: 2px 7px; font-size=
+: 0.86em; }
+
+.prose blockquote { border-left: 3px solid var(--brand); color: var(--text-=
+secondary); }
+
+.prose a { color: rgb(90, 176, 255); text-decoration: none; }
+
+.prose a:hover { text-decoration: underline; }
+
+.prose table { border-radius: 12px; overflow: hidden; border: 1px solid var=
+(--border); }
+
+.prose th, .prose td { border-top-width: medium; border-right-width: medium=
+; border-left-width: medium; border-top-style: none; border-right-style: no=
+ne; border-left-style: none; border-top-color: currentcolor; border-right-c=
+olor: currentcolor; border-left-color: currentcolor; border-image: none; bo=
+rder-bottom: 1px solid var(--border); }
+
+.prose tr:last-child td { border-bottom-width: medium; border-bottom-style:=
+ none; border-bottom-color: currentcolor; }
+
+.msg-actions { margin-top: 10px; gap: 2px; opacity: 0.55; transition: opaci=
+ty 0.15s; }
+
+.msg:hover .msg-actions { opacity: 1; }
+
+.msg-action-btn { border-radius: 8px; padding: 5px 10px; font-size: 12px; }
+
+.app:has(.stop-btn) .messages-col > .msg-assistant:nth-last-child(2) .prose=
+ > :last-child::after { content: ""; display: inline-block; width: 8px; hei=
+ght: 1.05em; margin-left: 3px; vertical-align: -0.18em; border-radius: 2px;=
+ background: var(--brand-2); animation: 1s steps(2, start) 0s infinite norm=
+al none running oxCaret; }
+
+@keyframes oxCaret {=20
+  100% { visibility: hidden; }
+}
+
+.typing-dots span { background: var(--brand-2); width: 7px; height: 7px; }
+
+.input-area { padding: 0px 20px 16px; }
+
+.input-col { max-width: 760px; }
+
+.input-box, .empty-input-box { border-radius: 26px; padding: 14px 14px 14px=
+ 22px; background: var(--surface); border: 1px solid var(--border); box-sha=
+dow: rgba(0, 0, 0, 0.7) 0px 24px 60px -32px, rgba(255, 255, 255, 0.04) 0px =
+1px 0px inset; backdrop-filter: blur(20px) saturate(160%); transition: bord=
+er-color 0.2s, box-shadow 0.25s, transform 0.25s; }
+
+[data-theme=3D"light"] .input-box, [data-theme=3D"light"] .empty-input-box =
+{ box-shadow: rgba(0, 0, 0, 0.35) 0px 24px 60px -36px, rgba(255, 255, 255, =
+0.8) 0px 1px 0px inset; }
+
+.input-box:focus-within, .empty-input-box:focus-within { border-color: rgba=
+(155, 138, 255, 0.7); box-shadow: 0 0 0 4px var(--brand-glow),0 24px 60px -=
+32px rgba(0,0,0,.7); }
+
+[data-theme=3D"light"] .input-box:focus-within, [data-theme=3D"light"] .emp=
+ty-input-box:focus-within { box-shadow: 0 0 0 4px var(--brand-glow),0 24px =
+60px -36px rgba(0,0,0,.35); }
+
+.input-box textarea, .empty-input-box textarea { font-size: 16px; line-heig=
+ht: 1.55; letter-spacing: -0.011em; }
+
+.input-box textarea::placeholder, .empty-input-box textarea::placeholder { =
+color: var(--text-muted); transition: color 0.2s; }
+
+.send-btn, .empty-input-box .send-btn { width: 38px; height: 38px; backgrou=
+nd: var(--user-bubble-bg); color: rgb(255, 255, 255); box-shadow: rgba(110,=
+ 86, 207, 0.9) 0px 8px 20px -10px; }
+
+.send-btn:disabled { opacity: 0.3; background: var(--text-muted); box-shado=
+w: none; }
+
+.send-btn:not(:disabled):hover { opacity: 1; filter: brightness(1.1); trans=
+form: scale(1.06); }
+
+.stop-btn { width: 38px; height: 38px; background: var(--text-primary); col=
+or: var(--bg); }
+
+.input-disclaimer { font-size: 11.5px; margin-top: 12px; color: var(--text-=
+muted); }
+
+.empty-state { padding: 40px 16px 90px; }
+
+.empty-inner { gap: 30px; max-width: 720px; }
+
+.empty-title { font-size: clamp(30px, 4.2vw, 46px); font-weight: 700; lette=
+r-spacing: -0.04em; line-height: 1.08; background: linear-gradient(92deg, r=
+gb(255, 255, 255) 0%, rgb(196, 181, 253) 55%, rgb(155, 138, 255) 100%) text=
+; color: transparent; -webkit-text-fill-color: transparent; text-align: cen=
+ter; animation: 0.8s cubic-bezier(0.2, 0.65, 0.2, 1) 0s 1 normal both runni=
+ng oxFadeUp; }
+
+[data-theme=3D"light"] .empty-title { background: linear-gradient(92deg, rg=
+b(29, 29, 31) 0%, rgb(79, 70, 229) 65%, rgb(110, 86, 207) 100%) text; }
+
+.empty-input-box { animation: 0.8s cubic-bezier(0.2, 0.65, 0.2, 1) 0.12s 1 =
+normal both running oxFadeUp; }
+
+@keyframes oxFadeUp {=20
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.settings-modal { border-radius: 22px; box-shadow: rgba(0, 0, 0, 0.7) 0px 4=
+0px 120px -40px; }
+
+.theme-pill.active { background: var(--brand); color: rgb(255, 255, 255); }
+
+.settings-item-icon { border-radius: 12px; }
+
+.msg-error { border-radius: 16px; padding: 12px 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .msg, .empty-title, .empty-input-box { animation: auto ease 0s 1 normal n=
+one running none; }
+}
+
+@media (max-width: 768px) {
+  .messages-wrap { padding: 22px 14px 8px; }
+  .input-area { padding: 0px 12px 12px; }
+  .input-box, .empty-input-box { border-radius: 22px; padding: 12px 12px 12=
+px 16px; }
+  .empty-title { font-size: 28px; }
+  .msg-user .msg-bubble { max-width: 86%; }
+  .sidebar, .sidebar.collapsed { width: 280px; }
+}
+
+.input-box textarea, .empty-input-box textarea { min-height: 38px; padding:=
+ 6.5px 0px; box-sizing: border-box; }
+
+.input-box, .empty-input-box { padding: 10px 10px 10px 22px; }
+
+.new-chat-btn, .new-chat-btn:hover { background: var(--text-primary); color=
+: var(--bg); box-shadow: none; filter: none; }
+
+.new-chat-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.new-chat-btn svg { display: none; }
+
+.sidebar.collapsed .new-chat-btn svg { display: block; opacity: 1; }
+
+.msg-model-label { display: none; }
+
+.msg-actions { margin-top: 8px; gap: 2px; opacity: 0.6; }
+
+.msg:hover .msg-actions, .msg-actions:focus-within { opacity: 1; }
+
+.msg-action-btn { font-size: 0px; line-height: 0; width: 32px; height: 32px=
+; padding: 0px; justify-content: center; border-radius: 9px; color: var(--t=
+ext-muted); position: relative; }
+
+.msg-action-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.msg-action-btn:hover { color: var(--text-primary); background: var(--surfa=
+ce-hover); }
+
+.msg-action-btn:has(polyline) { color: rgb(52, 199, 89); }
+
+.msg-action-btn.active { color: var(--brand-2); background: var(--brand-glo=
+w); }
+
+.msg-action-btn.active.down { color: rgb(255, 122, 122); background: rgba(2=
+55, 122, 122, 0.14); }
+
+.msg-action-btn[data-tip]::after { content: attr(data-tip); position: absol=
+ute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%) trans=
+lateY(2px); background: var(--text-primary); color: var(--bg); font-size: 1=
+1px; line-height: 1; font-weight: 600; padding: 6px 8px; border-radius: 7px=
+; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacit=
+y 0.15s, transform 0.15s; }
+
+.msg-action-btn[data-tip]:hover::after { opacity: 1; transform: translateX(=
+-50%); }
+
+.msg-actions .ox-sep { width: 1px; height: 16px; background: var(--border);=
+ margin: 0px 4px; }
+
+.ox-retry { display: none; }
+
+.messages-col > .msg-assistant:nth-last-child(2) .ox-retry { display: inlin=
+e-flex; }
+
+.app:has(.stop-btn) .ox-retry { display: none; }
+
+@media (max-width: 768px) {
+  .mobile-burger { width: 40px; height: 40px; justify-content: center; bord=
+er-radius: 10px; }
+}
+
+.msg-action-btn:has(polyline) { color: var(--text-muted); }
+
+.msg-action-btn:not(.ox-up):not(.ox-down):not(.ox-retry):has(polyline) { co=
+lor: rgb(52, 199, 89); }
+
+.ox-retry { color: var(--text-primary); }
+
+.ox-retry:hover { color: var(--text-primary); background: var(--surface-hov=
+er); }
+
+.ox-jump { position: absolute; left: 50%; bottom: 112px; transform: transla=
+teX(-50%) translateY(8px); z-index: 5; display: none; align-items: center; =
+gap: 6px; padding: 9px 14px; border-radius: 980px; background: var(--text-p=
+rimary); color: var(--bg); font-size: 12.5px; font-weight: 600; box-shadow:=
+ rgba(0, 0, 0, 0.6) 0px 10px 30px -10px; opacity: 0; transition: opacity 0.=
+2s, transform 0.2s; cursor: pointer; border-width: medium; border-style: no=
+ne; border-color: currentcolor; border-image: none; font-family: var(--font=
+); }
+
+.ox-jump.show { display: inline-flex; opacity: 1; transform: translateX(-50=
+%); }
+
+.ox-jump svg { width: 14px; height: 14px; }
+
+.msg-action-btn.ox-retry:hover { color: var(--text-primary); background: va=
+r(--surface-hover); }
+
+.prose .code-block-header { display: flex; align-items: center; gap: 4px; m=
+argin: 1em 0px 0px; padding: 6px 8px 6px 16px; min-height: 40px; background=
+: var(--code-header-bg); border: 1px solid var(--border); border-radius: 14=
+px 14px 0px 0px; font-family: var(--font); font-size: 12px; font-weight: 50=
+0; letter-spacing: 0.01em; color: var(--text-secondary); position: relative=
+; z-index: 1; }
+
+.prose .code-block-header > span:first-child { margin-right: auto; color: v=
+ar(--text-muted); font-weight: 500; letter-spacing: 0.02em; text-transform:=
+ lowercase; user-select: none; }
+
+.prose .code-block-header + pre { margin: 0px 0px 1em; border-radius: 0px 0=
+px 14px 14px; border-right-color: ; border-right-style: ; border-right-widt=
+h: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; b=
+order-left-color: ; border-left-style: ; border-left-width: ; border-image-=
+source: ; border-image-slice: ; border-image-width: ; border-image-outset: =
+; border-image-repeat: ; border-top: 0px; background: var(--code-bg); box-s=
+hadow: rgba(0, 0, 0, 0.55) 0px 18px 40px -30px; }
+
+.prose pre code, .prose pre code.hljs { background: transparent; padding: 1=
+6px 18px; font-size: 0.84em; line-height: 1.65; -webkit-font-smoothing: ant=
+ialiased; }
+
+.prose pre code::-webkit-scrollbar { height: 8px; }
+
+.prose pre code::-webkit-scrollbar-thumb { background: var(--scrollbar-thum=
+b); border-radius: 8px; border: 2px solid var(--code-bg); }
+
+.code-copy-btn, .code-dl-btn { display: inline-flex; align-items: center; g=
+ap: 6px; height: 28px; padding: 0px 10px; border-radius: 8px; font-family: =
+var(--font); font-size: 12px; font-weight: 500; font-style: normal; line-he=
+ight: 1; color: var(--text-secondary); cursor: pointer; user-select: none; =
+white-space: nowrap; transition: background-color 0.15s, color 0.15s, trans=
+form 0.1s; }
+
+.code-copy-btn:hover, .code-dl-btn:hover { color: var(--text-primary); back=
+ground: var(--surface-hover); }
+
+.code-copy-btn:active, .code-dl-btn:active { transform: scale(0.96); }
+
+.code-copy-btn:focus-visible, .code-dl-btn:focus-visible { outline: none; b=
+ox-shadow: 0 0 0 2px var(--brand); }
+
+.code-copy-btn::before, .code-dl-btn::before { content: ""; width: 14px; he=
+ight: 14px; flex-shrink: 0; background-color: currentcolor; mask: var(--ico=
+) center/contain no-repeat; transition: transform 0.15s; }
+
+.code-copy-btn { --ico: url("data:image/svg+xml,%3Csvg xmlns=3D'http://www.=
+w3.org/2000/svg' viewBox=3D'0 0 24 24' fill=3D'none' stroke=3D'black' strok=
+e-width=3D'2' stroke-linecap=3D'round' stroke-linejoin=3D'round'%3E%3Crect =
+x=3D'9' y=3D'9' width=3D'13' height=3D'13' rx=3D'2.5'/%3E%3Cpath d=3D'M5 15=
+H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'/%3E%3C/svg%3E"); }
+
+.code-dl-btn { --ico: url("data:image/svg+xml,%3Csvg xmlns=3D'http://www.w3=
+.org/2000/svg' viewBox=3D'0 0 24 24' fill=3D'none' stroke=3D'black' stroke-=
+width=3D'2' stroke-linecap=3D'round' stroke-linejoin=3D'round'%3E%3Cpath d=
+=3D'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points=3D'7 1=
+0 12 15 17 10'/%3E%3Cline x1=3D'12' y1=3D'15' x2=3D'12' y2=3D'3'/%3E%3C/svg=
+%3E"); }
+
+.code-copy-btn.is-done, .code-dl-btn.is-done { --ico: url("data:image/svg+x=
+ml,%3Csvg xmlns=3D'http://www.w3.org/2000/svg' viewBox=3D'0 0 24 24' fill=
+=3D'none' stroke=3D'black' stroke-width=3D'2' stroke-linecap=3D'round' stro=
+ke-linejoin=3D'round'%3E%3Cpolyline points=3D'20 6 9 17 4 12'/%3E%3C/svg%3E=
+"); color: var(--text-primary); }
+
+.code-copy-btn.is-done::before, .code-dl-btn.is-done::before { transform: s=
+cale(1.1); }
+
+@media (max-width: 480px) {
+  .prose .code-block-header { padding: 6px 6px 6px 14px; min-height: 38px; =
+}
+  .code-copy-btn, .code-dl-btn { font-size: 0px; gap: 0px; padding: 0px 8px=
+; }
+}
+
+.ox-drawer-close { display: none; }
+
+@media (max-width: 768px) {
+  .sidebar, .sidebar.collapsed { width: min(86vw, 320px); border-right-widt=
+h: medium; border-right-style: none; border-right-color: currentcolor; bord=
+er-radius: 0px 22px 22px 0px; box-shadow: 0 0 0 1px var(--border),30px 0 90=
+px -30px rgba(0,0,0,.7); transition: transform 0.32s cubic-bezier(0.2, 0.7,=
+ 0.2, 1); will-change: transform; padding-top: env(safe-area-inset-top); pa=
+dding-bottom: env(safe-area-inset-bottom); }
+  .sidebar-overlay { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(=
+6px); }
+  .sidebar.collapsed .sidebar-header, .sidebar-header { padding: 14px 14px =
+10px; }
+  .sidebar.collapsed .sidebar-header-top, .sidebar-header-top { justify-con=
+tent: space-between; margin-bottom: 14px; }
+  .sidebar.collapsed .sidebar-logo { display: flex; }
+  .sidebar-logo-text { display: block; font-size: 15.5px; font-weight: 600;=
+ }
+  .ox-drawer-close { display: flex; align-items: center; justify-content: c=
+enter; width: 38px; height: 38px; margin-left: auto; border-radius: 11px; c=
+olor: var(--text-muted); flex-shrink: 0; }
+  .ox-drawer-close:active { background: var(--surface); color: var(--text-p=
+rimary); }
+  .ox-drawer-close svg { width: 18px; height: 18px; }
+  .sidebar.collapsed .new-chat-btn, .new-chat-btn { min-height: 46px; paddi=
+ng: 12px 14px; gap: 8px; justify-content: center; border-radius: 14px; font=
+-size: 14.5px; }
+  .sidebar.collapsed .new-chat-label { display: inline; }
+  .sidebar.collapsed .new-chat-btn svg { display: none; }
+  .sidebar.collapsed .sidebar-chats, .sidebar-chats { padding: 4px 10px; }
+  .sidebar.collapsed .chat-group-label, .chat-group-label { font-size: 10.5=
+px; letter-spacing: 0.07em; padding: 18px 12px 6px; border-bottom-width: me=
+dium; border-bottom-style: none; border-bottom-color: currentcolor; }
+  .sidebar.collapsed .chat-item, .chat-item { min-height: 46px; padding: 10=
+px 6px 10px 14px; justify-content: flex-start; border-radius: 12px; font-si=
+ze: 14px; }
+  .sidebar.collapsed .chat-item-title { width: auto; flex: 1 1 0%; font-siz=
+e: 14px; }
+  .sidebar.collapsed .chat-item-title::first-letter { font-size: inherit; }
+  .chat-item-delete, .sidebar.collapsed .chat-item-delete { display: flex; =
+align-items: center; justify-content: center; opacity: 0.45; width: 34px; h=
+eight: 34px; padding: 0px; font-size: 17px; border-radius: 9px; }
+  .chat-item:active .chat-item-delete, .chat-item-delete:active { opacity: =
+1; }
+  .sidebar.collapsed .chat-item.active, .chat-item.active { background: var=
+(--surface); box-shadow: inset 0 0 0 1px var(--border); }
+  .sidebar.collapsed .sidebar-bottom, .sidebar-bottom { padding: 10px; }
+  .sidebar.collapsed .settings-trigger, .settings-trigger { min-height: 46p=
+x; justify-content: flex-start; padding: 10px 14px; border-radius: 12px; fo=
+nt-size: 14px; }
+  .sidebar.collapsed .settings-label { display: inline; }
+  .sidebar.collapsed .sidebar-bot-links, .sidebar.collapsed .sidebar-app-li=
+nks { display: none; }
+}
+
+.ox-verify { position: fixed; inset: 0px; z-index: 700; display: flex; alig=
+n-items: center; justify-content: center; padding: 16px; background: rgba(0=
+, 0, 0, 0.55); backdrop-filter: blur(8px); opacity: 0; transition: opacity =
+0.2s; }
+
+.ox-verify.show { opacity: 1; }
+
+.ox-verify-card { width: 400px; max-width: 100%; background: var(--bg); bor=
+der: 1px solid var(--border); border-radius: 22px; padding: 28px 26px 20px;=
+ box-shadow: rgba(0, 0, 0, 0.7) 0px 40px 120px -40px; text-align: center; t=
+ransform: translateY(12px) scale(0.98); transition: transform 0.28s cubic-b=
+ezier(0.2, 0.7, 0.2, 1); }
+
+.ox-verify.show .ox-verify-card { transform: none; }
+
+.ox-verify-icon { width: 54px; height: 54px; margin: 0px auto 14px; border-=
+radius: 17px; background: var(--surface); border: 1px solid var(--border); =
+display: flex; align-items: center; justify-content: center; color: var(--b=
+rand); }
+
+.ox-verify-icon svg { width: 26px; height: 26px; }
+
+.ox-verify-card h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.=
+02em; margin: 0px 0px 6px; color: var(--text-primary); font-family: var(--f=
+ont); }
+
+.ox-verify-card p { font-size: 13.5px; line-height: 1.5; color: var(--text-=
+secondary); margin: 0px 0px 18px; }
+
+.ox-verify-widget { min-height: 65px; display: flex; justify-content: cente=
+r; align-items: center; font-size: 13px; color: var(--text-muted); }
+
+.ox-verify-cancel { margin-top: 12px; padding: 8px 14px; border-radius: 10p=
+x; font-size: 13px; color: var(--text-muted); transition: background 0.15s,=
+ color 0.15s; }
+
+.ox-verify-cancel:hover { color: var(--text-primary); background: var(--sur=
+face); }
+
+@media (max-width: 480px) {
+  .ox-verify { align-items: flex-end; padding: 10px; }
+  .ox-verify-card { padding: 24px 20px 16px; border-radius: 22px; }
+}
+
+.ox-attach { width: 38px; height: 38px; border-radius: 50%; display: flex; =
+align-items: center; justify-content: center; color: var(--text-muted); fle=
+x-shrink: 0; cursor: pointer; transition: background 0.15s, color 0.15s, tr=
+ansform 0.1s; margin-bottom: 0px; }
+
+.ox-attach:hover { color: var(--text-primary); background: var(--surface-ho=
+ver); }
+
+.ox-attach:active { transform: scale(0.94); }
+
+.ox-attach svg { width: 20px; height: 20px; }
+
+.ox-attach input { display: none; }
+
+.input-box.ox-has-strip, .empty-input-box.ox-has-strip, .input-box:has(.ox-=
+attach-strip), .empty-input-box:has(.ox-attach-strip) { flex-wrap: wrap; }
+
+.ox-attach-strip { flex-basis: 100%; display: flex; gap: 10px; padding: 2px=
+ 0px 8px; }
+
+.ox-chip { position: relative; width: 64px; height: 64px; border-radius: 12=
+px; overflow: hidden; border: 1px solid var(--border); background: var(--su=
+rface); flex-shrink: 0; }
+
+.ox-chip img { width: 100%; height: 100%; object-fit: cover; display: block=
+; }
+
+.ox-chip button { position: absolute; top: 4px; right: 4px; width: 20px; he=
+ight: 20px; border-radius: 50%; background: rgba(0, 0, 0, 0.72); color: rgb=
+(255, 255, 255); font-size: 14px; line-height: 1; display: flex; align-item=
+s: center; justify-content: center; cursor: pointer; }
+
+.ox-chip button:hover { background: rgb(0, 0, 0); }
+
+.input-box.ox-dragover, .empty-input-box.ox-dragover { box-shadow: 0 0 0 3p=
+x var(--brand-glow),0 0 0 1px var(--brand); }
+
+.msg-user.ox-has-imgs { flex-wrap: wrap; row-gap: 6px; }
+
+.ox-imgs { flex-basis: 100%; display: flex; gap: 8px; flex-wrap: wrap; just=
+ify-content: flex-end; }
+
+.ox-imgs a { display: block; border-radius: 18px; overflow: hidden; box-sha=
+dow: rgba(0, 0, 0, 0.6) 0px 12px 30px -16px; border: 1px solid var(--border=
+); transition: transform 0.15s; }
+
+.ox-imgs a:hover { transform: translateY(-1px); }
+
+.ox-imgs img { display: block; max-width: min(360px, 70vw); max-height: 360=
+px; object-fit: cover; }
+
+.ox-toast { position: fixed; left: 50%; bottom: 110px; transform: translate=
+X(-50%) translateY(6px); z-index: 800; background: var(--text-primary); col=
+or: var(--bg); padding: 10px 16px; border-radius: 12px; font-size: 13px; fo=
+nt-weight: 500; box-shadow: rgba(0, 0, 0, 0.6) 0px 14px 40px -14px; opacity=
+: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; max-wi=
+dth: calc(-32px + 100vw); text-align: center; }
+
+.ox-toast.show { opacity: 1; transform: translateX(-50%); }
+
+@media (max-width: 480px) {
+  .ox-chip { width: 56px; height: 56px; }
+  .ox-imgs img { max-width: min(86vw, 320px); max-height: 280px; }
+}
+
+.ox-note { display: flex; align-items: center; gap: 12px; margin: 0px auto =
+10px; max-width: 820px; padding: 10px 12px 10px 14px; border-radius: 14px; =
+background: var(--surface); border: 1px solid var(--border); color: var(--t=
+ext-secondary); font-size: 13px; line-height: 1.45; }
+
+.ox-note b { color: var(--text-primary); font-weight: 600; }
+
+.ox-note button { margin-left: auto; width: 28px; height: 28px; border-radi=
+us: 8px; color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
+
+.ox-note button:hover { color: var(--text-primary); background: var(--surfa=
+ce-hover); }
+
+.ox-fchip { display: flex; align-items: center; gap: 9px; padding: 8px 10px=
+; border-radius: 12px; border: 1px solid var(--border); background: var(--s=
+urface); max-width: 230px; position: relative; font-family: var(--font); te=
+xt-align: left; }
+
+.ox-fchip-ico { font-size: 18px; flex-shrink: 0; }
+
+.ox-fchip-info { display: flex; flex-direction: column; min-width: 0px; }
+
+.ox-fchip-info b { font-size: 12.5px; font-weight: 600; color: var(--text-p=
+rimary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ox-fchip-info i { font-style: normal; font-size: 11px; color: var(--text-m=
+uted); }
+
+.ox-fchip > button { width: 20px; height: 20px; border-radius: 50%; backgro=
+und: rgba(0, 0, 0, 0.55); color: rgb(255, 255, 255); font-size: 13px; line-=
+height: 1; display: flex; align-items: center; justify-content: center; fle=
+x-shrink: 0; margin-left: 2px; }
+
+.ox-fchip > button:hover { background: rgb(0, 0, 0); }
+
+.ox-fchip-sent { cursor: pointer; box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 2=
+6px -18px; transition: transform 0.15s; }
+
+.ox-fchip-sent:hover { transform: translateY(-1px); }
+
+.msg-user { position: relative; }
+
+.ox-edit-btn { position: absolute; left: -2px; top: 50%; transform: transla=
+teY(-50%) translateX(-100%); width: 30px; height: 30px; border-radius: 8px;=
+ display: flex; align-items: center; justify-content: center; color: var(--=
+text-muted); opacity: 0; transition: opacity 0.15s, background 0.15s, color=
+ 0.15s; flex-shrink: 0; }
+
+.msg-user:hover .ox-edit-btn { opacity: 0.7; }
+
+.ox-edit-btn:hover { opacity: 1; color: var(--text-primary); background: va=
+r(--surface-hover); }
+
+.ox-edit-btn svg { width: 15px; height: 15px; }
+
+@media (max-width: 768px) {
+  .ox-edit-btn { opacity: 0.6; left: auto; right: 0px; top: -6px; transform=
+: none; }
+}
+
+.ox-edit-box { width: 100%; max-width: 640px; margin-left: auto; background=
+: var(--surface); border: 1px solid var(--border); border-radius: 16px; pad=
+ding: 12px; }
+
+.ox-edit-box textarea { width: 100%; background: none; border-width: medium=
+; border-style: none; border-color: currentcolor; border-image: none; color=
+: var(--text-primary); font-family: var(--font); font-size: 15px; line-heig=
+ht: 1.5; resize: vertical; outline: none; min-height: 44px; }
+
+.ox-edit-actions { display: flex; justify-content: flex-end; gap: 8px; marg=
+in-top: 8px; }
+
+.ox-edit-actions button { padding: 7px 14px; border-radius: 10px; font-size=
+: 13px; font-weight: 500; transition: filter 0.15s, background 0.15s; }
+
+.ox-edit-save { background: var(--user-bubble-bg); color: rgb(255, 255, 255=
+); }
+
+.ox-edit-save:hover { filter: brightness(1.1); }
+
+.ox-edit-cancel { color: var(--text-secondary); }
+
+.ox-edit-cancel:hover { background: var(--surface-hover); color: var(--text=
+-primary); }
+
+.ox-continue-bar { margin-top: 12px; }
+
+.ox-continue-btn { display: inline-flex; align-items: center; gap: 7px; pad=
+ding: 8px 16px; border-radius: 980px; background: var(--surface); border: 1=
+px solid var(--border); color: var(--text-primary); font-size: 13.5px; font=
+-weight: 500; transition: background 0.15s, transform 0.1s; }
+
+.ox-continue-btn:hover { background: var(--surface-hover); }
+
+.ox-continue-btn:active { transform: scale(0.97); }
+
+.ox-continue-btn svg { width: 15px; height: 15px; }
+
+.ox-cc { position: relative; margin: 0px 4px 8px; padding: 14px 14px 13px; =
+border-radius: 16px; overflow: hidden; background: radial-gradient(120% 120=
+% at 0% 0%, rgb(36, 27, 69) 0%, rgb(21, 18, 31) 55%, rgb(16, 14, 24) 100%);=
+ border: 1px solid rgba(150, 120, 255, 0.28); box-shadow: rgba(120, 90, 255=
+, 0.7) 0px 14px 34px -18px; color: rgb(243, 241, 255); font-family: var(--f=
+ont); }
+
+.ox-cc-badge { position: absolute; top: 11px; right: 34px; font-size: 10px;=
+ font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color=
+: rgb(201, 188, 255); background: rgba(150, 120, 255, 0.16); border: 1px so=
+lid rgba(150, 120, 255, 0.32); padding: 2px 7px; border-radius: 980px; }
+
+.ox-cc-x { position: absolute; top: 8px; right: 8px; width: 20px; height: 2=
+0px; border-radius: 6px; color: rgb(169, 159, 208); font-size: 16px; line-h=
+eight: 1; display: flex; align-items: center; justify-content: center; tran=
+sition: background 0.15s, color 0.15s; }
+
+.ox-cc-x:hover { background: rgba(255, 255, 255, 0.1); color: rgb(255, 255,=
+ 255); }
+
+.ox-cc-head { display: flex; align-items: center; gap: 8px; margin-bottom: =
+11px; }
+
+.ox-cc-logo { width: 24px; height: 24px; border-radius: 8px; display: flex;=
+ align-items: center; justify-content: center; background: linear-gradient(=
+135deg, rgb(124, 92, 255), rgb(176, 107, 255)); color: rgb(255, 255, 255); =
+flex-shrink: 0; }
+
+.ox-cc-logo svg { width: 14px; height: 14px; }
+
+.ox-cc-head b { font-size: 14px; font-weight: 700; letter-spacing: -0.01em;=
+ }
+
+.ox-cc-avatars { display: flex; margin-bottom: 11px; }
+
+.ox-cc-av { width: 34px; height: 34px; border-radius: 50%; overflow: hidden=
+; display: flex; align-items: center; justify-content: center; border: 2px =
+solid rgb(21, 18, 31); margin-left: -9px; box-shadow: rgba(0, 0, 0, 0.4) 0p=
+x 2px 6px; background: rgb(36, 27, 69); }
+
+.ox-cc-av:first-child { margin-left: 0px; }
+
+.ox-cc-av svg { width: 19px; height: 19px; }
+
+.ox-cc-av img { width: 100%; height: 100%; object-fit: cover; display: bloc=
+k; }
+
+.ox-cc-desc { font-size: 12px; line-height: 1.45; color: rgb(200, 194, 230)=
+; margin: 0px 0px 12px; }
+
+.ox-cc-btn { display: flex; align-items: center; justify-content: center; g=
+ap: 6px; width: 100%; padding: 9px 12px; border-radius: 11px; background: l=
+inear-gradient(135deg, rgb(124, 92, 255), rgb(157, 107, 255)); color: rgb(2=
+55, 255, 255); font-size: 13px; font-weight: 600; text-decoration: none; tr=
+ansition: filter 0.15s, transform 0.1s; box-shadow: rgba(124, 92, 255, 0.9)=
+ 0px 8px 20px -10px; }
+
+.ox-cc-btn:hover { filter: brightness(1.08); color: rgb(255, 255, 255); }
+
+.ox-cc-btn:active { transform: scale(0.98); }
+
+.ox-cc-btn svg { width: 14px; height: 14px; }
+
+.sidebar.collapsed .ox-cc { display: none; }
+
+@media (max-width: 768px) {
+  .sidebar.collapsed .ox-cc { display: block; }
+}
+
+.ox-ad-msg { margin: 4px 0px; }
+
+.ox-ad-msg .msg-content { max-width: 100%; }
+
+.ox-ad-label { display: flex; align-items: center; gap: 7px; margin-bottom:=
+ 5px; }
+
+.ox-ad-ava { width: 20px; height: 20px; border-radius: 50%; object-fit: cov=
+er; flex-shrink: 0; background: rgb(36, 27, 69); }
+
+.ox-ad-pill { font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; t=
+ext-transform: uppercase; color: var(--text-muted); border: 1px solid var(-=
+-border); border-radius: 980px; padding: 1px 6px; }
+
+.ox-ad-body { border-left: 2px solid rgba(150, 120, 255, 0.5); padding: 0px=
+ 0px 0px 11px; }
+
+.ox-ad-text { margin: 0px; font-size: 13.5px; line-height: 1.45; color: var=
+(--text-primary); }
+
+.ox-ad-cta { display: inline-flex; align-items: center; gap: 6px; margin-to=
+p: 8px; padding: 6px 12px; border-radius: 10px; background: linear-gradient=
+(135deg, rgb(124, 92, 255), rgb(157, 107, 255)); color: rgb(255, 255, 255);=
+ font-size: 13px; font-weight: 600; text-decoration: none; transition: filt=
+er 0.15s, transform 0.1s; box-shadow: rgba(124, 92, 255, 0.9) 0px 8px 20px =
+-12px; }
+
+.ox-ad-cta:hover { filter: brightness(1.08); color: rgb(255, 255, 255); }
+
+.ox-ad-cta:active { transform: scale(0.98); }
+
+.ox-ad-cta svg { width: 14px; height: 14px; }
+
+.ox-ad-in { animation: 0.3s ease 0s 1 normal both running ox-ad-fade; }
+
+@keyframes ox-ad-fade {=20
+  0% { opacity: 0; transform: translateY(3px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.ox-ad-typing { display: flex; gap: 5px; padding: 3px 0px; }
+
+.ox-ad-typing span { width: 7px; height: 7px; border-radius: 50%; backgroun=
+d: var(--brand-2,#9d6bff); animation: 1.2s ease-in-out 0s infinite normal n=
+one running ox-ad-dot; }
+
+.ox-ad-typing span:nth-child(2) { animation-delay: 0.18s; }
+
+.ox-ad-typing span:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes ox-ad-dot {=20
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0px); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://oxalpha.com/vendor/css/katex.min.css
+
+@charset "utf-8";
+
+@font-face { font-family: KaTeX_AMS; font-style: normal; font-weight: 400; =
+src: url("../fonts/KaTeX_AMS-Regular.woff2") format("woff2"), url("../fonts=
+/KaTeX_AMS-Regular.woff") format("woff"), url("../fonts/KaTeX_AMS-Regular.t=
+tf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Caligraphic; font-style: normal; font-weigh=
+t: 700; src: url("../fonts/KaTeX_Caligraphic-Bold.woff2") format("woff2"), =
+url("../fonts/KaTeX_Caligraphic-Bold.woff") format("woff"), url("../fonts/K=
+aTeX_Caligraphic-Bold.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Caligraphic; font-style: normal; font-weigh=
+t: 400; src: url("../fonts/KaTeX_Caligraphic-Regular.woff2") format("woff2"=
+), url("../fonts/KaTeX_Caligraphic-Regular.woff") format("woff"), url("../f=
+onts/KaTeX_Caligraphic-Regular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Fraktur; font-style: normal; font-weight: 7=
+00; src: url("../fonts/KaTeX_Fraktur-Bold.woff2") format("woff2"), url("../=
+fonts/KaTeX_Fraktur-Bold.woff") format("woff"), url("../fonts/KaTeX_Fraktur=
+-Bold.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Fraktur; font-style: normal; font-weight: 4=
+00; src: url("../fonts/KaTeX_Fraktur-Regular.woff2") format("woff2"), url("=
+../fonts/KaTeX_Fraktur-Regular.woff") format("woff"), url("../fonts/KaTeX_F=
+raktur-Regular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Main; font-style: normal; font-weight: 700;=
+ src: url("../fonts/KaTeX_Main-Bold.woff2") format("woff2"), url("../fonts/=
+KaTeX_Main-Bold.woff") format("woff"), url("../fonts/KaTeX_Main-Bold.ttf") =
+format("truetype"); }
+
+@font-face { font-family: KaTeX_Main; font-style: italic; font-weight: 700;=
+ src: url("../fonts/KaTeX_Main-BoldItalic.woff2") format("woff2"), url("../=
+fonts/KaTeX_Main-BoldItalic.woff") format("woff"), url("../fonts/KaTeX_Main=
+-BoldItalic.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Main; font-style: italic; font-weight: 400;=
+ src: url("../fonts/KaTeX_Main-Italic.woff2") format("woff2"), url("../font=
+s/KaTeX_Main-Italic.woff") format("woff"), url("../fonts/KaTeX_Main-Italic.=
+ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Main; font-style: normal; font-weight: 400;=
+ src: url("../fonts/KaTeX_Main-Regular.woff2") format("woff2"), url("../fon=
+ts/KaTeX_Main-Regular.woff") format("woff"), url("../fonts/KaTeX_Main-Regul=
+ar.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Math; font-style: italic; font-weight: 700;=
+ src: url("../fonts/KaTeX_Math-BoldItalic.woff2") format("woff2"), url("../=
+fonts/KaTeX_Math-BoldItalic.woff") format("woff"), url("../fonts/KaTeX_Math=
+-BoldItalic.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Math; font-style: italic; font-weight: 400;=
+ src: url("../fonts/KaTeX_Math-Italic.woff2") format("woff2"), url("../font=
+s/KaTeX_Math-Italic.woff") format("woff"), url("../fonts/KaTeX_Math-Italic.=
+ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_SansSerif; font-style: normal; font-weight:=
+ 700; src: url("../fonts/KaTeX_SansSerif-Bold.woff2") format("woff2"), url(=
+"../fonts/KaTeX_SansSerif-Bold.woff") format("woff"), url("../fonts/KaTeX_S=
+ansSerif-Bold.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_SansSerif; font-style: italic; font-weight:=
+ 400; src: url("../fonts/KaTeX_SansSerif-Italic.woff2") format("woff2"), ur=
+l("../fonts/KaTeX_SansSerif-Italic.woff") format("woff"), url("../fonts/KaT=
+eX_SansSerif-Italic.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_SansSerif; font-style: normal; font-weight:=
+ 400; src: url("../fonts/KaTeX_SansSerif-Regular.woff2") format("woff2"), u=
+rl("../fonts/KaTeX_SansSerif-Regular.woff") format("woff"), url("../fonts/K=
+aTeX_SansSerif-Regular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Script; font-style: normal; font-weight: 40=
+0; src: url("../fonts/KaTeX_Script-Regular.woff2") format("woff2"), url("..=
+/fonts/KaTeX_Script-Regular.woff") format("woff"), url("../fonts/KaTeX_Scri=
+pt-Regular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Size1; font-style: normal; font-weight: 400=
+; src: url("../fonts/KaTeX_Size1-Regular.woff2") format("woff2"), url("../f=
+onts/KaTeX_Size1-Regular.woff") format("woff"), url("../fonts/KaTeX_Size1-R=
+egular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Size2; font-style: normal; font-weight: 400=
+; src: url("../fonts/KaTeX_Size2-Regular.woff2") format("woff2"), url("../f=
+onts/KaTeX_Size2-Regular.woff") format("woff"), url("../fonts/KaTeX_Size2-R=
+egular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Size3; font-style: normal; font-weight: 400=
+; src: url("../fonts/KaTeX_Size3-Regular.woff2") format("woff2"), url("../f=
+onts/KaTeX_Size3-Regular.woff") format("woff"), url("../fonts/KaTeX_Size3-R=
+egular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Size4; font-style: normal; font-weight: 400=
+; src: url("../fonts/KaTeX_Size4-Regular.woff2") format("woff2"), url("../f=
+onts/KaTeX_Size4-Regular.woff") format("woff"), url("../fonts/KaTeX_Size4-R=
+egular.ttf") format("truetype"); }
+
+@font-face { font-family: KaTeX_Typewriter; font-style: normal; font-weight=
+: 400; src: url("../fonts/KaTeX_Typewriter-Regular.woff2") format("woff2"),=
+ url("../fonts/KaTeX_Typewriter-Regular.woff") format("woff"), url("../font=
+s/KaTeX_Typewriter-Regular.ttf") format("truetype"); }
+
+.katex { font: 1.21em / 1.2 KaTeX_Main, "Times New Roman", serif; text-inde=
+nt: 0px; text-rendering: auto; }
+
+.katex * { border-color: currentcolor; }
+
+.katex .katex-version::after { content: "0.16.21"; }
+
+.katex .katex-mathml { clip: rect(1px, 1px, 1px, 1px); border: 0px; height:=
+ 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; }
+
+.katex .katex-html > .newline { display: block; }
+
+.katex .base { position: relative; white-space: nowrap; width: min-content;=
+ }
+
+.katex .base, .katex .strut { display: inline-block; }
+
+.katex .textbf { font-weight: 700; }
+
+.katex .textit { font-style: italic; }
+
+.katex .textrm { font-family: KaTeX_Main; }
+
+.katex .textsf { font-family: KaTeX_SansSerif; }
+
+.katex .texttt { font-family: KaTeX_Typewriter; }
+
+.katex .mathnormal { font-family: KaTeX_Math; font-style: italic; }
+
+.katex .mathit { font-family: KaTeX_Main; font-style: italic; }
+
+.katex .mathrm { font-style: normal; }
+
+.katex .mathbf { font-family: KaTeX_Main; font-weight: 700; }
+
+.katex .boldsymbol { font-family: KaTeX_Math; font-style: italic; font-weig=
+ht: 700; }
+
+.katex .amsrm, .katex .mathbb, .katex .textbb { font-family: KaTeX_AMS; }
+
+.katex .mathcal { font-family: KaTeX_Caligraphic; }
+
+.katex .mathfrak, .katex .textfrak { font-family: KaTeX_Fraktur; }
+
+.katex .mathboldfrak, .katex .textboldfrak { font-family: KaTeX_Fraktur; fo=
+nt-weight: 700; }
+
+.katex .mathtt { font-family: KaTeX_Typewriter; }
+
+.katex .mathscr, .katex .textscr { font-family: KaTeX_Script; }
+
+.katex .mathsf, .katex .textsf { font-family: KaTeX_SansSerif; }
+
+.katex .mathboldsf, .katex .textboldsf { font-family: KaTeX_SansSerif; font=
+-weight: 700; }
+
+.katex .mathitsf, .katex .mathsfit, .katex .textitsf { font-family: KaTeX_S=
+ansSerif; font-style: italic; }
+
+.katex .mainrm { font-family: KaTeX_Main; font-style: normal; }
+
+.katex .vlist-t { border-collapse: collapse; display: inline-table; table-l=
+ayout: fixed; }
+
+.katex .vlist-r { display: table-row; }
+
+.katex .vlist { display: table-cell; position: relative; vertical-align: bo=
+ttom; }
+
+.katex .vlist > span { display: block; height: 0px; position: relative; }
+
+.katex .vlist > span > span { display: inline-block; }
+
+.katex .vlist > span > .pstrut { overflow: hidden; width: 0px; }
+
+.katex .vlist-t2 { margin-right: -2px; }
+
+.katex .vlist-s { display: table-cell; font-size: 1px; min-width: 2px; vert=
+ical-align: bottom; width: 2px; }
+
+.katex .vbox { align-items: baseline; display: inline-flex; flex-direction:=
+ column; }
+
+.katex .hbox { width: 100%; }
+
+.katex .hbox, .katex .thinbox { display: inline-flex; flex-direction: row; =
+}
+
+.katex .thinbox { max-width: 0px; width: 0px; }
+
+.katex .msupsub { text-align: left; }
+
+.katex .mfrac > span > span { text-align: center; }
+
+.katex .mfrac .frac-line { border-bottom-style: solid; display: inline-bloc=
+k; width: 100%; }
+
+.katex .hdashline, .katex .hline, .katex .mfrac .frac-line, .katex .overlin=
+e .overline-line, .katex .rule, .katex .underline .underline-line { min-hei=
+ght: 1px; }
+
+.katex .mspace { display: inline-block; }
+
+.katex .clap, .katex .llap, .katex .rlap { position: relative; width: 0px; =
+}
+
+.katex .clap > .inner, .katex .llap > .inner, .katex .rlap > .inner { posit=
+ion: absolute; }
+
+.katex .clap > .fix, .katex .llap > .fix, .katex .rlap > .fix { display: in=
+line-block; }
+
+.katex .llap > .inner { right: 0px; }
+
+.katex .clap > .inner, .katex .rlap > .inner { left: 0px; }
+
+.katex .clap > .inner > span { margin-left: -50%; margin-right: 50%; }
+
+.katex .rule { border: 0px solid; display: inline-block; position: relative=
+; }
+
+.katex .hline, .katex .overline .overline-line, .katex .underline .underlin=
+e-line { border-bottom-style: solid; display: inline-block; width: 100%; }
+
+.katex .hdashline { border-bottom-style: dashed; display: inline-block; wid=
+th: 100%; }
+
+.katex .sqrt > .root { margin-left: 0.277778em; margin-right: -0.555556em; =
+}
+
+.katex .fontsize-ensurer.reset-size1.size1, .katex .sizing.reset-size1.size=
+1 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size1.size2, .katex .sizing.reset-size1.size=
+2 { font-size: 1.2em; }
+
+.katex .fontsize-ensurer.reset-size1.size3, .katex .sizing.reset-size1.size=
+3 { font-size: 1.4em; }
+
+.katex .fontsize-ensurer.reset-size1.size4, .katex .sizing.reset-size1.size=
+4 { font-size: 1.6em; }
+
+.katex .fontsize-ensurer.reset-size1.size5, .katex .sizing.reset-size1.size=
+5 { font-size: 1.8em; }
+
+.katex .fontsize-ensurer.reset-size1.size6, .katex .sizing.reset-size1.size=
+6 { font-size: 2em; }
+
+.katex .fontsize-ensurer.reset-size1.size7, .katex .sizing.reset-size1.size=
+7 { font-size: 2.4em; }
+
+.katex .fontsize-ensurer.reset-size1.size8, .katex .sizing.reset-size1.size=
+8 { font-size: 2.88em; }
+
+.katex .fontsize-ensurer.reset-size1.size9, .katex .sizing.reset-size1.size=
+9 { font-size: 3.456em; }
+
+.katex .fontsize-ensurer.reset-size1.size10, .katex .sizing.reset-size1.siz=
+e10 { font-size: 4.148em; }
+
+.katex .fontsize-ensurer.reset-size1.size11, .katex .sizing.reset-size1.siz=
+e11 { font-size: 4.976em; }
+
+.katex .fontsize-ensurer.reset-size2.size1, .katex .sizing.reset-size2.size=
+1 { font-size: 0.833333em; }
+
+.katex .fontsize-ensurer.reset-size2.size2, .katex .sizing.reset-size2.size=
+2 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size2.size3, .katex .sizing.reset-size2.size=
+3 { font-size: 1.16667em; }
+
+.katex .fontsize-ensurer.reset-size2.size4, .katex .sizing.reset-size2.size=
+4 { font-size: 1.33333em; }
+
+.katex .fontsize-ensurer.reset-size2.size5, .katex .sizing.reset-size2.size=
+5 { font-size: 1.5em; }
+
+.katex .fontsize-ensurer.reset-size2.size6, .katex .sizing.reset-size2.size=
+6 { font-size: 1.66667em; }
+
+.katex .fontsize-ensurer.reset-size2.size7, .katex .sizing.reset-size2.size=
+7 { font-size: 2em; }
+
+.katex .fontsize-ensurer.reset-size2.size8, .katex .sizing.reset-size2.size=
+8 { font-size: 2.4em; }
+
+.katex .fontsize-ensurer.reset-size2.size9, .katex .sizing.reset-size2.size=
+9 { font-size: 2.88em; }
+
+.katex .fontsize-ensurer.reset-size2.size10, .katex .sizing.reset-size2.siz=
+e10 { font-size: 3.45667em; }
+
+.katex .fontsize-ensurer.reset-size2.size11, .katex .sizing.reset-size2.siz=
+e11 { font-size: 4.14667em; }
+
+.katex .fontsize-ensurer.reset-size3.size1, .katex .sizing.reset-size3.size=
+1 { font-size: 0.714286em; }
+
+.katex .fontsize-ensurer.reset-size3.size2, .katex .sizing.reset-size3.size=
+2 { font-size: 0.857143em; }
+
+.katex .fontsize-ensurer.reset-size3.size3, .katex .sizing.reset-size3.size=
+3 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size3.size4, .katex .sizing.reset-size3.size=
+4 { font-size: 1.14286em; }
+
+.katex .fontsize-ensurer.reset-size3.size5, .katex .sizing.reset-size3.size=
+5 { font-size: 1.28571em; }
+
+.katex .fontsize-ensurer.reset-size3.size6, .katex .sizing.reset-size3.size=
+6 { font-size: 1.42857em; }
+
+.katex .fontsize-ensurer.reset-size3.size7, .katex .sizing.reset-size3.size=
+7 { font-size: 1.71429em; }
+
+.katex .fontsize-ensurer.reset-size3.size8, .katex .sizing.reset-size3.size=
+8 { font-size: 2.05714em; }
+
+.katex .fontsize-ensurer.reset-size3.size9, .katex .sizing.reset-size3.size=
+9 { font-size: 2.46857em; }
+
+.katex .fontsize-ensurer.reset-size3.size10, .katex .sizing.reset-size3.siz=
+e10 { font-size: 2.96286em; }
+
+.katex .fontsize-ensurer.reset-size3.size11, .katex .sizing.reset-size3.siz=
+e11 { font-size: 3.55429em; }
+
+.katex .fontsize-ensurer.reset-size4.size1, .katex .sizing.reset-size4.size=
+1 { font-size: 0.625em; }
+
+.katex .fontsize-ensurer.reset-size4.size2, .katex .sizing.reset-size4.size=
+2 { font-size: 0.75em; }
+
+.katex .fontsize-ensurer.reset-size4.size3, .katex .sizing.reset-size4.size=
+3 { font-size: 0.875em; }
+
+.katex .fontsize-ensurer.reset-size4.size4, .katex .sizing.reset-size4.size=
+4 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size4.size5, .katex .sizing.reset-size4.size=
+5 { font-size: 1.125em; }
+
+.katex .fontsize-ensurer.reset-size4.size6, .katex .sizing.reset-size4.size=
+6 { font-size: 1.25em; }
+
+.katex .fontsize-ensurer.reset-size4.size7, .katex .sizing.reset-size4.size=
+7 { font-size: 1.5em; }
+
+.katex .fontsize-ensurer.reset-size4.size8, .katex .sizing.reset-size4.size=
+8 { font-size: 1.8em; }
+
+.katex .fontsize-ensurer.reset-size4.size9, .katex .sizing.reset-size4.size=
+9 { font-size: 2.16em; }
+
+.katex .fontsize-ensurer.reset-size4.size10, .katex .sizing.reset-size4.siz=
+e10 { font-size: 2.5925em; }
+
+.katex .fontsize-ensurer.reset-size4.size11, .katex .sizing.reset-size4.siz=
+e11 { font-size: 3.11em; }
+
+.katex .fontsize-ensurer.reset-size5.size1, .katex .sizing.reset-size5.size=
+1 { font-size: 0.555556em; }
+
+.katex .fontsize-ensurer.reset-size5.size2, .katex .sizing.reset-size5.size=
+2 { font-size: 0.666667em; }
+
+.katex .fontsize-ensurer.reset-size5.size3, .katex .sizing.reset-size5.size=
+3 { font-size: 0.777778em; }
+
+.katex .fontsize-ensurer.reset-size5.size4, .katex .sizing.reset-size5.size=
+4 { font-size: 0.888889em; }
+
+.katex .fontsize-ensurer.reset-size5.size5, .katex .sizing.reset-size5.size=
+5 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size5.size6, .katex .sizing.reset-size5.size=
+6 { font-size: 1.11111em; }
+
+.katex .fontsize-ensurer.reset-size5.size7, .katex .sizing.reset-size5.size=
+7 { font-size: 1.33333em; }
+
+.katex .fontsize-ensurer.reset-size5.size8, .katex .sizing.reset-size5.size=
+8 { font-size: 1.6em; }
+
+.katex .fontsize-ensurer.reset-size5.size9, .katex .sizing.reset-size5.size=
+9 { font-size: 1.92em; }
+
+.katex .fontsize-ensurer.reset-size5.size10, .katex .sizing.reset-size5.siz=
+e10 { font-size: 2.30444em; }
+
+.katex .fontsize-ensurer.reset-size5.size11, .katex .sizing.reset-size5.siz=
+e11 { font-size: 2.76444em; }
+
+.katex .fontsize-ensurer.reset-size6.size1, .katex .sizing.reset-size6.size=
+1 { font-size: 0.5em; }
+
+.katex .fontsize-ensurer.reset-size6.size2, .katex .sizing.reset-size6.size=
+2 { font-size: 0.6em; }
+
+.katex .fontsize-ensurer.reset-size6.size3, .katex .sizing.reset-size6.size=
+3 { font-size: 0.7em; }
+
+.katex .fontsize-ensurer.reset-size6.size4, .katex .sizing.reset-size6.size=
+4 { font-size: 0.8em; }
+
+.katex .fontsize-ensurer.reset-size6.size5, .katex .sizing.reset-size6.size=
+5 { font-size: 0.9em; }
+
+.katex .fontsize-ensurer.reset-size6.size6, .katex .sizing.reset-size6.size=
+6 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size6.size7, .katex .sizing.reset-size6.size=
+7 { font-size: 1.2em; }
+
+.katex .fontsize-ensurer.reset-size6.size8, .katex .sizing.reset-size6.size=
+8 { font-size: 1.44em; }
+
+.katex .fontsize-ensurer.reset-size6.size9, .katex .sizing.reset-size6.size=
+9 { font-size: 1.728em; }
+
+.katex .fontsize-ensurer.reset-size6.size10, .katex .sizing.reset-size6.siz=
+e10 { font-size: 2.074em; }
+
+.katex .fontsize-ensurer.reset-size6.size11, .katex .sizing.reset-size6.siz=
+e11 { font-size: 2.488em; }
+
+.katex .fontsize-ensurer.reset-size7.size1, .katex .sizing.reset-size7.size=
+1 { font-size: 0.416667em; }
+
+.katex .fontsize-ensurer.reset-size7.size2, .katex .sizing.reset-size7.size=
+2 { font-size: 0.5em; }
+
+.katex .fontsize-ensurer.reset-size7.size3, .katex .sizing.reset-size7.size=
+3 { font-size: 0.583333em; }
+
+.katex .fontsize-ensurer.reset-size7.size4, .katex .sizing.reset-size7.size=
+4 { font-size: 0.666667em; }
+
+.katex .fontsize-ensurer.reset-size7.size5, .katex .sizing.reset-size7.size=
+5 { font-size: 0.75em; }
+
+.katex .fontsize-ensurer.reset-size7.size6, .katex .sizing.reset-size7.size=
+6 { font-size: 0.833333em; }
+
+.katex .fontsize-ensurer.reset-size7.size7, .katex .sizing.reset-size7.size=
+7 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size7.size8, .katex .sizing.reset-size7.size=
+8 { font-size: 1.2em; }
+
+.katex .fontsize-ensurer.reset-size7.size9, .katex .sizing.reset-size7.size=
+9 { font-size: 1.44em; }
+
+.katex .fontsize-ensurer.reset-size7.size10, .katex .sizing.reset-size7.siz=
+e10 { font-size: 1.72833em; }
+
+.katex .fontsize-ensurer.reset-size7.size11, .katex .sizing.reset-size7.siz=
+e11 { font-size: 2.07333em; }
+
+.katex .fontsize-ensurer.reset-size8.size1, .katex .sizing.reset-size8.size=
+1 { font-size: 0.347222em; }
+
+.katex .fontsize-ensurer.reset-size8.size2, .katex .sizing.reset-size8.size=
+2 { font-size: 0.416667em; }
+
+.katex .fontsize-ensurer.reset-size8.size3, .katex .sizing.reset-size8.size=
+3 { font-size: 0.486111em; }
+
+.katex .fontsize-ensurer.reset-size8.size4, .katex .sizing.reset-size8.size=
+4 { font-size: 0.555556em; }
+
+.katex .fontsize-ensurer.reset-size8.size5, .katex .sizing.reset-size8.size=
+5 { font-size: 0.625em; }
+
+.katex .fontsize-ensurer.reset-size8.size6, .katex .sizing.reset-size8.size=
+6 { font-size: 0.694444em; }
+
+.katex .fontsize-ensurer.reset-size8.size7, .katex .sizing.reset-size8.size=
+7 { font-size: 0.833333em; }
+
+.katex .fontsize-ensurer.reset-size8.size8, .katex .sizing.reset-size8.size=
+8 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size8.size9, .katex .sizing.reset-size8.size=
+9 { font-size: 1.2em; }
+
+.katex .fontsize-ensurer.reset-size8.size10, .katex .sizing.reset-size8.siz=
+e10 { font-size: 1.44028em; }
+
+.katex .fontsize-ensurer.reset-size8.size11, .katex .sizing.reset-size8.siz=
+e11 { font-size: 1.72778em; }
+
+.katex .fontsize-ensurer.reset-size9.size1, .katex .sizing.reset-size9.size=
+1 { font-size: 0.289352em; }
+
+.katex .fontsize-ensurer.reset-size9.size2, .katex .sizing.reset-size9.size=
+2 { font-size: 0.347222em; }
+
+.katex .fontsize-ensurer.reset-size9.size3, .katex .sizing.reset-size9.size=
+3 { font-size: 0.405093em; }
+
+.katex .fontsize-ensurer.reset-size9.size4, .katex .sizing.reset-size9.size=
+4 { font-size: 0.462963em; }
+
+.katex .fontsize-ensurer.reset-size9.size5, .katex .sizing.reset-size9.size=
+5 { font-size: 0.520833em; }
+
+.katex .fontsize-ensurer.reset-size9.size6, .katex .sizing.reset-size9.size=
+6 { font-size: 0.578704em; }
+
+.katex .fontsize-ensurer.reset-size9.size7, .katex .sizing.reset-size9.size=
+7 { font-size: 0.694444em; }
+
+.katex .fontsize-ensurer.reset-size9.size8, .katex .sizing.reset-size9.size=
+8 { font-size: 0.833333em; }
+
+.katex .fontsize-ensurer.reset-size9.size9, .katex .sizing.reset-size9.size=
+9 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size9.size10, .katex .sizing.reset-size9.siz=
+e10 { font-size: 1.20023em; }
+
+.katex .fontsize-ensurer.reset-size9.size11, .katex .sizing.reset-size9.siz=
+e11 { font-size: 1.43981em; }
+
+.katex .fontsize-ensurer.reset-size10.size1, .katex .sizing.reset-size10.si=
+ze1 { font-size: 0.24108em; }
+
+.katex .fontsize-ensurer.reset-size10.size2, .katex .sizing.reset-size10.si=
+ze2 { font-size: 0.289296em; }
+
+.katex .fontsize-ensurer.reset-size10.size3, .katex .sizing.reset-size10.si=
+ze3 { font-size: 0.337512em; }
+
+.katex .fontsize-ensurer.reset-size10.size4, .katex .sizing.reset-size10.si=
+ze4 { font-size: 0.385728em; }
+
+.katex .fontsize-ensurer.reset-size10.size5, .katex .sizing.reset-size10.si=
+ze5 { font-size: 0.433944em; }
+
+.katex .fontsize-ensurer.reset-size10.size6, .katex .sizing.reset-size10.si=
+ze6 { font-size: 0.48216em; }
+
+.katex .fontsize-ensurer.reset-size10.size7, .katex .sizing.reset-size10.si=
+ze7 { font-size: 0.578592em; }
+
+.katex .fontsize-ensurer.reset-size10.size8, .katex .sizing.reset-size10.si=
+ze8 { font-size: 0.694311em; }
+
+.katex .fontsize-ensurer.reset-size10.size9, .katex .sizing.reset-size10.si=
+ze9 { font-size: 0.833173em; }
+
+.katex .fontsize-ensurer.reset-size10.size10, .katex .sizing.reset-size10.s=
+ize10 { font-size: 1em; }
+
+.katex .fontsize-ensurer.reset-size10.size11, .katex .sizing.reset-size10.s=
+ize11 { font-size: 1.19961em; }
+
+.katex .fontsize-ensurer.reset-size11.size1, .katex .sizing.reset-size11.si=
+ze1 { font-size: 0.200965em; }
+
+.katex .fontsize-ensurer.reset-size11.size2, .katex .sizing.reset-size11.si=
+ze2 { font-size: 0.241158em; }
+
+.katex .fontsize-ensurer.reset-size11.size3, .katex .sizing.reset-size11.si=
+ze3 { font-size: 0.28135em; }
+
+.katex .fontsize-ensurer.reset-size11.size4, .katex .sizing.reset-size11.si=
+ze4 { font-size: 0.321543em; }
+
+.katex .fontsize-ensurer.reset-size11.size5, .katex .sizing.reset-size11.si=
+ze5 { font-size: 0.361736em; }
+
+.katex .fontsize-ensurer.reset-size11.size6, .katex .sizing.reset-size11.si=
+ze6 { font-size: 0.401929em; }
+
+.katex .fontsize-ensurer.reset-size11.size7, .katex .sizing.reset-size11.si=
+ze7 { font-size: 0.482315em; }
+
+.katex .fontsize-ensurer.reset-size11.size8, .katex .sizing.reset-size11.si=
+ze8 { font-size: 0.578778em; }
+
+.katex .fontsize-ensurer.reset-size11.size9, .katex .sizing.reset-size11.si=
+ze9 { font-size: 0.694534em; }
+
+.katex .fontsize-ensurer.reset-size11.size10, .katex .sizing.reset-size11.s=
+ize10 { font-size: 0.833601em; }
+
+.katex .fontsize-ensurer.reset-size11.size11, .katex .sizing.reset-size11.s=
+ize11 { font-size: 1em; }
+
+.katex .delimsizing.size1 { font-family: KaTeX_Size1; }
+
+.katex .delimsizing.size2 { font-family: KaTeX_Size2; }
+
+.katex .delimsizing.size3 { font-family: KaTeX_Size3; }
+
+.katex .delimsizing.size4 { font-family: KaTeX_Size4; }
+
+.katex .delimsizing.mult .delim-size1 > span { font-family: KaTeX_Size1; }
+
+.katex .delimsizing.mult .delim-size4 > span { font-family: KaTeX_Size4; }
+
+.katex .nulldelimiter { display: inline-block; width: 0.12em; }
+
+.katex .delimcenter, .katex .op-symbol { position: relative; }
+
+.katex .op-symbol.small-op { font-family: KaTeX_Size1; }
+
+.katex .op-symbol.large-op { font-family: KaTeX_Size2; }
+
+.katex .accent > .vlist-t, .katex .op-limits > .vlist-t { text-align: cente=
+r; }
+
+.katex .accent .accent-body { position: relative; }
+
+.katex .accent .accent-body:not(.accent-full) { width: 0px; }
+
+.katex .overlay { display: block; }
+
+.katex .mtable .vertical-separator { display: inline-block; min-width: 1px;=
+ }
+
+.katex .mtable .arraycolsep { display: inline-block; }
+
+.katex .mtable .col-align-c > .vlist-t { text-align: center; }
+
+.katex .mtable .col-align-l > .vlist-t { text-align: left; }
+
+.katex .mtable .col-align-r > .vlist-t { text-align: right; }
+
+.katex .svg-align { text-align: left; }
+
+.katex svg { fill: currentcolor; stroke: currentcolor; fill-rule: nonzero; =
+fill-opacity: 1; stroke-width: 1; stroke-linecap: butt; stroke-linejoin: mi=
+ter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; st=
+roke-opacity: 1; display: block; height: inherit; position: absolute; width=
+: 100%; }
+
+.katex svg path { stroke: none; }
+
+.katex img { border-style: none; max-height: none; max-width: none; min-hei=
+ght: 0px; min-width: 0px; }
+
+.katex .stretchy { display: block; overflow: hidden; position: relative; wi=
+dth: 100%; }
+
+.katex .stretchy::after, .katex .stretchy::before { content: ""; }
+
+.katex .hide-tail { overflow: hidden; position: relative; width: 100%; }
+
+.katex .halfarrow-left { left: 0px; overflow: hidden; position: absolute; w=
+idth: 50.2%; }
+
+.katex .halfarrow-right { overflow: hidden; position: absolute; right: 0px;=
+ width: 50.2%; }
+
+.katex .brace-left { left: 0px; overflow: hidden; position: absolute; width=
+: 25.1%; }
+
+.katex .brace-center { left: 25%; overflow: hidden; position: absolute; wid=
+th: 50%; }
+
+.katex .brace-right { overflow: hidden; position: absolute; right: 0px; wid=
+th: 25.1%; }
+
+.katex .x-arrow-pad { padding: 0px 0.5em; }
+
+.katex .cd-arrow-pad { padding: 0px 0.55556em 0px 0.27778em; }
+
+.katex .mover, .katex .munder, .katex .x-arrow { text-align: center; }
+
+.katex .boxpad { padding: 0px 0.3em; }
+
+.katex .fbox, .katex .fcolorbox { border: 0.04em solid; box-sizing: border-=
+box; }
+
+.katex .cancel-pad { padding: 0px 0.2em; }
+
+.katex .cancel-lap { margin-left: -0.2em; margin-right: -0.2em; }
+
+.katex .sout { border-bottom-style: solid; border-bottom-width: 0.08em; }
+
+.katex .angl { border-right: 0.049em solid; border-top: 0.049em solid; box-=
+sizing: border-box; margin-right: 0.03889em; }
+
+.katex .anglpad { padding: 0px 0.03889em; }
+
+.katex .eqn-num::before { content: "(" counter(katexEqnNo) ")"; counter-inc=
+rement: katexEqnNo 1; }
+
+.katex .mml-eqn-num::before { content: "(" counter(mmlEqnNo) ")"; counter-i=
+ncrement: mmlEqnNo 1; }
+
+.katex .mtr-glue { width: 50%; }
+
+.katex .cd-vert-arrow { display: inline-block; position: relative; }
+
+.katex .cd-label-left { display: inline-block; position: absolute; right: c=
+alc(50% + 0.3em); text-align: left; }
+
+.katex .cd-label-right { display: inline-block; left: calc(50% + 0.3em); po=
+sition: absolute; text-align: right; }
+
+.katex-display { display: block; margin: 1em 0px; text-align: center; }
+
+.katex-display > .katex { display: block; text-align: center; white-space: =
+nowrap; }
+
+.katex-display > .katex > .katex-html { display: block; position: relative;=
+ }
+
+.katex-display > .katex > .katex-html > .tag { position: absolute; right: 0=
+px; }
+
+.katex-display.leqno > .katex > .katex-html > .tag { left: 0px; right: auto=
+; }
+
+.katex-display.fleqn > .katex { padding-left: 2em; text-align: left; }
+
+body { counter-reset: katexEqnNo 0 mmlEqnNo 0; }
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://oxalpha.com/vendor/css/highlight-light.min.css
+
+@charset "utf-8";
+
+pre code.hljs { display: block; overflow-x: auto; padding: 1em; }
+
+code.hljs { padding: 3px 5px; }
+
+.hljs { color: rgb(36, 41, 46); background: rgb(255, 255, 255); }
+
+.hljs-doctag, .hljs-keyword, .hljs-meta .hljs-keyword, .hljs-template-tag, =
+.hljs-template-variable, .hljs-type, .hljs-variable.language_ { color: rgb(=
+215, 58, 73); }
+
+.hljs-title, .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-titl=
+e.function_ { color: rgb(111, 66, 193); }
+
+.hljs-attr, .hljs-attribute, .hljs-literal, .hljs-meta, .hljs-number, .hljs=
+-operator, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-id, .h=
+ljs-variable { color: rgb(0, 92, 197); }
+
+.hljs-meta .hljs-string, .hljs-regexp, .hljs-string { color: rgb(3, 47, 98)=
+; }
+
+.hljs-built_in, .hljs-symbol { color: rgb(227, 98, 9); }
+
+.hljs-code, .hljs-comment, .hljs-formula { color: rgb(106, 115, 125); }
+
+.hljs-name, .hljs-quote, .hljs-selector-pseudo, .hljs-selector-tag { color:=
+ rgb(34, 134, 58); }
+
+.hljs-subst { color: rgb(36, 41, 46); }
+
+.hljs-section { color: rgb(0, 92, 197); font-weight: 700; }
+
+.hljs-bullet { color: rgb(115, 92, 15); }
+
+.hljs-emphasis { color: rgb(36, 41, 46); font-style: italic; }
+
+.hljs-strong { color: rgb(36, 41, 46); font-weight: 700; }
+
+.hljs-addition { color: rgb(34, 134, 58); background-color: rgb(240, 255, 2=
+44); }
+
+.hljs-deletion { color: rgb(179, 29, 40); background-color: rgb(255, 238, 2=
+40); }
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: font/woff2
+Content-Transfer-Encoding: base64
+Content-Location: https://oxalpha.com/vendor/fonts/jetbrains-mono-latin.woff2
+
+PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ZW4+CiAgPG1ldGEgY2hhcnNldD11dGYtOD4KICA8
+bWV0YSBuYW1lPXZpZXdwb3J0IGNvbnRlbnQ9ImluaXRpYWwtc2NhbGU9MSwgbWluaW11bS1zY2Fs
+ZT0xLCB3aWR0aD1kZXZpY2Utd2lkdGgiPgogIDx0aXRsZT5FcnJvciA0MDQgKE5vdCBGb3VuZCkh
+ITE8L3RpdGxlPgogIDxzdHlsZT4KICAgICp7bWFyZ2luOjA7cGFkZGluZzowfWh0bWwsY29kZXtm
+b250OjE1cHgvMjJweCBhcmlhbCxzYW5zLXNlcmlmfWh0bWx7YmFja2dyb3VuZDojZmZmO2NvbG9y
+OiMyMjI7cGFkZGluZzoxNXB4fWJvZHl7bWFyZ2luOjclIGF1dG8gMDttYXgtd2lkdGg6MzkwcHg7
+bWluLWhlaWdodDoxODBweDtwYWRkaW5nOjMwcHggMCAxNXB4fSogPiBib2R5e2JhY2tncm91bmQ6
+dXJsKC8vd3d3Lmdvb2dsZS5jb20vaW1hZ2VzL2Vycm9ycy9yb2JvdC5wbmcpIDEwMCUgNXB4IG5v
+LXJlcGVhdDtwYWRkaW5nLXJpZ2h0OjIwNXB4fXB7bWFyZ2luOjExcHggMCAyMnB4O292ZXJmbG93
+OmhpZGRlbn1pbnN7Y29sb3I6Izc3Nzt0ZXh0LWRlY29yYXRpb246bm9uZX1hIGltZ3tib3JkZXI6
+MH1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjc3MnB4KXtib2R5e2JhY2tncm91bmQ6bm9u
+ZTttYXJnaW4tdG9wOjA7bWF4LXdpZHRoOm5vbmU7cGFkZGluZy1yaWdodDowfX0jbG9nb3tiYWNr
+Z3JvdW5kOnVybCgvL3d3dy5nb29nbGUuY29tL2ltYWdlcy9icmFuZGluZy9nb29nbGVsb2dvLzF4
+L2dvb2dsZWxvZ29fY29sb3JfMTUweDU0ZHAucG5nKSBuby1yZXBlYXQ7bWFyZ2luLWxlZnQ6LTVw
+eH1AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4tcmVzb2x1dGlvbjoxOTJkcGkpeyNsb2dve2Jh
+Y2tncm91bmQ6dXJsKC8vd3d3Lmdvb2dsZS5jb20vaW1hZ2VzL2JyYW5kaW5nL2dvb2dsZWxvZ28v
+MngvZ29vZ2xlbG9nb19jb2xvcl8xNTB4NTRkcC5wbmcpIG5vLXJlcGVhdCAwJSAwJS8xMDAlIDEw
+MCU7LW1vei1ib3JkZXItaW1hZ2U6dXJsKC8vd3d3Lmdvb2dsZS5jb20vaW1hZ2VzL2JyYW5kaW5n
+L2dvb2dsZWxvZ28vMngvZ29vZ2xlbG9nb19jb2xvcl8xNTB4NTRkcC5wbmcpIDB9fUBtZWRpYSBv
+bmx5IHNjcmVlbiBhbmQgKC13ZWJraXQtbWluLWRldmljZS1waXhlbC1yYXRpbzoyKXsjbG9nb3ti
+YWNrZ3JvdW5kOnVybCgvL3d3dy5nb29nbGUuY29tL2ltYWdlcy9icmFuZGluZy9nb29nbGVsb2dv
+LzJ4L2dvb2dsZWxvZ29fY29sb3JfMTUweDU0ZHAucG5nKSBuby1yZXBlYXQ7LXdlYmtpdC1iYWNr
+Z3JvdW5kLXNpemU6MTAwJSAxMDAlfX0jbG9nb3tkaXNwbGF5OmlubGluZS1ibG9jaztoZWlnaHQ6
+NTRweDt3aWR0aDoxNTBweH0KICA8L3N0eWxlPgogIDxhIGhyZWY9Ly93d3cuZ29vZ2xlLmNvbS8+
+PHNwYW4gaWQ9bG9nbyBhcmlhLWxhYmVsPUdvb2dsZT48L3NwYW4+PC9hPgogIDxwPjxiPjQwNC48
+L2I+IDxpbnM+VGhhdOKAmXMgYW4gZXJyb3IuPC9pbnM+CiAgPHA+VGhlIHJlcXVlc3RlZCBVUkwg
+PGNvZGU+L3MvamV0YnJhaW5zbW9uby92MTgvdERiWTJvLWZsRUVueTBGWmhzZkt1NVdVNHpyM0Vf
+QlgwUG5UOFJEOHlLeGpQVm1Vc2FhRGh3LndvZmYyPC9jb2RlPiB3YXMgbm90IGZvdW5kIG9uIHRo
+aXMgc2VydmVyLiAgPGlucz5UaGF04oCZcyBhbGwgd2Uga25vdy48L2lucz4K
+
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://oxalpha.com/vendor/css/fonts.css
+
+@charset "utf-8";
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400 700; =
+font-display: swap; src: url("../fonts/inter-latin.woff2") format("woff2");=
+ unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U=
++304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+=
+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400 700; =
+font-display: swap; src: url("../fonts/inter-latin-ext.woff2") format("woff=
+2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, =
+U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-=
+20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400 500; font-display: swap; src: url("../fonts/jetbrains-mono-latin.woff=
+2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+=
+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191=
+, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--plOOLVAtHdgaRLVjHWXxz4w77Ou2w09Y3ZZw4MXvx6------

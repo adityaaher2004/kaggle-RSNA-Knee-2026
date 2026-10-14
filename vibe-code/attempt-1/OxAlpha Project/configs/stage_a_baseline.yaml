@@ -1,0 +1,2 @@
+# SPEC: S9 -- overrides base.yaml
+extends: base.yaml

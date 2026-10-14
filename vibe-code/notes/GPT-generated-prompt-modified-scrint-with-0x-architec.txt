@@ -1,0 +1,754 @@
+# Task: Design a State-of-the-Art Model for the RSNA Knee Abnormality Detection Competition
+
+You are a senior researcher in **medical computer vision, MRI analysis, multimodal learning, weakly supervised learning, and competitive ML**, with expertise in PyTorch, MONAI, DICOM, 2D/3D vision transformers, multiple-instance learning, knowledge distillation, and medical vision-language models.
+
+Your task is to design a **high-performance, computationally realistic model and complete training system** for:
+
+**RSNA Knee Abnormality Detection**
+
+Do not produce a generic medical-imaging architecture. Design specifically for the structure and constraints of this competition.
+
+---
+
+## 1. Competition formulation
+
+The dataset consists of knee MRI studies.
+
+Each training study contains:
+
+### `train.csv`
+
+One row per `StudyInstanceUID`.
+
+Fields include:
+
+* `StudyInstanceUID`
+* `Report`
+* `ACL`
+* `MCL`
+* `Medial Meniscus`
+* `Lateral Meniscus`
+* `Medial OA`
+* `Lateral OA`
+* `PF OA`
+* `Effusion`
+* `Synovitis`
+* `Baker's`
+* `Contusion`
+* `Fracture`
+
+The twelve targets are binary and may simultaneously be positive.
+
+Therefore formulate the task as:
+
+$$
+\mathbf y_i\in\{0,1\}^{12}
+$$
+
+with twelve study-level predictions.
+
+---
+
+### `train_series.csv`
+
+One row per MRI series.
+
+Each series has:
+
+* `StudyInstanceUID`
+* `SeriesInstanceUID`
+* `Fluid_Sensitive`
+* `Fat_Suppression`
+* `Anatomical_Plane`
+
+where `Anatomical_Plane` is:
+
+* Sagittal
+* Coronal
+* Axial
+
+Each series consists of multiple DICOM slices.
+
+The directory hierarchy is:
+
+```text
+train_series/
+    StudyInstanceUID/
+        SeriesInstanceUID/
+            SOPInstanceUID.dcm
+```
+
+A study therefore has the hierarchy:
+
+$$
+\boxed{
+Study
+\rightarrow
+Series
+\rightarrow
+Slices
+}
+$$
+
+---
+
+## 2. Critical train/test modality constraint
+
+Training provides:
+
+$$
+\boxed{
+MRI + radiology\ Report + 12\ labels
+}
+$$
+
+but testing provides:
+
+$$
+\boxed{
+MRI\ only
+}
+$$
+
+The report is NOT available at test time.
+
+Treat this as a central architectural constraint.
+
+Investigate the problem as:
+
+$$
+(X,T,Y)_{\text{train}}
+$$
+
+but:
+
+$$
+(X)_{\text{test}}.
+$$
+
+Consider the relationship to:
+
+* Learning Using Privileged Information (LUPI)
+* knowledge distillation
+* multimodal teacher → unimodal student learning
+* cross-modal representation alignment
+* contrastive learning
+* auxiliary text supervision
+* modality dropout
+* missing-modality learning
+
+Do not assume the report can simply be concatenated with MRI features at inference.
+
+---
+
+# 3. Your primary objective
+
+Design the best model you reasonably believe can be built for this competition under realistic computational constraints.
+
+The final system should maximize expected performance while maintaining:
+
+* robust generalization
+* leakage-free validation
+* efficient training
+* feasible inference
+* reproducibility
+* interpretability sufficient for medical-image error analysis.
+
+Do not optimize solely for theoretical sophistication.
+
+If a simpler architecture is likely to outperform a complex architecture because of dataset size, explain why and choose the simpler architecture.
+
+---
+
+# 4. Analyze the problem before proposing the architecture
+
+First perform a rigorous decomposition of the task.
+
+
+# 5. Analyze the data hierarchy
+
+# 6. Design the image encoder
+
+Propose and compare realistic choices such as:
+
+* 2D CNN
+* pretrained 2D foundation model
+* 2.5D CNN
+* 3D CNN
+* 3D Swin Transformer
+* ViT
+* medical-imaging pretrained models
+* self-supervised MRI encoders.
+
+Consider:
+
+* input dimensions
+* slice sampling
+* spatial resampling
+* normalization
+* cropping
+* augmentation
+* memory requirements
+* pretrained weights
+* expected performance.
+
+Select one primary architecture and justify it.
+
+---
+
+# 7. Design slice-level aggregation
+
+Treat slices as instances:
+
+$$
+B_j=\{x_{j1},...,x_{jn}\}.
+$$
+
+Compare:
+
+* mean pooling
+* max pooling
+* attention MIL
+* gated attention
+* DSMIL
+* CLAM
+* TransMIL
+* transformer-based aggregation.
+
+Explain when each approach is appropriate.
+
+The model should be able to learn that only a subset of slices may contain strong diagnostic evidence.
+
+---
+
+# 8. Design series-level aggregation
+
+A study contains multiple series with different:
+
+* anatomical planes
+* sequence contrasts
+* fat suppression
+* fluid sensitivity.
+
+Design a mechanism for learning:
+
+$$
+\{z_1,z_2,...,z_m\}
+\rightarrow
+z_{\text{study}}.
+$$
+
+Investigate:
+
+* attention pooling
+* transformer aggregation
+* metadata-conditioned attention
+* learned series embeddings
+* positional/plane embeddings
+* sequence embeddings
+* modality tokens.
+
+Explicitly determine whether:
+
+$$
+z_j =
+f(V_j,M_j)
+$$
+
+is preferable to:
+
+$$
+z_j=f(V_j).
+$$
+
+---
+
+# 9. Design the multimodal training system
+
+The report is available only during training.
+
+Design a multimodal teacher.
+
+Potential architecture:
+
+```text
+MRI
+ ↓
+Hierarchical image encoder
+ ↓
+z_image
+
+Report
+ ↓
+Text encoder
+ ↓
+z_text
+
+z_image + z_text
+ ↓
+Multimodal fusion
+ ↓
+Teacher
+ ↓
+12 predictions
+```
+
+Then design an MRI-only student:
+
+```text
+MRI
+ ↓
+Hierarchical image encoder
+ ↓
+Student
+ ↓
+12 predictions
+```
+
+Investigate how to transfer knowledge:
+
+### Logit distillation
+
+$$
+\mathcal L_{KD}^{logit}
+=
+KL(p_T^\tau||p_S^\tau).
+$$
+
+### Feature distillation
+
+$$
+\mathcal L_{KD}^{feature}
+=
+\|z_T-z_S\|_2^2.
+$$
+
+### Contrastive image-text alignment
+
+$$
+\mathcal L_{ITC}.
+$$
+
+### Label supervision
+
+$$
+\mathcal L_{BCE}.
+$$
+
+### Attention distillation
+
+Transfer which slices/series the teacher considers diagnostically relevant.
+
+Compare these methods.
+
+---
+
+# 10. Design the loss function
+
+The final model predicts twelve labels.
+
+Start with:
+
+$$
+\mathcal L_{BCE}.
+$$
+
+Then investigate:
+
+* weighted BCE
+* focal loss
+* asymmetric loss
+* class-balanced loss
+* label-dependent weighting
+* multi-task losses
+* distillation losses
+* contrastive losses.
+
+Propose a complete objective:
+
+$$
+\mathcal L=
+\lambda_1L_{\text{diagnostic}}
++
+\lambda_2L_{\text{KD}}
++
+\lambda_3L_{\text{feature}}
++
+\lambda_4L_{\text{contrastive}}
++
+\lambda_5L_{\text{auxiliary}}.
+$$
+
+Explain how the \(\lambda\)'s should be selected.
+
+---
+
+# 11. Exploit label structure
+
+The twelve abnormalities are not necessarily statistically independent.
+
+Investigate:
+
+$$
+P(y_i,y_j)
+$$
+
+and label co-occurrence.
+
+Consider whether the model should use:
+
+* label embeddings
+* classifier chains
+* label attention
+* label graphs
+* graph neural networks
+* conditional prediction
+* low-rank label representations.
+
+Because the designer has expertise in GNNs, explicitly investigate whether a **label graph or anatomical/pathological graph** is justified.
+
+Do not add a GNN merely because it is available.
+
+Determine whether it is likely to provide measurable benefit.
+
+---
+
+# 12. Consider anatomy-aware modeling
+
+Investigate whether the model should explicitly represent:
+
+* ACL
+* MCL
+* menisci
+* cartilage
+* patella
+* bone marrow
+* joint space
+* synovium
+* popliteal region.
+
+Consider:
+
+* anatomical region proposals
+* learned region attention
+* anatomical coordinate embeddings
+* segmentation-assisted features
+* ROI pooling
+* pathology-specific attention heads.
+
+Compare these approaches against a global model.
+
+---
+
+# 13. Consider multi-task auxiliary objectives
+
+Investigate whether training auxiliary tasks could improve representation learning.
+
+Examples:
+
+* plane classification
+* sequence classification
+* fluid-sensitive prediction
+* fat-suppression prediction
+* anatomical region prediction
+* report-label extraction
+* pathology localization
+* slice relevance prediction.
+
+Determine which auxiliary objectives are realistic given the available annotations.
+
+Do not assume unavailable ground-truth labels exist.
+
+---
+
+# 14. Radiology NLP
+
+The report may be multilingual.
+
+Investigate:
+
+* multilingual BERT
+* XLM-R
+* multilingual medical language models
+* clinical BERT variants
+* medical LLM embeddings.
+
+Pay particular attention to:
+
+* negation
+* uncertainty
+* temporal language
+* anatomy
+* pathology
+* synonyms
+* multilingual terminology.
+
+Explain whether full report understanding is necessary or whether structured pathology extraction is preferable.
+
+---
+
+# 15. DICOM pipeline
+
+Design the complete preprocessing pipeline.
+
+Address:
+
+* DICOM loading
+* transfer syntaxes
+* slice ordering
+* ImagePositionPatient
+* ImageOrientationPatient
+* PixelSpacing
+* SliceThickness
+* orientation consistency
+* resampling
+* intensity normalization
+* clipping
+* cropping
+* slice sampling
+* series selection.
+
+Specify appropriate libraries:
+
+* pydicom
+* SimpleITK
+* MONAI
+* nibabel where appropriate
+* OpenCV/PIL only where appropriate.
+
+Explain why naïve filename sorting is unsafe.
+
+---
+
+# 16. Validation strategy
+
+Design a rigorous validation framework.
+
+Address:
+
+* patient/study-level splitting
+* leakage
+* duplicate studies
+* correlated series
+* repeated acquisitions
+* stratification
+* multi-label stratification
+* cross-validation
+* out-of-fold predictions
+* ensemble validation.
+
+Do not split at the slice or series level if that can cause study leakage.
+
+Design an experiment table that allows fair comparison of architectures.
+
+---
+
+# 17. Evaluation and calibration
+
+The competition evaluates twelve binary targets.
+
+Analyze:
+
+* ROC-AUC
+* per-label AUC
+* macro vs micro aggregation
+* threshold independence
+* calibration
+* ranking quality.
+
+Explain why optimizing accuracy or F1 at an arbitrary threshold is not necessarily aligned with leaderboard performance.
+
+---
+
+# 18. Ensembling
+
+Design an ensemble strategy.
+
+Consider:
+
+* different seeds
+* different folds
+* different architectures
+* different image resolutions
+* 2D + 3D
+* plane-specific models
+* teacher/student models.
+
+Determine whether probability averaging, logit averaging, or rank averaging is preferable.
+
+---
+
+# 19. Proposed final architecture
+
+After the analysis, provide one definitive architecture.
+
+Give it a name.
+
+Provide a complete architecture diagram.
+
+For example, the final design may resemble:
+
+```text
+                        TRAINING ONLY
+                ┌─────────────────────────────────┐
+                │ Radiology Report (multilingual) │
+                └───────────┬─────────────────────┘
+                            ↓
+                Language detector → XLM-R-base
+                            ↓
+                Structured finding extractor (12×{−1,0,+1} + z_text ∈ R^768)
+                            ↓
+        ┌───────────────────┴───────────────┐
+        │ MULTIMODAL TEACHER (train only)   │
+        │ [z_img ‖ z_text] → MLP → τ logits │
+        │ + InfoNCE(z_img, z_text)          │
+        └───────────────────┬───────────────┘
+                            │ logit KD (τ=3), feature KD,
+                            │ attention KD, ITC
+MRI study                   ↓
+ ├── m series (plane, fluid, fat-sup metadata M_j)
+ │    ├── N_j slices (sorted via ImagePositionPatient)
+ │    │     2.5D 3-channel stacks → ConvNeXt-T/EffNet-B0
+ │    │     + 3D-position embedding          [B·m × N × 512]
+ │    │     ↓
+ │    │   Gated attention MIL (metadata-conditioned query)
+ │    │     + 6 pathology-group attention heads   → z_j ∈ R^512
+ │    └── (repeat)
+ │
+ ├── 2-layer transformer over {z_1..z_m} (+ modality tokens)
+ ├── metadata-conditioned series attention pooling
+ ↓
+ z_study ∈ R^512
+ ↓
+ Label-embedding head (512→64→12)
+ ↓
+ 12 sigmoid logits
+
+```
+
+But do not assume this exact design is optimal. Modify it if your analysis supports another architecture.
+
+---
+
+# 22. Give exact tensor dimensions
+
+For every major stage specify example tensor shapes.
+
+For example:
+
+$$
+B\times N_s\times C\times H\times W
+$$
+
+→
+
+$$
+B\times N_s\times d
+$$
+
+→
+
+$$
+B\times N_{\text{series}}\times d
+$$
+
+→
+
+$$
+B\times d
+$$
+
+→
+
+$$
+B\times12.
+$$
+
+Do this for the actual proposed architecture.
+
+---
+
+# 23. Provide PyTorch/MONAI implementation architecture
+
+Provide a modular project structure:
+
+```text
+project/
+├── configs/
+├── data/
+│   ├── dicom.py
+│   ├── preprocessing.py
+│   └── dataset.py
+├── models/
+│   ├── slice_encoder.py
+│   ├── mil.py
+│   ├── series_encoder.py
+│   ├── text_encoder.py
+│   ├── fusion.py
+│   ├── teacher.py
+│   └── student.py
+├── losses/
+├── training/
+├── validation/
+├── inference/
+└── notebooks/
+```
+
+Specify the purpose of every module.
+
+
+Do not claim novelty without checking the literature.
+
+---
+
+# 20. Explicitly identify likely failure modes
+
+Provide at least 15.
+
+Examples:
+
+* incorrect DICOM slice ordering
+* anisotropic volumes
+* excessive slice sampling
+* loss of small abnormalities
+* irrelevant series
+* misleading attention
+* report leakage
+* multilingual NLP failure
+* negation errors
+* class imbalance
+* overfitting
+* patient leakage
+* site/scanner distribution shift
+* intensity distribution shift
+* teacher overfitting
+* student failing to inherit useful text information
+* excessive model complexity
+* insufficient GPU memory.
+
+For every failure mode give a mitigation.
+
+---
+---
+
+# Standards for reasoning
+
+Follow these rules:
+
+1. **Do not assume the most complicated model is the best model.**
+2. **Respect the study → series → slice hierarchy.**
+3. **Treat the report as privileged training information because it disappears at inference.**
+4. **Do not introduce information unavailable at test time.**
+5. **Separate clinically plausible reasoning from experimentally validated claims.**
+6. **Distinguish established methods from speculative ideas.**
+7. **Prefer ablation-tested architectural additions.**
+8. **Consider the relatively limited number of studies when selecting model capacity.**
+9. **Treat DICOM preprocessing as part of the model rather than an afterthought.**
+10. **Optimize for the actual competition metric rather than generic classification accuracy.**
+11. **Use recent literature from 2024–2026 when proposing frontier components.**
+12. **Cite primary papers whenever possible.**
+13. **If a paper's method is being adapted, explicitly explain the adaptation.**
+14. **Identify what should be implemented first versus what should only be attempted after a strong baseline exists.**
+15. **Be skeptical of claims that attention weights are inherently explanations.**
+16. **Do not hallucinate dataset properties that have not been verified.**
+17. **If competition rules or dataset details have changed, verify them from current sources.**

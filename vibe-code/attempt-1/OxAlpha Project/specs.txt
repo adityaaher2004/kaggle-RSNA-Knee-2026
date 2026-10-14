@@ -1,0 +1,493 @@
+================================================================================
+OxAlpha  --  SPECIFICATION  (spec-anchored + spec-as-source)
+RSNA Knee Abnormality Detection -- multi-series knee MRI, 12 study-level labels
+Spec version: 0.1.0     Date: 2026-10-09     Status: DRAFT (pre-baseline)
+================================================================================
+
+HOW TO USE THIS FILE (spec-driven rules)
+----------------------------------------
+R1. specs.txt is the source of truth. Numbers that code consumes live in
+    configs/*.yaml and are tagged here as  [cfg: key.path]. A change to a
+    [cfg] value is made in the YAML, then reflected here in the same commit.
+R2. Structural changes (new module, tensor shape, loss term) are made HERE
+    first, then code is changed to match. Every module docstring starts with
+    "SPEC: Sx.y" pointing at the section it implements.
+R3. Every claim is tagged:
+      [V]  verified on the local data / files in this repo
+      [E]  established method from the literature (cite in S14)
+      [H]  hypothesis -- must pass an ablation (S12) before it stays
+    Nothing tagged [H] ships in the final model without an ablation win.
+R4. Nothing that is unavailable at test time (report text, labels) may enter
+    the student inference path. Enforced by a unit test (TODO T-LEAK-1).
+
+--------------------------------------------------------------------------------
+S0. VERIFIED FACTS ABOUT THE LOCAL REPO AND DATA   (all [V], inspected 2026-10-09)
+--------------------------------------------------------------------------------
+Paths (root = C:\Users\adity\Downloads\RSNA)
+  DATA/train.csv, train_series.csv, test.csv, test_series.csv, sample_submission.csv
+  DATA/series_data/train_series/<StudyUID>/<SeriesUID>/*.dcm   (only 5 studies,
+        1038 slices locally -- a SAMPLE, not the full train set)
+  DATA/series_data/test_series/                                (3 studies, 557 slices)
+  DATA/rsna-knee-mri-processed-3d-volumes/<SeriesUID>.npz      24,371 files
+        == 24,371 rows of train_series.csv (one npz per train series)
+        key 'data', shape (24,224,224), dtype uint8  (300/300 sampled files
+        had exactly this shape)  -> already resampled to 24 slices @ 224x224.
+  DATA/rsna-knee-abnormality-detection.zip (+ .kaggle-partial)  -- download
+        incomplete / leftover, do not use.
+  papers/   15 PDFs (KD 1503.02531, MIL / attention, HAN, ...)
+  repo/kaggle-RSNA-Knee-2026/{self-code, vibe-code, notes}   (git repo)
+  vibe-code/attempt-1/"OxAlpha Project"/   <- THIS project (working folder)
+
+Tables
+  train.csv: 4,407 studies (unique), cols StudyInstanceUID, Report, 12 labels.
+  train_series.csv: 24,371 series over the same 4,407 studies; series/study
+        mean 5.53, median 5, min 3, max 14.
+  Plane counts: Sagittal 9,864 / Coronal 8,609 / Axial 5,898.
+  (Fluid_Sensitive, Fat_Suppression) only takes the values (1,1) = 14,010 and
+        (0,0) = 10,361. The two flags are PERFECTLY CORRELATED -> one bit of
+        information, not two.
+  test.csv: 3 studies, test_series.csv: 15 series (sample only; real test is
+        hidden and re-run on Kaggle).
+
+*** CRITICAL: LABEL SPARSITY ***
+  Of 4,407 studies only 58 (1.3%) have ANY of the 12 labels; 4,349 have all 12
+  labels NULL and only a Report. Positives among the 58 gold studies:
+     ACL 24/58   MCL 9/58    MedMen 26/58  LatMen 23/58
+     MedOA 15/58 LatOA 11/58 PF-OA 21/58   Effusion 35/58
+     Synovitis 27/58 Baker's 12/58 Contusion 19/58 Fracture 18/58
+  Reports exist for all 4,407 (none null), median length 977 chars,
+  multilingual (Spanish, German, Dutch seen in the first rows; full language
+  mix NOT yet measured).
+  CONSEQUENCE: this is a weakly/semi-supervised problem. Reports are not just
+  "privileged information"; they are the main LABEL SOURCE. See S5, S6.
+
+Local compute  [V]
+  Python 3.14.8, torch 2.14.1+cpu (no CUDA), GPU = GeForce MX250 2GB (unusable
+  for training). Installed: pydicom, pandas, sklearn, transformers.
+  Missing: timm, monai, SimpleITK. => All real training happens on rented /
+  Kaggle GPU. Local machine is for EDA, extraction rules, unit tests, CPU
+  smoke tests on tiny batches.
+
+Not verified yet (do not assume)  -> TODO items
+  - Competition metric (assumed: mean per-label ROC-AUC) and rules.
+  - Whether the 24-slice npz were built with IPP-sorted slices, which slice
+    selection (uniform? centre?), which crop and intensity normalisation.
+  - Whether hidden test series arrive as DICOM only (they do locally) so the
+    SAME npz recipe must be reproducible from DICOM (S3.4).
+  - Language distribution of reports; fraction of reports mentioning each label.
+  - Duplicate / same-patient studies in train.
+
+--------------------------------------------------------------------------------
+S1. PROBLEM FORMULATION
+--------------------------------------------------------------------------------
+Hierarchy:  Study i -> series j=1..m_i (m ~ 3..14) -> slices k=1..24.
+Train tuple: (X_i, T_i, M_i, y_i)  with y_i in {0,1,NA}^12 (NA for 98.7%).
+Test tuple : (X_i, M_i).      M_j = (plane_j, fluid/fat flag_j) is available at
+test time (test_series.csv has it), so metadata MAY be used by the student.
+Goal: p(y_i | X_i, M_i) for 12 sigmoid outputs; metric AUC per label.
+Why this is not plain MIL: bag-of-bags (slice -> series -> study), only the
+top bag label is (weakly) known, labels are partially missing, and a text view
+exists only in training (LUPI / teacher-student).
+
+--------------------------------------------------------------------------------
+S2. PROJECT LAYOUT (matches the suggested plan; every module has a SPEC tag)
+--------------------------------------------------------------------------------
+OxAlpha Project/
+  specs.txt  TODO.md  requirements.txt
+  configs/
+    base.yaml          global: seed, paths, labels, groups, dims   [cfg]
+    stage_a_baseline.yaml   frozen-feature baseline
+    stage_b_student.yaml    end-to-end MRI-only student
+    stage_c_teacher_kd.yaml teacher + distillation
+  data/
+    dicom.py           pydicom read, transfer syntax, IPP/IOP sort, spacing
+    preprocessing.py   DICOM->(24,224,224) recipe parity with provided npz;
+                       normalise/crop; cache
+    dataset.py         StudyBagDataset: pads to (S_max series, 24 slices),
+                       series mask, metadata ids, optional report fields
+  models/
+    slice_encoder.py   2.5D backbone + slice-position embedding
+    mil.py             gated-attention MIL + 6 pathology-group heads
+    series_encoder.py  metadata/modality tokens + 2L transformer + pooling
+    text_encoder.py    language ID, rule+XLM-R structured extractor, z_text
+    fusion.py          teacher fusion MLP + ITC projection heads
+    teacher.py         image-trunk + text -> 12 logits (train only)
+    student.py         image-only model (the artefact that is submitted)
+  losses/
+    asymmetric.py  kd.py (logit / feature / attention)  itc.py  auxiliary.py
+    composite.py   weighted sum with warm-up schedule
+  training/
+    loops.py  amp.py (AMP+grad accum)  schedulers.py  ema.py
+    train_stage_a.py  train_stage_b.py  train_stage_c.py
+  validation/
+    folds.py (grouped iterative stratification)  oof.py  metrics.py
+    dedup.py (duplicate-study detection)
+  inference/
+    predict.py (sliding-slice, TTA)  ensemble.py  make_submission.py
+  notebooks/
+    01_eda.ipynb  02_label_cooccurrence.ipynb  03_report_languages.ipynb
+    04_error_analysis.ipynb
+
+--------------------------------------------------------------------------------
+S3. DATA PIPELINE  (DICOM treated as part of the model)
+--------------------------------------------------------------------------------
+S3.1 Loading (data/dicom.py)  [E]
+  - pydicom.dcmread with force=False; decode via pylibjpeg/gdcm fallback for
+    compressed transfer syntaxes; reject files with no PixelData.
+  - Apply RescaleSlope/Intercept only if present (MRI usually raw units).
+  - Never sort by filename: SOPInstanceUID filenames are random/hashed, not
+    anatomical order. Sorting key = dot(ImagePositionPatient, slice_normal),
+    slice_normal = cross(row_dir, col_dir) from ImageOrientationPatient;
+    fallback InstanceNumber, then SliceLocation; log the fallback used.
+  - Record PixelSpacing, SliceThickness, SpacingBetweenSlices, Rows, Cols,
+    Manufacturer, MagneticFieldStrength, EchoTime/RepetitionTime if present
+    (kept for site-shift analysis, NOT fed to the student by default).
+S3.2 Spatial recipe
+  - In-plane: resample to isotropic-ish 224x224 (centre crop to knee FOV, then
+    bilinear). Through-plane: pick 24 slices (see S3.3), never interpolate
+    across a slice thickness larger than 2x in-plane spacing.
+  - Orientation: reorient each series to a canonical array order per plane so
+    that slices of one plane look alike (consistency, not RAS conversion).
+S3.3 Slice selection ("24 slices")  [V for shape, H for recipe]
+  - Provided npz are already 24 x 224 x 224 uint8. Stage A/B use them directly.
+  - Parity task: reverse-engineer the provided recipe and confirm
+    preprocessing.py reproduces it on the 5 local train series (SSIM > 0.99)
+    before trusting it on test DICOM. If it cannot, test-time inference must
+    be done through the provided recipe only.
+S3.4 Intensity
+  - Per-series percentile clip [0.5, 99.5], min-max to [0,1] (npz is already
+    uint8), then dataset mean/std per channel after replicating to 3ch.
+  - No cross-series normalisation: contrast differs by sequence.
+S3.5 2.5D stacking (in dataset/slice_encoder)
+  - Channel k = slices (k-1, k, k+1) of the same series, edge-replicated;
+    shape per series  24 x 3 x 224 x 224.
+S3.6 Series selection / padding
+  - Keep up to S_max = 8 series per study (priority: >=1 per plane, then
+    fluid-sensitive first, then longest). Studies with m > 8 are subsampled
+    randomly in training, deterministically (priority rule) at inference.
+  - Padded series are masked everywhere (attention, pooling, loss).
+S3.7 Augmentation (train only)
+  - Random resized crop scale [0.85,1], aspect [0.9,1.1]; rotation +/-10 deg;
+    brightness/contrast +/-0.15; gaussian noise sigma<=0.02; slice dropout
+    p=0.1 (zero a 2.5D stack); series dropout p=0.15 (never drop all).
+  - NO flips: left-right flips change medial/lateral meaning; vertical flips
+    change anterior/posterior. [H] revisit only with a side-aware ablation.
+  - Same geometric transform for all slices in a series (consistent 3D object).
+
+--------------------------------------------------------------------------------
+S4. TENSOR SHAPES  (B = studies per step; S = series (<=8); N = 24 slices;
+                    d = 512; L = 12 labels; G = 6 groups)
+--------------------------------------------------------------------------------
+ input volumes         x      : B x S x N x 3 x 224 x 224   (uint8->float16)
+ series mask           s_mask : B x S           (bool)
+ metadata ids          meta   : B x S x 2  (plane in {0,1,2}, fluid_fat in {0,1})
+ flatten for backbone         : (B*S*N) x 3 x 224 x 224
+ backbone feature map         : (B*S*N) x C x 7 x 7   (C=1280 EffNet-B0 / 768 ConvNeXt-T)
+ GAP + Linear(C->d)+LN        : (B*S*N) x d  -> B x S x N x d
+ + slice-position emb (24,d)  : B x S x N x d
+ gated-attn MIL (G heads)     : alpha  B x S x G x N ; pooled  B x S x G x d
+ group-merge Linear(G*d->d)   : z_series  B x S x d
+ + meta token / series pos    : B x S x d
+ 2L Transformer (+ CLS)       : B x (S+1) x d
+ metadata-conditioned attn
+ pooling over series          : beta B x G x S ; z_study B x d
+ label-embedding head         : d -> 64 -> L   : logits B x 12
+ teacher only:
+   z_text                     : B x 768 -> Linear -> B x d
+   fusion [z_study || z_text] : B x 2d -> MLP(1024,GELU) -> B x 12
+   ITC projections            : B x 256 (both modalities, L2-normalised)
+
+--------------------------------------------------------------------------------
+S5. SUPERVISION SOURCES  (resolving the label sparsity)
+--------------------------------------------------------------------------------
+Tier G (gold)   : 58 studies with provided labels. Weight 1.0. Used for final
+                  selection / calibration only where possible; ALSO in training.
+Tier W (weak)   : 4,349 studies, labels derived from Report by the
+                  extractor (S6). Weight w_W = 0.5 x extractor confidence. [H]
+Tier U (unlabeled-after-extraction) : label slots the extractor marks as
+                  "not mentioned/uncertain" (-1). MASKED in the BCE/ASL loss.
+Important caveats  [H]
+  - Weak label noise is correlated with report language/site; check per-language
+    precision on the 58 gold studies before trusting any label slot.
+  - Hidden-test labels are presumably gold-quality; weak-label OOF AUC will be
+    optimistic. Always report gold-58 AUC with bootstrap CI beside weak OOF AUC.
+  - Because y_weak = f(report), the text teacher can reach near-perfect agreement
+    with weak labels WITHOUT looking at images -> teacher leakage (F-2).
+
+--------------------------------------------------------------------------------
+S6. RADIOLOGY NLP  (models/text_encoder.py)
+--------------------------------------------------------------------------------
+Decision: structured extraction first, full-report embedding second.
+  Reason: labels are the 12 named findings; negation + laterality + language are
+  the failure sources, and a lexicon+rules extractor can be audited line by
+  line against the 58 gold rows. Full embeddings (XLM-R) are only needed for
+  ITC / feature KD and finding severity words.
+Pipeline
+  1. Language ID (fastText lid / langdetect), logged per study.
+  2. Per-language lexicon (es, de, nl, en first; add others as found in EDA) for
+     each of the 12 findings, with anatomy (medial/lateral, patellofemoral).
+  3. Negation / uncertainty scope (NegEx-style windows per language;
+     "no se observa", "kein", "geen", "without", "cannot exclude" ...).
+  4. Output  e_i in {-1,0,+1}^12 (+1 present, 0 absent, -1 not mentioned or
+     uncertain => masked) plus confidence c in [0,1].
+  5. Validate against the 58 gold rows: per-label precision/recall; no label is
+     used as weak supervision unless gold precision >= 0.9 on >= 5 positives
+     (else that slot stays masked). [cfg: weak.min_precision]
+  6. XLM-R-base (270M, sentencepiece) encodes the report; mean pool -> z_text
+     in R^768. Frozen first; unfreeze last 2 layers only if the ITC ablation
+     wins. max_len 256 tokens (head+tail truncation).
+  7. Optional later [H]: LLM-assisted labelling to enlarge/verify weak labels,
+     only with an offline, auditable prompt and gold-58 check.
+Not used: machine translation to English (adds a noise stage), clinical BERT
+(English-only).
+
+--------------------------------------------------------------------------------
+S7. MODEL ARCHITECTURE  "OxAlpha-MIL-KD"
+--------------------------------------------------------------------------------
+S7.1 Slice encoder (models/slice_encoder.py)
+  Primary: EfficientNet-B0 (timm 'tf_efficientnet_b0.ns_jft_in1k', 5.3M params)
+  on 2.5D stacks. Why: ~4.4k studies / 24k series is small; 3D transformers
+  and large ViTs overfit and cost memory. [H] Alternative A/B: ConvNeXt-T
+  (28M, C=768). 3D CNN / Swin-3D / MRI SSL encoders: later, only if a strong
+  baseline exists (no public knee-MRI weights verified).
+  - C -> d=512 via Linear + LayerNorm; dropout 0.2 [cfg: slice.drop]
+  - Learned slice-position embedding (24 x 512) added to every slice token
+  - Gradient checkpointing on the backbone; stages 0-2 frozen in epochs 1-3.
+S7.2 Slice aggregation (models/mil.py)  [E: Ilse 2018 gated attention]
+  alpha_k = softmax_k( w^T ( tanh(V h_k) * sigmoid(U h_k) ) )
+  V,U: 512->256, w: 256->1. Query is metadata-conditioned by adding the meta
+  embedding to h_k before V/U [H]. Six pathology-group heads (separate w per
+  group, shared V,U) so different findings can attend to different slices:
+     G1 ligament  : ACL, MCL
+     G2 meniscus  : Medial Meniscus, Lateral Meniscus
+     G3 cartilage : Medial OA, Lateral OA, PF OA
+     G4 joint     : Effusion, Synovitis
+     G5 popliteal : Baker's
+     G6 bone      : Contusion, Fracture
+  Group-merge: concat(G*d) -> Linear -> z_series (512). Attention entropy
+  regulariser lambda_ent = 0.01 (prevents collapse to 1 slice) [H].
+  Compared and rejected for v1: mean/max pooling (kept as baseline), DSMIL,
+  CLAM (instance clustering needs instance labels we lack), TransMIL
+  (quadratic, overfits at this N).
+S7.3 Series encoder (models/series_encoder.py)
+  Decision: z_j = f(V_j, M_j) rather than f(V_j) [H, ablated A5]. Rationale:
+  plane and sequence contrast determine which findings are visible (menisci /
+  ACL best in sagittal, MCL/effusion in coronal, PF OA in axial); test-time
+  metadata exists. Because Fluid_Sensitive == Fat_Suppression always [V], use
+  ONE contrast embedding (2 values) plus plane embedding (3 values).
+  - Meta token = Emb_plane(3,d) + Emb_contrast(2,d); added to z_series.
+  - Learned series-order embedding NOT used (order in csv is arbitrary).
+  - [CLS] token + 2-layer Transformer encoder, 8 heads, ff 1024, dropout 0.1,
+    pre-LN, key-padding mask from s_mask.
+  - Pooling: G=6 attention queries over series tokens (metadata-conditioned
+    via the meta token), outputs z_study = Linear(G*d->d).
+S7.4 Classification head
+  Label-embedding head: z_study -> 64-d bottleneck (GELU, dropout 0.2) -> 12
+  logits with learnable per-label bias initialised to logit(prior). Low-rank
+  (64) shares statistical strength across co-occurring labels.
+S7.5 Label graph / GNN  -- DECISION: NOT in v1.
+  12 nodes and 58 gold rows cannot fit a reliable edge structure; co-occurrence
+  from weak labels is mostly report-style correlation. Low-rank head captures
+  the benefit cheaply. Re-open only if S11 co-occurrence analysis shows strong
+  stable structure AND an ablation (A9) of a 2-layer GAT head on 12 label nodes
+  beats the 64-d bottleneck by > 0.005 macro-AUC OOF.
+S7.6 Anatomy-aware modelling
+  v1 = global model + pathology-group attention (slice-level localisation by
+  attention). No segmentation / ROI proposals (no mask labels exist). Revisit
+  only via weak localisation from attention maps (CAM) after baseline.
+S7.7 Teacher (models/teacher.py, fusion.py)  -- train only
+  Shares the image trunk (slice encoder + MIL + series encoder) with the
+  student. Teacher head: [z_study || Linear(z_text)] -> MLP(1024)->12.
+  Modality dropout p_text=0.3 on z_text so the fused head cannot ignore images.
+  Training schedule: Stage C1 trains teacher end-to-end; Stage C2 freezes the
+  teacher and trains an independent student with KD (offline KD, stable).
+S7.8 Student (models/student.py) -- deployed
+  Same architecture as the trunk + head; no text input of any kind.
+
+--------------------------------------------------------------------------------
+S8. LOSS FUNCTION
+--------------------------------------------------------------------------------
+L = l1*L_diag + l2*L_KD + l3*L_feat + l4*L_ITC + l5*L_aux (+ l6*L_attn, l_ent)
+  L_diag : Asymmetric Loss (gamma_neg=4, gamma_pos=0, clip m=0.05) [E: Ridnik
+           2021], mask for -1 labels, per-sample weight (gold 1.0, weak 0.5*c).
+           Baseline control: plain BCE with pos_weight clipped to [1,10].
+  L_KD   : binary-KL(p_T^tau || p_S^tau) per label, tau=3, scaled by tau^2
+           [E: Hinton 2015]; teacher probabilities from the frozen teacher.
+  L_feat : 1 - cos(P_s z_S, z_T) with stop-grad on z_T [H]; P_s: Linear(d->d).
+  L_ITC  : symmetric InfoNCE between 256-d projections of z_study and z_text,
+           in-batch negatives, learnable temperature init 0.07, batch >= 32
+           studies via grad accumulation + memory queue (1024) [E: CLIP];
+           caution: report similarity between studies with identical labels
+           creates false negatives -> mask pairs whose weak label vectors are
+           identical [H].
+  L_attn : KL(beta_T || beta_S) over series attention + slice attention
+           (teacher -> student), small weight; interpretability caveat F-8 [H].
+  L_aux  : (a) plane CE from slice-level features (3-way) and contrast BCE:
+           labels exist in train_series.csv [V]; (b) report-label prediction
+           from z_study on weak labels (same as L_diag but only Tier W, kept
+           separate to log). NOT used: pathology localisation, slice
+           relevance, anatomical region (no ground truth).
+Weights (initial, [cfg: loss.*]):  l1=1.0  l2=0.5  l3=0.1  l4=0.2  l5=0.1
+  l6=0.05  l_ent=0.01. Warm-up: l2,l3,l4 linearly ramp 0 -> target over epochs
+  2..6 so early learning is label-driven.
+Selection: coordinate search on {l2,l4} x {0.1,0.3,0.5,1.0} using gold-58 +
+  weak-OOF macro AUC averaged over 2 folds; other l's fixed. Final choice must
+  also not hurt ECE. Report all runs in the experiment table (S12).
+
+--------------------------------------------------------------------------------
+S9. TRAINING SYSTEM
+--------------------------------------------------------------------------------
+Stage A (baseline, build FIRST): frozen EfficientNet-B0 -> cached 24x512 slice
+  features per series (one pass, ~24k series) -> MIL/series model on cached
+  features. Hours not days; gives the first leaderboard-quality number and a
+  ruler for everything after. Heads: mean/max pool baselines, then gated MIL.
+Stage B (student end-to-end): unfreeze backbone, weak+gold labels, ASL.
+Stage C (teacher + KD + ITC): as S7.7.
+Hyperparameters [cfg: train.*]
+  optimiser AdamW, betas (0.9,0.999), weight decay 0.05
+  lr: backbone 1e-4 (layer-wise decay 0.8), heads/MIL/series 5e-4
+  schedule: 2-epoch linear warm-up, cosine to 1e-6
+  epochs: A 40 (cached), B 25, C1 25, C2 25
+  batch: 2 studies per micro-batch (<=16 series x 24 slices fwd), grad accum 8
+         -> effective 16 studies ; clip grad-norm 1.0
+  precision: fp16 AMP + GradScaler (Kaggle T4/P100 lack bf16); bf16 on Ampere+
+  EMA of weights decay 0.999, evaluate EMA
+  seeds: 3 seeds x 5 folds for final ensemble; fold seed fixed [cfg: seed]
+  memory estimate (UNMEASURED [H]): EffNet-B0 224px fp16, 192 slices fwd with
+  grad checkpointing ~8-10 GB; profile on first GPU run and set micro-batch.
+Text side: XLM-R lr 1e-5 only if unfrozen; max_len 256; precomputed z_text
+  cache for frozen mode (no XLM-R at train time).
+Logging: per-epoch per-label AUC (weak OOF and gold), calibration (ECE),
+  attention entropy, gradient norm; config hash + git commit saved with
+  every checkpoint.
+
+--------------------------------------------------------------------------------
+S10. VALIDATION  (validation/)
+--------------------------------------------------------------------------------
+- Unit of split = study (StudyInstanceUID). Series/slices NEVER split.
+- Patient ID not given: detect duplicate/same-patient studies via (a) exact
+  or near-duplicate report text (MinHash), (b) volume-embedding nearest
+  neighbours across studies (cosine > 0.98 on frozen-feature mean). Duplicate
+  clusters are merged into a single group before folding. [cfg: dedup.*]
+- 5 folds, GroupKFold over duplicate-clusters with iterative stratification
+  (Sechidis 2011) on the 12-label vector where known; the 58 gold studies are
+  stratified separately so each fold holds ~11-12 gold rows (expected
+  per-fold positives for MCL ~2: gold metrics are very noisy -> report pooled
+  OOF over all 58 plus bootstrap 95% CI).
+- Tier-W metrics are always labelled "weak-OOF"; Tier-G metrics "gold-OOF".
+- Text-model leakage control: the extractor lexicon is frozen before looking at
+  image-model results; folds are fixed once and reused by every experiment.
+- Ensemble validation: blend weights fitted on OOF only, nested across folds.
+
+--------------------------------------------------------------------------------
+S11. EVALUATION AND CALIBRATION
+--------------------------------------------------------------------------------
+Metric (to verify on Kaggle page [V pending]): assumed mean per-label ROC-AUC.
+- AUC is rank-based => threshold-free; accuracy/F1 at 0.5 is misaligned with
+  ranking and useless under prevalence 15-60%.
+- Macro over labels (matches assumed metric); also log micro AUC and per-label.
+- Calibration (ECE, reliability) is monitored but does NOT affect AUC; use
+  temperature scaling only if the metric turns out to be log-loss-like.
+- Co-occurrence analysis (notebook 02): phi coefficients + conditional
+  probabilities on gold and weak labels; informs only S7.5 decision.
+
+--------------------------------------------------------------------------------
+S12. EXPERIMENT TABLE (fair comparison; same folds, seed set, epochs budget)
+--------------------------------------------------------------------------------
+ ID  Change vs previous                         Metric focus
+ A0  frozen EffNet-B0 + mean-pool + logistic    baseline floor
+ A1  A0 with max-pool / gated MIL                MIL value
+ A2  + 6 group heads                             group-head value
+ A3  + series transformer                        series fusion value
+ A4  + metadata token (z=f(V,M))                 metadata value [H1]
+ A5  end-to-end backbone (Stage B)               finetune value
+ A6  weak labels vs gold-only                    weak supervision value
+ A7  + teacher text KD (logit)                   LUPI value [H2]
+ A8  + ITC                                        alignment value
+ A9  + feature/attention KD                       extra KD terms
+ A10 label-graph head                             GNN value (S7.5)
+ A11 ConvNeXt-T vs EffNet-B0                      backbone choice
+ A12 resolution 224 vs 288 (if source permits)    detail vs cost
+ Each row: weak-OOF AUC macro/per-label, gold-OOF AUC + CI, ECE, GPU-hours.
+ Promotion rule: keep a component only if it improves BOTH weak-OOF and
+ gold-OOF macro AUC (or one improves and the other is within CI) at 3 seeds.
+
+--------------------------------------------------------------------------------
+S13. INFERENCE AND ENSEMBLE  (inference/)
+--------------------------------------------------------------------------------
+- Student only. Series priority/selection from S3.6. TTA: identity + 2 small
+  scale crops (no flips). "Sliding-slice": when a series has more than 24
+  usable slices, run overlapping windows of 24 and average attention-weighted
+  features (only relevant if raw DICOM at test time).
+- Ensemble: 5 folds x 3 seeds x {EffNet-B0, ConvNeXt-T} (+ plane-specific
+  models only if A-table shows gain). Average LOGITS per label, then sigmoid
+  (rank averaging only if metric is global-AUC across studies, and then
+  per-label ranks over the test set).
+- Time budget: Kaggle submission < 9h limit [verify]; target < 30 min for the
+  hidden test set.
+
+--------------------------------------------------------------------------------
+S14. FAILURE MODES AND MITIGATIONS (>= 15)
+--------------------------------------------------------------------------------
+F-1  Label sparsity (58/4407 gold): weak labels carry most signal -> validate
+     extractor on gold, mask low-precision slots, report gold-OOF with CI.
+F-2  Teacher leakage: weak labels = f(report), teacher reads report -> ignores
+     images, KD transfers only label noise -> modality dropout, ITC, KD only on
+     image-relevant soft targets, ablation A7 vs A6.
+F-3  Report leakage into student: any report-derived feature at inference ->
+     unit test T-LEAK-1; student class has no text parameters.
+F-4  Wrong slice order: filename sort -> sort by IPP projection (S3.1).
+F-5  npz recipe unknown / mismatch with DICOM test path -> parity test S3.3.
+F-6  Anisotropic volumes, spacing differences across sites -> per-series
+     resampling, record spacing, site-shift analysis.
+F-7  Small lesions lost (24 slices, 224px) -> test 288px, keep 6 group heads,
+     lower stride; consider crop around joint.
+F-8  Misleading attention -> treat as heuristic; verify with occlusion /
+     Grad-CAM on spot checks; attention KD weight small.
+F-9  Irrelevant / duplicate series -> metadata token, series dropout, priority
+     selection.
+F-10 Multilingual NLP failure (unseen language) -> language ID, lexicon per
+     language, mask labels when language unsupported.
+F-11 Negation / uncertainty errors ("no evidence of tear") -> NegEx scope,
+     -1 on hedging, gold check.
+F-12 Class imbalance per label (MCL 9/58 positives) -> ASL, pos_weight clip,
+     per-label bias init.
+F-13 Overfitting (4.4k studies) -> small backbone, frozen early stages, EMA,
+     augmentation, weight decay, early stop on weak-OOF + gold-OOF.
+F-14 Patient / duplicate leakage across folds -> dedup clusters (S10).
+F-15 Scanner / intensity shift -> per-series percentile norm, intensity
+     augmentation, monitor AUC by site/manufacturer proxy.
+F-16 Student cannot inherit text info -> inspect KD loss curve, A7/A8 ablations,
+     feature-KD cosine; if no gain, drop teacher and ship Stage B.
+F-17 Excessive complexity vs data -> promotion rule S12; Stage A baseline first.
+F-18 GPU memory -> checkpointing, micro-batch 1-2 studies, cached features
+     (Stage A), fp16, series cap S_max=8.
+F-19 Weak-label optimism (OOF AUC inflated) -> always show gold-OOF next to it.
+F-20 Metric/rules drift -> TODO to re-verify competition page before each
+     final submission.
+F-21 Python 3.14 / library incompatibility locally -> pin env in
+     requirements.txt, develop on the Kaggle/GPU image versions.
+
+--------------------------------------------------------------------------------
+S15. LITERATURE (primary sources to confirm and cite; entries marked * are in
+     papers/ already -- confirm exact titles before citing)
+--------------------------------------------------------------------------------
+ *Hinton, Vinyals, Dean 2015, Distilling the Knowledge in a NN (1503.02531)
+  Ilse, Tomczak, Welling 2018, Attention-based Deep MIL (ICML)
+  Radford et al. 2021, CLIP;  Ridnik et al. 2021, Asymmetric Loss;
+  Vapnik & Vashist 2009, LUPI;  Conneau et al. 2020, XLM-R;
+  Sechidis et al. 2011, iterative stratification;
+  Tan & Le 2019, EfficientNet;  Liu et al. 2022, ConvNeXt;
+  Chapman et al. 2001, NegEx;  Bien et al. 2018, MRNet (knee MRI baseline).
+ Frontier 2024-2026 components: to be surveyed with a dated search BEFORE
+ adopting any (TODO T-LIT-1). No novelty claim is made.
+
+--------------------------------------------------------------------------------
+S16. BUILD ORDER
+--------------------------------------------------------------------------------
+1. Environment + EDA + metric/rules check.  2. Folds + dedup.  3. Weak-label
+extractor + gold validation.  4. Stage A baseline (cached features).
+5. Stage B student.  6. Teacher + KD + ITC.  7. Ensemble + submission.
+Only attempt after a strong baseline: ConvNeXt-T, GNN head, ITC memory queue,
+LLM-assisted labelling, 288px, plane-specific models.
+================================================================================
