@@ -1,7 +1,8 @@
 ================================================================================
 OxAlpha  --  SPECIFICATION  (spec-anchored + spec-as-source)
 RSNA Knee Abnormality Detection -- multi-series knee MRI, 12 study-level labels
-Spec version: 0.2.0     Date: 2026-10-14     Status: DRAFT (pre-baseline)
+Spec version: 0.2.0     Date: 2026-10-15     Status: BASELINE
+Baseline anchor: hpc-master @ dc5dcfcbd228051191ccd7970b476bbee8e78545
 Supersedes 0.1.0 (2026-10-09, written on a Windows laptop with a 5-study sample)
 ================================================================================
 
