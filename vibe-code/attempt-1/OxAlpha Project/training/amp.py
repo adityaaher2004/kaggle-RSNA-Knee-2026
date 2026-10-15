@@ -1,8 +1,8 @@
 """SPEC: S9
 
-fp16/bf16 autocast, GradScaler, gradient accumulation helpers.
+bf16 autocast context (fp16 + GradScaler fallback for non-Ampere GPUs).
 
-API (planned): Stepper
+API (planned): autocast_ctx(cfg); make_scaler(cfg)
 """
 
 raise NotImplementedError("stub -- see specs.txt S9")

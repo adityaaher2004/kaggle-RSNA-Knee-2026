@@ -1,0 +1,5 @@
+# SPEC: S9 Stage B2, S8 L_KD -- noisy-student targets from Stage B OOF; overrides base.yaml
+extends: stage_b_reader.yaml
+stage: B2
+oof_from: null                # run id of the Stage B fold ensemble
+loss: {target: mixed, kd_mix: 0.5}

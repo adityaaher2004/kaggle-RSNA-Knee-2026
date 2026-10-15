@@ -1,0 +1,8 @@
+# SPEC: S13 -- paths inside the offline Kaggle kernel (dataset slugs to be filled in at upload)
+paths:
+  raw: /kaggle/input/rsna-knee-abnormality-detection
+  code: /kaggle/input/oxalpha-code
+  weights: /kaggle/input/oxalpha-weights
+  wheels: /kaggle/input/oxalpha-wheels
+  out: /kaggle/working
+decode_workers: 4

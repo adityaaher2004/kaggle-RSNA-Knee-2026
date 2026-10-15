@@ -1,8 +1,8 @@
-"""SPEC: S7.7
+"""SPEC: S7.7 (DEFERRED)
 
-Image trunk + fusion; train-only; frozen when distilling.
+Multimodal teacher: Reader trunk + text encoder + fusion. Train only, never imported by inference/.
 
-API (planned): Teacher.forward(x, s_mask, meta, z_text) -> logits, z_study, attn
+API (planned): Teacher(cfg).forward(batch) -> dict
 """
 
 raise NotImplementedError("stub -- see specs.txt S7.7")

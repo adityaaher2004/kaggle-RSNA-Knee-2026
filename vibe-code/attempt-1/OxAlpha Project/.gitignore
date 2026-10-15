@@ -1,0 +1,15 @@
+work/
+runs/
+*.npz
+*.npy
+*.pt
+*.pth
+*.safetensors
+*.parquet
+__pycache__/
+.ipynb_checkpoints/
+# competition data must not be committed (Data Security rules)
+*.dcm
+train*.csv
+test*.csv
+sample_submission.csv

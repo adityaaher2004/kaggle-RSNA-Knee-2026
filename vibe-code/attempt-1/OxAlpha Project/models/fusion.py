@@ -1,8 +1,8 @@
-"""SPEC: S7.7
+"""SPEC: S7.7 (DEFERRED)
 
-Teacher fusion MLP([z_img||z_text]->12) with modality dropout; ITC projection heads (256-d).
+Teacher fusion MLP over [z_study || Linear(z_text)] with modality dropout; ITC projection heads.
 
-API (planned): TeacherFusion ; ITCHeads
+API (planned): Fusion(cfg).forward(z_img, z_text, train) -> logits, proj_img, proj_txt
 """
 
 raise NotImplementedError("stub -- see specs.txt S7.7")

@@ -1,0 +1,3 @@
+# SPEC: S9 Stage B -- end-to-end OxAlpha Reader (shipped model); overrides base.yaml
+extends: base.yaml
+stage: B

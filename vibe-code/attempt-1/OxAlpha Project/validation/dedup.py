@@ -1,8 +1,8 @@
 """SPEC: S10
 
-Near-duplicate study detection (report MinHash + feature cosine).
+Duplicate studies via report MinHash and Stage A mean-feature cosine -> dup cluster ids.
 
-API (planned): find_clusters()
+API (planned): dup_clusters(reports, feats, cfg) -> pd.Series
 """
 
 raise NotImplementedError("stub -- see specs.txt S10")

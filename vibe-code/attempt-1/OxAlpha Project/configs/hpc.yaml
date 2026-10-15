@@ -1,0 +1,15 @@
+# SPEC: S0.1, S2, S9 -- IU HPC paths and Slurm defaults
+paths:
+  root: /N/scratch/aaher/RSNA
+  raw: /N/scratch/aaher/RSNA/full_data/rsna-knee-abnormality-detection
+  cache: /N/scratch/aaher/RSNA/cache/v1
+  labels: /N/scratch/aaher/RSNA/labels
+  runs: /N/scratch/aaher/RSNA/runs
+  hf_home: /N/scratch/aaher/RSNA/hf_cache
+env:
+  module: python/3.14.5
+  venv: /N/scratch/aaher/RSNA/venv
+slurm:
+  gpu: {partition: h100-single, gres: "gpu:1", cpus: 16, mem: 128G, time: "06:00:00"}
+  debug_gpu: {partition: h100-debug, gres: "gpu:1", cpus: 16, mem: 64G, time: "01:00:00"}
+  cpu: {partition: general, cpus: 32, mem: 64G, time: "08:00:00"}

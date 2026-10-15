@@ -1,8 +1,8 @@
 """SPEC: S8
 
-Plane CE + contrast BCE from slice features (labels from train_series.csv).
+Attention-entropy regulariser on head attention (enabled only if attention collapses).
 
-API (planned): aux_loss(plane_logits, contrast_logits, meta)
+API (planned): attn_entropy(attn, mask) -> scalar
 """
 
 raise NotImplementedError("stub -- see specs.txt S8")

@@ -1,8 +1,8 @@
-"""SPEC: S7.2
+"""SPEC: S7.5
 
-Gated-attention MIL with 6 pathology-group heads; returns z_series[B,S,512] and alpha[B,S,G,N].
+Ablation aggregators over window tokens: mean, max, gated-attention MIL (Ilse 2018) with a linear 12-way head.
 
-API (planned): GatedMIL(d, n_groups).forward(h, meta_emb)
+API (planned): make_pool(kind, cfg) -> nn.Module; forward(tokens, mask) -> logits[B,12]
 """
 
-raise NotImplementedError("stub -- see specs.txt S7.2")
+raise NotImplementedError("stub -- see specs.txt S7.5")

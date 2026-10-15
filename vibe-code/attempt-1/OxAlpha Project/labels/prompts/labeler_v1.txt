@@ -1,0 +1,5 @@
+SPEC: S6.2 -- labeler prompt v1. Versioned: never edit in place; copy to labeler_v2.txt and bump labels.prompt.
+STATUS: placeholder. Write after reading ~30 reports across languages and the 58 gold rows (TODO P2.3).
+Must contain: role; the 12 label definitions (with medial/lateral/PF compartment rules and OA vs chondromalacia
+threshold); status vocabulary {present, absent, uncertain, not_mentioned}; negation + hedging rules; output
+JSON schema {label: {status, p, evidence}}; instruction to quote evidence verbatim in the report's language.

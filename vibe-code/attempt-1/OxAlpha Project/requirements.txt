@@ -1,17 +1,19 @@
-torch
-torchvision
+# SPEC: S0.1 -- installed on top of `module load python/3.14.5` (torch 2.14.0+cu130, torchvision, transformers,
+# sklearn, pandas, numpy, pyyaml come from the module via --system-site-packages). Pin exact versions after
+# the first successful install (pip freeze > requirements.lock). py3.14 wheels for gdcm/SimpleITK are unverified.
 timm
-monai
 pydicom
 pylibjpeg
 pylibjpeg-libjpeg
+pylibjpeg-openjpeg
+python-gdcm
 SimpleITK
-numpy
-pandas
-scikit-learn
+opencv-python-headless
 iterative-stratification
-transformers
-sentencepiece
-langdetect
-pyyaml
 datasketch
+langdetect
+sentencepiece
+pyarrow
+kaggle
+jupytext
+pytest

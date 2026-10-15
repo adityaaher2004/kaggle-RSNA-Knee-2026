@@ -1,0 +1,6 @@
+{
+  "_spec": "S13 -- template for `kaggle datasets create -p <dir>`; copy next to the weights/code dir and fill id",
+  "title": "oxalpha-weights",
+  "id": "KAGGLE_USERNAME/oxalpha-weights",
+  "licenses": [{"name": "CC0-1.0"}]
+}

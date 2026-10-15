@@ -1,8 +1,8 @@
 """SPEC: S7.3
 
-Meta token (plane+contrast) + CLS + 2-layer Transformer + G-query attention pooling. Out: z_study[B,512], beta[B,G,S].
+Study transformer: 2 pre-LN encoder layers over all S*T window tokens with key-padding mask.
 
-API (planned): SeriesEncoder(cfg).forward(z_series, meta, s_mask)
+API (planned): StudyEncoder(cfg).forward(tokens[B,S*T,d], mask[B,S*T]) -> [B,S*T,d]
 """
 
 raise NotImplementedError("stub -- see specs.txt S7.3")

@@ -1,8 +1,8 @@
-"""SPEC: S9
+"""SPEC: S9 Stage A
 
-Stage A: cache frozen features then train MIL/series heads.
+Train ablation heads on cached features for every fold; writes OOF + metrics row.
 
-API (planned): main(cfg_path)
+API (planned): main(cfg, fold)
 """
 
 raise NotImplementedError("stub -- see specs.txt S9")

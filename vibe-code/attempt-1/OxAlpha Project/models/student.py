@@ -1,8 +1,8 @@
-"""SPEC: S7.8
+"""SPEC: S7
 
-Deployed image-only model: trunk + label-embedding head. MUST NOT import text_encoder/fusion.
+OxAlpha Reader = WindowEncoder + TokenEmbed + StudyEncoder + LabelQueryHead. No text inputs (T-LEAK-1). Also the Stage A head when fed cached features.
 
-API (planned): Student.forward(x, s_mask, meta) -> logits[B,12], z_study, attn
+API (planned): Reader(cfg, priors).forward(batch) -> dict(logits[B,12], attn)
 """
 
-raise NotImplementedError("stub -- see specs.txt S7.8")
+raise NotImplementedError("stub -- see specs.txt S7")

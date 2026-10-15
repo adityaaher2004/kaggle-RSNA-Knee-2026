@@ -1,8 +1,8 @@
-"""SPEC: S10
+"""SPEC: S11, S12
 
-Assemble out-of-fold prediction tables (weak and gold).
+Assemble OOF predictions across folds; gold-OOF and label-OOF tables; append a row to the experiment table.
 
-API (planned): collect_oof()
+API (planned): collect(run_dirs) -> pd.DataFrame; report(oof, gold, labels) -> dict
 """
 
-raise NotImplementedError("stub -- see specs.txt S10")
+raise NotImplementedError("stub -- see specs.txt S11")

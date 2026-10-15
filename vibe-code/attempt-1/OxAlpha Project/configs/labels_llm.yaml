@@ -1,0 +1,10 @@
+# SPEC: S6.2 -- report labeler. Model choice decided by gold macro AUC (L1 row of S12); licence check T-RULES-2.
+labels:
+  candidates: [Qwen/Qwen3-30B-A3B-Instruct-2507, google/gemma-3-27b-it, google/medgemma-27b-text-it]
+  model: null                 # set after L1 comparison
+  prompt: labels/prompts/labeler_v1.txt
+  temperature: 0.0
+  max_new_tokens: 600
+  self_consistency: 1         # 3 = average over prompt paraphrases
+  engine: vllm
+  out_dir: ${paths.labels}

@@ -1,8 +1,8 @@
-"""SPEC: S8
+"""SPEC: S8, S7.7 (DEFERRED)
 
-Symmetric InfoNCE image-text with learnable temperature, false-negative masking.
+Symmetric InfoNCE between image and text projections.
 
-API (planned): itc(z_img, z_txt, y_weak)
+API (planned): info_nce(p_img, p_txt, temp) -> scalar
 """
 
 raise NotImplementedError("stub -- see specs.txt S8")

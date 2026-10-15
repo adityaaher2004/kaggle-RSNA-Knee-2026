@@ -1,8 +1,8 @@
-"""SPEC: S6
+"""SPEC: S7.7 (DEFERRED)
 
-Language ID, per-language lexicon/negation extractor -> e in {-1,0,1}^12 + confidence; XLM-R-base mean-pooled z_text[768]. TRAIN ONLY.
+XLM-R-base report encoder, mean-pooled z_text in R^768, frozen; cached embeddings.
 
-API (planned): extract_labels(report)->(e,c) ; TextEncoder.encode(reports)->z_text
+API (planned): TextEncoder(cfg).encode(reports) -> np.ndarray[n,768]
 """
 
-raise NotImplementedError("stub -- see specs.txt S6")
+raise NotImplementedError("stub -- see specs.txt S7.7")

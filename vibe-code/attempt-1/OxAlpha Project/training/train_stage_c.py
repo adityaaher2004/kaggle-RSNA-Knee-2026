@@ -1,8 +1,8 @@
-"""SPEC: S9
+"""SPEC: S7.7, S9 Stage C (DEFERRED)
 
-Stage C: teacher (C1) then KD student (C2).
+Teacher training then offline KD into the Reader.
 
-API (planned): main(cfg_path)
+API (planned): main(cfg, fold)
 """
 
-raise NotImplementedError("stub -- see specs.txt S9")
+raise NotImplementedError("stub -- see specs.txt S7.7")
