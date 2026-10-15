@@ -1,6 +1,7 @@
 # OxAlpha TODO
 
 Source of truth: `specs.txt` v0.2.0 (section refs in brackets). Order = build order; dates are targets (spec S16).
+Baseline status: **ACTIVE** as of 2026-10-15; implementation must conform to spec v0.2.0 until superseded by a spec-first commit.
 `[ ]` open, `[x]` done. **GPU** = Slurm h100 job. **USER** = needs you (accounts, rules, Kaggle UI).
 Deadline rule R5: anything that cannot produce a measured result by **2026-10-20** moves to "Deferred".
 
@@ -8,7 +9,7 @@ Deadline rule R5: anything that cannot produce a measured result by **2026-10-20
 - [ ] **USER** P0.1 Team/merger deadline **2026-10-15**: confirm you are entered (rules accepted) and decide on any team merge [S0.3]
 - [ ] **USER** P0.2 T-RULES-1 Read Overview/Evaluation/Rules on Kaggle; confirm macro-AUC, 9 h, internet off, submission format, efficiency formula [S0.3, S11, S13]
 - [ ] **USER** P0.3 T-RULES-2 Rules on external data/models: is a locally-run open LLM allowed for labeling? Are other teams' public label datasets / public notebooks allowed in a final submission? [S6.2, S6.4, F-21]
-- [x] P0.4 Inspect repo, HPC, data; spec 0.2.0, layout, TODO (2026-10-14)
+- [x] P0.4 Inspect repo, HPC, data; establish spec 0.2.0 + TODO as authoritative baseline on `hpc-master` (2026-10-15)
 - [ ] P0.5 `scripts/setup_env.sh` → venv on python/3.14.5; check timm/pydicom/gdcm wheels install on 3.14; write `requirements.lock` [S0.1]
 - [ ] P0.6 Fix Kaggle CLI (old ~/.local one points to a removed python3.13); `kaggle competitions files rsna-knee-abnormality-detection` works [S0.1]
 - [ ] P0.7 `scripts/download_data.sh csv` → 5 CSVs in `full_data/...` [S0.2]
