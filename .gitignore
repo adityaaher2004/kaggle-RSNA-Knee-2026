@@ -1,0 +1,18 @@
+# competition data: PII/redistribution risk and size -- never commit
+*.dcm
+*.npz
+*.zip
+*.kaggle-partial
+# secrets and model artefacts
+hf_access_token.txt
+*.onnx
+*.ckpt
+*.pt
+!self-code/learn/xlm-r/xlmr.vocab.pt
+# python / jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# run outputs (produced on HPC/local, not source)
+**/oxalpha/work/
+*.egg-info/
