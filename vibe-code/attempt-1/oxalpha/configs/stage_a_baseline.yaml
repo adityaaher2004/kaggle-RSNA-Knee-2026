@@ -1,0 +1,2 @@
+﻿# SPEC: SPEC.md section 9 -- overrides base.yaml
+extends: base.yaml

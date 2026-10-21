@@ -1,0 +1,17 @@
+torch
+torchvision
+timm
+pydicom
+pylibjpeg
+pylibjpeg-libjpeg
+numpy
+pandas
+scikit-learn
+iterative-stratification
+transformers
+sentencepiece
+langdetect
+pyyaml
+datasketch
+# removed 2026-10-20 (no spec requirement uses them): monai, SimpleITK. Re-add with a SPEC reference.
+# pin exact versions on the HPC image (TODO T-ENV-1); local is Python 3.14 and is not the target.
