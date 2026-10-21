@@ -27,7 +27,7 @@ Task list: [TODO.md](TODO.md). Every task there cites a requirement ID below.
 | F8 | **Filename order ≠ anatomical order in 20/20 series.** InstanceNumber vs slice-normal projection has sign +1 in 11 and −1 in 9 series → the sort *direction* is not constant either. | [V] DATA_REPORT |
 | F9 | `PatientID` (UUID-like) is present in DICOM headers; 4 local studies = 4 distinct patients. Whether one patient has several studies in the full set is `[U]`. | [V] / [U] |
 | F10 | Competition runs "through October 22, 2026"; training set ">5,000 knee MRI exams … about a dozen languages … 16 sites"; test annotated by expert radiologists; new **"most efficient models"** award. | [P] <https://www.rsna.org/news/2026/august/ai-challenge-knee-mri> |
-| F11 | Metric = macro ROC-AUC over the 12 labels; code competition ≤ 9 h, internet off. **Single secondary source, page now 404.** | [S] — confirm on Kaggle (REQ-RULES-1) |
+| F11 | **Metric = macro-averaged ROC-AUC over the 12 labels** (confirmed by project owner 2026-10-20). Code competition ≤ 9 h, internet off is still `[S]` (one secondary source). | owner-confirmed / [S] |
 | F12 | `sample_submission.csv`: one row per `StudyInstanceUID`, 12 float columns (0.5), same names/order as `train.csv` labels. | [V] test_data_contract |
 | F13 | Local env: Python 3.14.8, torch 2.14.1 CPU, timm 1.0.30, monai, SimpleITK, transformers 4.57, sklearn, iterstrat, langdetect, datasketch, pylibjpeg installed. No CUDA. | [V] `pip list` |
 
@@ -38,7 +38,7 @@ Task list: [TODO.md](TODO.md). Every task there cites a requirement ID below.
 | I-01 | **Critical** | 98.7% of studies have no label; reports are the *label source*, not only privileged info. Report→label quality caps the whole system. | Weak-label pipeline first (REQ-NLP-*); trust gated by gold precision. |
 | I-02 | High | Gold-58 is enriched (no negatives) and tiny (MCL has 9 positives). AUC on it has huge CI and prevalence ≠ population. | Report pooled gold AUC with bootstrap CI; never select on gold alone (REQ-VAL-3). |
 | I-03 | High | **Gold reuse.** Old spec tuned the extractor on gold-58 *and* evaluated the student on gold-58. Extractor errors then correlate with the evaluation set. | Extractor developed blind to gold; gold used once to score the frozen extractor, then as eval (REQ-NLP-3). |
-| I-04 | High | **Schedule.** Contest ends 2026-10-22 [P]; today is 2026-10-20. The full teacher/KD plan cannot finish. | §4 Tier 0 = minimum viable submission, defined first. Human decision D-1. |
+| I-04 | High | **Schedule.** Contest ends 2026-10-22 [P]; today is 2026-10-20. Owner decision (D-1): the goal is the full pipeline; do not let a minimal pipeline eat time. | §4: Tier 0 is a bounded smoke test only. |
 | I-05 | High | `base.yaml` used `${...}` interpolation (PyYAML can't) and a relative `../../../..` data path. | Fixed: `data_root` from env `RSNA_DATA`. |
 | I-06 | High | Previous S0 facts are stale: it cited 5 train / 3 test studies, 1038/557 slices and 24,371 `rsna-knee-mri-processed-3d-volumes/*.npz` (24×224×224 uint8). **None of that is in `DATA/` now** (only 3+1 studies). The npz has no verified provenance; test arrives as DICOM. | DICOM→tensor pipeline is canonical (REQ-DATA-*). npz only an optional accelerator on HPC if parity-tested (REQ-DATA-6). |
 | I-07 | Med | `Fluid_Sensitive` and `Fat_Suppression` are identical (F4). Old design implied two metadata inputs. | One `contrast` bit + plane (REQ-MODEL-4). |
@@ -55,14 +55,14 @@ Study *i* → series *j=1..m_i* (3–14) → slices *k=1..N_j* (16–48 observed
 
 Not plain MIL: bag-of-bags, weak/missing top-level labels, and a text view that exists only in training (LUPI [Vapnik & Vashist 2009] / distillation [Hinton 2015]).
 
-**Metric:** treat as per-label macro ROC-AUC `[S]`. Consequences if true: rank-based, threshold-free; per-label ranks matter, calibration doesn't; label with fewer than 2 classes in a split must be skipped explicitly, not NaN-averaged. If Kaggle says otherwise (log-loss, weighted), only §9 ensembling and loss calibration change.
+**Metric (owner-confirmed): macro-averaged ROC-AUC.** Consequences: rank-based, threshold-free; per-label ranks matter, calibration doesn't; label with fewer than 2 classes in a split must be skipped explicitly, not NaN-averaged.
 
 ## 4. Strategy and tiers (what to build first)
 
 The label bottleneck means **extractor quality and a sound validation set dominate architecture choices**. Therefore:
 
-- **Tier 0 — minimum viable submission (target: working in ≤ 1 day, runnable offline on Kaggle).**
-  Weak labels (REQ-NLP) → frozen ImageNet backbone features per slice (REQ-DATA, REQ-MODEL-1) → mean/max pooled series features + plane/contrast one-hot → per-label logistic/ridge or small MLP → `submission.csv`. No fine-tuning, no teacher. Also acts as the ruler for everything else.
+- **Main goal — the full pipeline (Tiers 1–2).** Everything in Phases 1–3 serves it.
+- **Tier 0 — HPC smoke test (optional, hard cap ~½ day, drop it if it overruns).** Purpose is only to prove the HPC agent, data paths, DICOM loader, fold file, metric code and `submission.csv` writer work end to end: frozen ImageNet B0 slice features → pooled + plane/contrast → per-label logistic → `submission.csv`. Not a goal in itself; reuses Phase 1–3 code, adds none.
 - **Tier 1 — end-to-end MRI-only student** (EffNet-B0 2.5D + gated-attention MIL + series transformer), trained on gold+weak labels with ASL. Promote only if it beats Tier 0 on weak-OOF *and* gold-OOF (REQ-VAL-3).
 - **Tier 2 — report-guided training** (teacher logit-KD, report-derived auxiliary targets). Promote only after an ablation win.
 - **Deferred:** §10.
@@ -142,7 +142,7 @@ Backbone choice is a hypothesis; the pipeline must work with each below.
 
 | ID | Change | Question |
 |---|---|---|
-| A0 | frozen B0 + mean pool + logistic | floor (= Tier 0) |
+| A0 | frozen B0 + mean pool + logistic | floor (= Tier 0 smoke test) |
 | A1 | max pool / gated MIL | MIL value |
 | A2 | + group heads | group-head value |
 | A3 | + series transformer | series fusion value |
@@ -163,4 +163,4 @@ Established `[E]` (primary papers; confirm exact bibliographic data before citin
 
 ## 12. Open items needing a human (also in TODO "Decisions")
 
-D-1 Accept Tier 0 as primary given the 10/22 deadline? D-2 Is external pretrained weights (LLM, timm) allowed, and available on Kaggle offline? D-3 Rewrite git history / make repo private for the 79 committed DICOMs? D-4 Why 4,407 vs ">5,000"? D-5 Confirm metric on Kaggle.
+D-1 resolved (full pipeline is the goal). D-2 **open**: are external pretrained weights (LLM, timm, XLM-R) allowed and available offline on Kaggle? D-3 owner: make GitHub repo private (history still holds 79 DICOMs). D-4 open: cause of 4,407 vs ">5,000" unknown. D-5 resolved: folder rename approved. D-6 see TODO.
