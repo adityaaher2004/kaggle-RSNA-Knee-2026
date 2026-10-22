@@ -233,7 +233,12 @@ def main(argv=None):
     optimizer = make_optimizer(model, args.lr_head, args.lr_backbone, args.weight_decay)
     scheduler = make_scheduler(optimizer, epochs=args.epochs, warmup=args.warmup_epochs)
     amp = (device.type == 'cuda' and not args.no_amp)
-    scaler = torch.amp.GradScaler('cuda', enabled=amp)
+    scaler = torch.amp.GradScaler(
+        "cuda",
+        enabled=amp,
+        init_scale=1024.0,
+        growth_interval=2000,
+    )
     # Prevent resume from a different data snapshot or model/preprocessing version.
     cli = vars(args).copy()
     cli.pop('resume')

@@ -1,0 +1,9 @@
+{
+  "data_root": "/N/scratch/aaher/RSNA/full_data/rsna-knee-abnormality-detection",
+  "decode_samples": 2,
+  "limited": 0,
+  "metadata_sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+  "patient_hash_enabled": false,
+  "schema_version": 1,
+  "split": "train"
+}

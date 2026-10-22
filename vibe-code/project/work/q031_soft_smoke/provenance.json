@@ -1,0 +1,31 @@
+{
+  "backbone_weights_sha256": null,
+  "folds_sha256": "fa59f9525cbc3d2f172410b9ccb9588da6565b4b6f4f14fe948b5d1a165ab5cd",
+  "gold_excluded": true,
+  "gold_ids_sha256": "f18823a446809a1ff4bc57fc6f3f862123082db04b336d91655402d06f70458b",
+  "gpu": "Tesla V100-PCIE-32GB",
+  "grouping_columns_present": [],
+  "model_config": {
+    "activation_checkpointing": false,
+    "backbone_name": "convnext_tiny.fb_in22k_ft_in1k",
+    "backbone_weights": null,
+    "chunk_size": 4,
+    "d_model": 256,
+    "dropout": 0.1,
+    "freeze_backbone": true,
+    "geometry_dim": 6,
+    "heads": 4,
+    "n_labels": 12,
+    "pretrained": true,
+    "series_pool": "gated",
+    "slice_pool": "gated"
+  },
+  "preprocess_version": "quartz-q-img-02-v1",
+  "run_config_hash": "25f1e81cec1696d1dbd373e108c89c1d23e8f4bedbcd78213e6b463f062ea682",
+  "target_semantics": "soft_bernoulli_bce_v2",
+  "torch_version": "2.8.0+cu126",
+  "train_ids_hash": "5658d4b1391f2b9243171f29e8bf7ed1c725d8076f6b5396b08f54a2201b183d",
+  "train_series_sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+  "val_ids_hash": "82093b1087e5f243e00c110eb8dc41d0da3d2de9c189aafc9f6f477eed92c17f",
+  "weak_labels_sha256": "4816caa89814e3d99f12636b180b3f280b08215572d1de8c9b6bef40da52bc79"
+}

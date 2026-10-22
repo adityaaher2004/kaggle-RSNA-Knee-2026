@@ -57,8 +57,39 @@ def _flush_gradients(model: nn.Module, optimizer: torch.optim.Optimizer,
     for p in model.parameters():
         if p.grad is not None:
             p.grad.div_(denominator)
-    if grad_clip > 0:
-        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=grad_clip, error_if_nonfinite=True)
+    parameters = [
+        p for p in model.parameters()
+        if p.grad is not None
+    ]
+    if parameters:
+        total_norm = torch.nn.utils.clip_grad_norm_(
+            parameters,
+            max_norm=grad_clip if grad_clip > 0 else float("inf"),
+            error_if_nonfinite=False,
+        )
+
+        if not torch.isfinite(total_norm):
+            if scaler is None or not scaler.is_enabled():
+                optimizer.zero_grad(set_to_none=True)
+                raise FloatingPointError(
+                    "Non-finite gradients with AMP disabled. "
+                    "Inspect model activations, loss, and inputs."
+                )
+
+            # GradScaler detected inf/NaN during unscale_.
+            # scaler.step() skips the optimizer update.
+            # scaler.update() reduces the loss scale.
+            old_scale = scaler.get_scale()
+            scaler.step(optimizer)
+            scaler.update()
+
+            optimizer.zero_grad(set_to_none=True)
+
+            print(
+                f"[AMP overflow] Skipped optimizer step; "
+                f"loss scale {old_scale:g} -> {scaler.get_scale():g}"
+            )
+            return False
     if scaler is not None and scaler.is_enabled():
         old = scaler.get_scale()
         scaler.step(optimizer)

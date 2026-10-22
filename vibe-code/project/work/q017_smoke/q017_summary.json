@@ -1,0 +1,65 @@
+{
+  "split": "train",
+  "sampled": 3,
+  "ok": 3,
+  "failed": 0,
+  "cache_hits": 0,
+  "cache_misses": 0,
+  "total_seconds": 5.69,
+  "median_seconds": 2.096,
+  "p95_seconds": 2.1068000000000002,
+  "preprocess_version": "quartz-q-img-02-v1",
+  "size": 288,
+  "slices": 24,
+  "max_series": 8,
+  "rows": [
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.10004873229099053869093324292195817260",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 94,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 2.096
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.10004945927472656027199792075652399585",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 2.108
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.10009278692606631573540062909909132231",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 1.489
+    }
+  ]
+}

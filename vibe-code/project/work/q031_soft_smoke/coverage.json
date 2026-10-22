@@ -1,0 +1,174 @@
+{
+  "train": {
+    "ACL": {
+      "expected_positives": 1.5050000000000001,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Baker's": {
+      "expected_positives": 2.215,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Contusion": {
+      "expected_positives": 2.33,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Effusion": {
+      "expected_positives": 4.025,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Fracture": {
+      "expected_positives": 1.6,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Lateral Meniscus": {
+      "expected_positives": 1.21,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Lateral OA": {
+      "expected_positives": 1.6550000000000002,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "MCL": {
+      "expected_positives": 0.6000000000000001,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Medial Meniscus": {
+      "expected_positives": 2.8600000000000003,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Medial OA": {
+      "expected_positives": 3.865,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "PF OA": {
+      "expected_positives": 2.175,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Synovitis": {
+      "expected_positives": 2.6275,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    }
+  },
+  "val": {
+    "ACL": {
+      "expected_positives": 0.52,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Baker's": {
+      "expected_positives": 2.16,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Contusion": {
+      "expected_positives": 1.025,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Effusion": {
+      "expected_positives": 1.9000000000000001,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Fracture": {
+      "expected_positives": 0.365,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Lateral Meniscus": {
+      "expected_positives": 2.395,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Lateral OA": {
+      "expected_positives": 1.25,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "MCL": {
+      "expected_positives": 1.935,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Medial Meniscus": {
+      "expected_positives": 3.205,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Medial OA": {
+      "expected_positives": 1.25,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "PF OA": {
+      "expected_positives": 2.545,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    },
+    "Synovitis": {
+      "expected_positives": 1.45,
+      "missing_or_zero_confidence": 0,
+      "neg": 0,
+      "pos": 0,
+      "soft": 8
+    }
+  }
+}

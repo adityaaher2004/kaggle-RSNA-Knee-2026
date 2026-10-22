@@ -1,0 +1,497 @@
+{
+  "split": "train",
+  "sampled": 30,
+  "ok": 30,
+  "failed": 0,
+  "cache_hits": 0,
+  "cache_misses": 0,
+  "total_seconds": 365.21,
+  "median_seconds": 9.197,
+  "p95_seconds": 23.534099999999988,
+  "preprocess_version": "quartz-q-img-02-v1",
+  "size": 288,
+  "slices": 24,
+  "max_series": 8,
+  "rows": [
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.11091958567356981151034727948765010881",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 6,
+      "valid_slices": 144,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 11.062
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.11135115047200279264914390528987153419",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 3,
+      "valid_series": 8,
+      "valid_slices": 184,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 14.87
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.11208663314213048426907645330143931419",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 94,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 5.991
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.11619883329923252065839671636992770849",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 116,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 6.4
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.12328313245396930020974053819810033945",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 25.587
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.12531442175319757740745664049001806494",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 8,
+      "valid_slices": 184,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 18.094
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.25650384476012633612528314070894186451",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 6,
+      "valid_slices": 136,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 13.538
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.28925345859498351203477642741908452608",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 6.801
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.32413534416513678586709935453506443461",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 7.984
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.33215387283623093392227819856970670071",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 2,
+      "valid_series": 8,
+      "valid_slices": 184,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 13.778
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.34076627216941578548083498328399240999",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 7,
+      "valid_slices": 168,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 16.577
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.34826100703045042103752460066224521343",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 4,
+      "valid_slices": 75,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 4.445
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.40154708689850542672289658249059660788",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 7.163
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.41600498783384864111179175518614837125",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 8,
+      "valid_slices": 184,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 15.255
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.42965031665568825650795822006244115609",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 111,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 8.507
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.45811964949115542204306831813385709206",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 9.434
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.58143227319316521737029358930629086887",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 103,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 6.274
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.58925843611945635442423587804169242644",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 20.291
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.64527059976573114931020581328924993069",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 6,
+      "valid_slices": 144,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 8.96
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.67281816624401881515444587844116136597",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 4,
+      "valid_slices": 96,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 6.887
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.69002590469755721401448924002989552840",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 2,
+      "valid_series": 8,
+      "valid_slices": 184,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 13.51
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.72023797276837219152365428999317131110",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 7.383
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.73083786204651635096412213233334934941",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 6,
+      "valid_slices": 133,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 11.835
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.74243110959141459268838217468465880820",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 118,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 6.357
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.74622031396885197580453304563088863451",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 21.025
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.79038153803632889185429988483097161887",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 106,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 6.76
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.80726797831040227285328789648680519664",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 4,
+      "valid_slices": 96,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 7.411
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.82548952153746644951736669119607083230",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 20.426
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.91220255464004258635083940797356822178",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 120,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 7.804
+    },
+    {
+      "study_uid": "1.2.826.0.1.3680043.8.498.96859317329616917022799512740280754327",
+      "status": "ok",
+      "cache": "disabled",
+      "series_failures": {},
+      "excluded_series_count": 0,
+      "valid_series": 5,
+      "valid_slices": 116,
+      "planes": [
+        "Axial",
+        "Coronal",
+        "Sagittal"
+      ],
+      "image_megabytes": 191.1,
+      "seconds": 34.802
+    }
+  ]
+}
