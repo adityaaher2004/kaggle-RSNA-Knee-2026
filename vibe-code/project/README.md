@@ -1,36 +1,32 @@
-# T-DATA-3 / Q-015 — Study-level MRI series selection
+# Q-016 — DICOM manifest audit patch
 
-Incremental patch for the `quartz` worktree, requiring T-DATA-1 (`dicom.py`) and T-DATA-2 (`preprocessing.py`). This patch **does not** modify your Git branch automatically.
+Copy `scripts/audit_dicom.py` and `tests/test_audit_dicom.py` into the root of the existing Quartz repo (with T-DATA-1/2/3 installed). The copied `src/` tree in this working directory was used only for local test verification and is **not** included in the ZIP.
 
-## Files
-- `src/oxalpha/data/dataset.py`: label-blind `SeriesRecord`, plane/contrast-diverse selection, padded `StudyTensor`, `preprocess_study`, `StudyBagDataset`, collate helper.
-- `tests/test_selection.py`: eight synthetic tests.
+## Requirements
 
-## Contracts
-- `S=8` max selected series (configurable), `K=24`, `H=W=288` by default.
-- Study images `[S,K,3,H,W]`; per-series masks `[S]`, per-slice masks `[S,K]`.
-- Plane IDs: sagittal=0, coronal=1, axial=2, unknown=3.
-- Fluid-sensitive and fat-suppressed: 0=no, 1=yes, 2=unknown; *independent*, including `fluid=1,fat=0`.
-- Geometry features `[S,6]` with matching presence masks, from available slice metadata.
-- Inference output fields: `images,slice_mask,series_mask,plane,fluid,fat,geometry_features,geometry_mask,study_ids` **only**.
-- Deterministic inference selection regardless of CSV row order. Training adds seeded metadata-rank jitter, preserving three-plane coverage if available.
-- On a failed preferred DICOM series, tries other series while restoring missing planes when possible; errors are recorded, never interpreted as valid images.
-
-## Integration
-Copy the `src/` and `tests/` files into the existing `quartz` worktree. Run:
+Python >=3.10; `pydicom`, `numpy`, `pandas`, `pyarrow` (Parquet output only). Reads `oxalpha.data.dicom.read_header` and optionally `.read_slice` from T-DATA-1.
 
 ```bash
-pip install numpy scipy pytest pydicom pylibjpeg pylibjpeg-libjpeg pylibjpeg-openjpeg
-pytest -q tests/test_selection.py tests/test_preprocess.py tests/test_dicom_decode.py tests/test_dicom_sort.py
+module load python/gpu/3.12.5
+cd /N/scratch/aaher/RSNA/repo/quartz/vibe-code/project
+python -m pip install pydicom numpy pandas pyarrow pytest
+export RSNA_DATA=/absolute/path/to/dataset
+python scripts/audit_dicom.py --data-root "$RSNA_DATA" --splits train --limit 20 --out-dir work/audit_smoke
+python scripts/audit_dicom.py --data-root "$RSNA_DATA" --splits train test --out-dir work/audit_full
+python scripts/audit_dicom.py --data-root "$RSNA_DATA" --splits train test --out-dir work/audit_decode --decode-samples 2
+python -m pytest -q tests/test_audit_dicom.py
 ```
 
-To construct records from `train_series.csv` or `test_series.csv`, call `SeriesRecord.from_row(row, series_root)` where `series_root` is the `train_series/` or `test_series/` folder. A `StudyBagDataset(records)` returns inference-only dictionaries. Use `collate_studies(batch)` for NumPy batch stacking; a PyTorch training pipeline may convert its arrays via `torch.from_numpy`.
+Dataset expected: `train_series.csv`, `test_series.csv`, `train_series/<StudyInstanceUID>/<SeriesInstanceUID>/*.dcm`, similarly for test.
 
-## Validation boundary
-31 tests passed, 2 skipped with the previous patch tests in this environment. Real DICOM round-trip and compressed transfer syntax are not verified here. The complete full-data manifest and memory/throughput profile require Quartz. Neither labels nor reports are loaded by this module. Series selection `quality` must be based on header or image quality only, never target labels.
+**Never use the smoke-test output directory for the full scan:** resume config forbids mixing `--limit`, decode settings, and different input CSV contents. Re-running the identical command resumes; `--retry-failed` retries statuses other than `ok` while preserving an append-only log. A terminated job may leave an incomplete final JSONL line; correct only that final line before resuming.
 
-## Known limits
-- All `S×K×3×H×W` float32 inputs can be large; full-float batch collation is appropriate for smoke tests, but stream/decode on demand and use micro-batches on V100.
-- `StudyBagDataset` is label-blind; a future *training adapter* should fetch masked labels independently, after dataset group and train/val exclusion checks.
-- Geometry values are only produced when the DICOM metadata is provided; unknown dimensions remain masked.
-- Full-data source manifest should verify DICOM paths, duplicate IDs, and the actual per-plane distribution.
+Outputs for each split:
+- `manifest_{split}.jsonl`: append-only per-series progress checkpoint (private work directory).
+- `manifest_{split}.parquet`: latest per-series manifest (atomically replaced).
+- `audit_{split}_summary.json`: counts, codec/vendor breakdown, error rates and geometry flags.
+- `manifest_{split}.config.json`: guard against incorrectly resuming a different audit run.
+
+`--decode-samples 2` tests only two distributed slices per valid series; header-only run is the default. Decoding every slice is intentionally avoided during initial audit. The scanner does not read pixel data in header mode. Per-series file scanning uses a bounded list of file paths, but the output stores all series in memory to write Parquet at the end. Patient IDs are omitted by default. For grouped splitting, `--patient-salt-env RSNA_PATIENT_SALT` hashes `PatientID` (set a private >=16 character environment secret, do not log/commit it). Identical patient IDs map to identical hashes *within a scan using the same salt*; pseudonymization does not alone make manifests public-safe.
+
+Header errors record only basename, stage and exception class, never raw exception messages. Inspect `status=missing/partial/failed` and `flags` before beginning training. This is metadata validation, not validation of medical labels, model predictions, or complete pixel integrity. `--no-parquet` is useful if pyarrow is unavailable.
