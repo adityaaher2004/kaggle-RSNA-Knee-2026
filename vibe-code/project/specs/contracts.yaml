@@ -1,0 +1,76 @@
+# QuartzKnee-HMIL schema — machine-readable source for generated inference contracts.
+spec_version: "1.0.0"
+model_name: "QuartzKnee-HMIL"
+labels:
+  - ACL
+  - MCL
+  - Medial Meniscus
+  - Lateral Meniscus
+  - Medial OA
+  - Lateral OA
+  - PF OA
+  - Effusion
+  - Synovitis
+  - Baker's
+  - Contusion
+  - Fracture
+metadata:
+  planes: [Sagittal, Coronal, Axial, Unknown]
+  binary_values: [0, 1, 2]  # 2 explicitly means unknown
+  fluid_and_fat_are_independent: true
+inference_inputs:
+  - images
+  - slice_mask
+  - series_mask
+  - plane
+  - fluid
+  - fat
+  - geometry_features
+  - geometry_mask
+  - study_ids
+forbidden_inference_inputs:
+  - Report
+  - report
+  - text
+  - text_embedding
+  - labels
+  - y
+  - weak_labels
+  - gold_labels
+  - teacher_logits
+shapes:
+  images: "[B,S,K,3,H,W]"
+  slice_mask: "[B,S,K]"
+  series_mask: "[B,S]"
+  plane: "[B,S]"
+  fluid: "[B,S]"
+  fat: "[B,S]"
+  geometry_features: "[B,S,G]"
+  geometry_mask: "[B,S,G]"
+  logits: "[B,12]"
+  submission: "[N,13]"
+config_defaults:
+  data:
+    max_series: 8
+    slices_per_series: 24
+    image_size: 288
+    percentile_low: 0.5
+    percentile_high: 99.5
+    channel_mode: 2p5d
+  model:
+    family: convnext_tiny
+    d_model: 256
+    transformer_heads: 4
+    transformer_layers: 1
+  train:
+    seed: 42
+    head_lr: 0.0005
+    backbone_lr: 0.00003
+    weight_decay: 0.05
+  gold:
+    use_for_training: false
+submission:
+  id_column: StudyInstanceUID
+  output_name: submission.csv
+  probability_min: 0.0
+  probability_max: 1.0

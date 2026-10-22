@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QuartzKnee inference contract",
+  "x-spec-version": "1.0.0",
+  "x-source-sha256": "834a425dd5249ff2e3700eebd88a3542bb0c1a28010f8f9eb5a48ab45c4d462f",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "images": {
+      "description": "[B,S,K,3,H,W]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "slice_mask": {
+      "description": "[B,S,K]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "series_mask": {
+      "description": "[B,S]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "plane": {
+      "description": "[B,S]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "fluid": {
+      "description": "[B,S]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "fat": {
+      "description": "[B,S]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "geometry_features": {
+      "description": "[B,S,G]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "geometry_mask": {
+      "description": "[B,S,G]",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    },
+    "study_ids": {
+      "description": "batch study ids",
+      "x-runtime-validator": "tensor-shape-test-or-id-list"
+    }
+  },
+  "required": [
+    "images",
+    "slice_mask",
+    "series_mask",
+    "plane",
+    "fluid",
+    "fat",
+    "geometry_features",
+    "geometry_mask",
+    "study_ids"
+  ],
+  "x-output-columns": [
+    "StudyInstanceUID",
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "x-default-config": {
+    "data": {
+      "max_series": 8,
+      "slices_per_series": 24,
+      "image_size": 288,
+      "percentile_low": 0.5,
+      "percentile_high": 99.5,
+      "channel_mode": "2p5d"
+    },
+    "model": {
+      "family": "convnext_tiny",
+      "d_model": 256,
+      "transformer_heads": 4,
+      "transformer_layers": 1
+    },
+    "train": {
+      "seed": 42,
+      "head_lr": 0.0005,
+      "backbone_lr": 3e-05,
+      "weight_decay": 0.05
+    },
+    "gold": {
+      "use_for_training": false
+    }
+  },
+  "x-tensor-runtime-validation-required": true
+}
