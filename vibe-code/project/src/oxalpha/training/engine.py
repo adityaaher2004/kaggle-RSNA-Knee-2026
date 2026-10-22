@@ -149,6 +149,10 @@ def masked_auc_report(y: np.ndarray, p: np.ndarray, w: np.ndarray) -> dict[str, 
         raise ValueError('expected matching [N,12] arrays')
     per_label = {}
     valid_auc = []
+    # ROC-AUC is defined against observed binary ground truth. Fractional
+    # pseudo-labels are supervision for soft BCE, *not* hard AUC outcomes.
+    observed_soft = np.isfinite(y) & (y > 0.) & (y < 1.) & np.isfinite(w) & (w > 0)
+    n_soft_total = int(observed_soft.sum())
     for i, name in enumerate(LABELS):
         mask = np.isfinite(y[:, i]) & np.isfinite(p[:, i]) & np.isfinite(w[:, i]) & (w[:, i] > 0) & np.isin(y[:, i], (0., 1.))
         truth, preds = y[mask, i], p[mask, i]
@@ -158,13 +162,21 @@ def masked_auc_report(y: np.ndarray, p: np.ndarray, w: np.ndarray) -> dict[str, 
             valid_auc.append(auc)
         per_label[name] = {'positives': npos, 'negatives': nneg,
                            'observed': int(mask.sum()),
+                           'soft_excluded_from_auc': int(observed_soft[:, i].sum()),
                            'auc': float(auc) if np.isfinite(auc) else None}
     complete = len(valid_auc) == len(LABELS)
-    return {'official_macro_auc': float(np.mean(valid_auc)) if complete else None,
+    # If any soft validation labels exist, a macro over remaining hard labels
+    # must not be presented as an official complete-label AUC.
+    eligible_official = complete and n_soft_total == 0
+    return {'official_macro_auc': float(np.mean(valid_auc)) if eligible_official else None,
             'partial_macro_auc': float(np.mean(valid_auc)) if valid_auc else None,
+            'soft_targets_excluded_from_auc': n_soft_total,
+            'hard_macro_auc': float(np.mean(valid_auc)) if complete else None,
             'valid_labels': len(valid_auc), 'total_labels': len(LABELS),
             'per_label': per_label,
-            'warning': None if complete else 'Partial macro only: at least one label lacks positive or negative examples'}
+            'warning': ('Soft pseudo-labels are excluded from ROC-AUC; checkpoint by validation soft BCE'
+                        if n_soft_total else (None if complete else
+                        'Partial macro only: at least one label lacks positive or negative examples'))}
 
 
 @torch.no_grad()

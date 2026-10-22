@@ -118,9 +118,11 @@ def _hash_ids(ids: list[str]) -> str:
 def _coverage(labels: dict, uids: list[str]) -> dict:
     y = np.asarray([labels[u].targets for u in uids])
     w = np.asarray([labels[u].confidence for u in uids])
-    known = np.isfinite(y) & (w > 0)
+    known = np.isfinite(y) & (y >= 0) & (y <= 1) & (w > 0)
     return {label: {'pos': int(np.sum(known[:, i] & (y[:, i] == 1))),
                     'neg': int(np.sum(known[:, i] & (y[:, i] == 0))),
+                    'soft': int(np.sum(known[:, i] & (y[:, i] > 0) & (y[:, i] < 1))),
+                    'expected_positives': float(np.sum(np.where(known[:, i], y[:, i], 0))),
                     'missing_or_zero_confidence': int(np.sum(~known[:, i]))}
             for i, label in enumerate(LABELS)}
 
@@ -205,9 +207,9 @@ def main(argv=None):
         raise ValueError('gold/validation leakage')
     train_cover = _coverage(labels, train_ids)
     val_cover = _coverage(labels, val_ids)
-    if sum(c['pos'] + c['neg'] for c in train_cover.values()) == 0:
+    if sum(c['pos'] + c['neg'] + c['soft'] for c in train_cover.values()) == 0:
         raise ValueError('no supervised non-gold training labels')
-    if sum(c['pos'] + c['neg'] for c in val_cover.values()) == 0:
+    if sum(c['pos'] + c['neg'] + c['soft'] for c in val_cover.values()) == 0:
         raise ValueError('no supervised validation labels')
     if not any(f.groups for f in folds.values()):
         warnings.warn('No patient/duplicate group column in folds.csv; study-only grouping is unverified')
@@ -246,6 +248,7 @@ def main(argv=None):
         'backbone_weights_sha256': file_sha256(args.backbone_weights) if args.backbone_weights else None,
         'preprocess_version': PREPROCESS_VERSION,
         'torch_version': str(torch.__version__), 'gpu': torch.cuda.get_device_name(0) if device.type == 'cuda' else None,
+        'target_semantics': 'soft_bernoulli_bce_v2',
         'gold_excluded': True, 'grouping_columns_present': sorted({g[0] for f in folds.values() for g in f.groups}),
     }
     _write_json_atomic(out/'provenance.json', provenance)

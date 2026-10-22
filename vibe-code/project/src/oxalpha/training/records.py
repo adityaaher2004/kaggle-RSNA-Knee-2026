@@ -1,7 +1,8 @@
 """Strict weak-label/fold loading for Q-031; gold exclusion is fail-closed.
 
-Canonical CSV schema: StudyInstanceUID, 12 exact abnormality columns;
-optional <label>__confidence, <label>__status for each label.
+Canonical CSV schema: StudyInstanceUID, 12 exact abnormality columns with
+soft targets [0,1] or null; optional <label>__confidence, <label>__status.
+Soft targets encode target probability, not confidence weights.
 No report text, extractor evidence, or gold targets leave this module.
 """
 from __future__ import annotations
@@ -18,7 +19,7 @@ from oxalpha.models.student import LABELS
 
 @dataclass(frozen=True)
 class TargetRecord:
-    targets: tuple[float, ...]  # NaN for unavailable cells
+    targets: tuple[float, ...]  # [0,1] soft/hard targets; NaN for unavailable cells
     confidence: tuple[float, ...]  # always 0 for unavailable cells
 
 
@@ -81,14 +82,21 @@ def read_gold_ids(path: str | Path) -> set[str]:
 
 
 def _target(raw: str | None) -> float:
+    """Parse a Bernoulli soft target in [0,1], or a missing/abstained value.
+
+    Fractional inputs such as 0.25 are probabilities used directly by BCE.
+    Missing values remain NaN; malformed or out-of-range data fail closed.
+    """
     s = ('' if raw is None else str(raw)).strip().lower()
     if s in {'', 'nan', 'null', 'none', 'na', '<na>', 'unknown', 'uncertain'}:
         return float('nan')
-    if s in {'0', '0.0'}:
-        return 0.0
-    if s in {'1', '1.0'}:
-        return 1.0
-    raise ValueError(f'non-binary weak label {raw!r}: only 0, 1, null supported')
+    try:
+        value = float(s)
+    except (ValueError, TypeError) as exc:
+        raise ValueError(f'invalid weak label {raw!r}: expected probability [0,1] or null') from exc
+    if not math.isfinite(value) or not 0.0 <= value <= 1.0:
+        raise ValueError(f'invalid weak label {raw!r}: expected probability [0,1] or null')
+    return value
 
 
 def _cell(row: Mapping[str, str], name: str) -> tuple[float, float]:
@@ -101,14 +109,18 @@ def _cell(row: Mapping[str, str], name: str) -> tuple[float, float]:
         if status not in {'positive', 'negative'}:
             raise ValueError(f'unknown status {status!r} for {name}')
         expected = 1.0 if status == 'positive' else 0.0
-        if not math.isfinite(value) or value != expected:
+        # A status encodes the extractor's hard call; a blended soft target
+        # is an independent probability estimate and must not be forced to 0/1.
+        # Exact contradictory hard labels still indicate a malformed record.
+        if math.isfinite(value) and value in (0.0, 1.0) and value != expected:
             raise ValueError(f'contradictory value/status for {name}: {value}, {status}')
     if not math.isfinite(value):
         return float('nan'), 0.0
     conf_key = name + '__confidence'
     raw = row.get(conf_key) if conf_key in row else None
     if raw is None or str(raw).strip() == '':
-        # Explicit 0/1 without confidence is uncalibrated, not a probability.
+        # Target probability and reliability/confidence are distinct.
+        # If no confidence column is present, use weight 1 for all observed targets.
         conf = 1.0
     else:
         try:
