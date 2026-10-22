@@ -1,32 +1,69 @@
-# Q-016 — DICOM manifest audit patch
+# Q-017 — real study smoke gate & optional cache benchmark
 
-Copy `scripts/audit_dicom.py` and `tests/test_audit_dicom.py` into the root of the existing Quartz repo (with T-DATA-1/2/3 installed). The copied `src/` tree in this working directory was used only for local test verification and is **not** included in the ZIP.
+Overlay this patch on the existing T-DATA-1/2/3 Quartz project. The modified
+`src/oxalpha/data/dataset.py` adds only `selected_slice_indices` to the
+non-inference StudyTensor metadata; `inference_inputs()` remains unchanged.
 
-## Requirements
-
-Python >=3.10; `pydicom`, `numpy`, `pandas`, `pyarrow` (Parquet output only). Reads `oxalpha.data.dicom.read_header` and optionally `.read_slice` from T-DATA-1.
+## Real-data smoke test (no cache, run alongside Q-016)
 
 ```bash
 module load python/gpu/3.12.5
 cd /N/scratch/aaher/RSNA/repo/quartz/vibe-code/project
-python -m pip install pydicom numpy pandas pyarrow pytest
-export RSNA_DATA=/absolute/path/to/dataset
-python scripts/audit_dicom.py --data-root "$RSNA_DATA" --splits train --limit 20 --out-dir work/audit_smoke
-python scripts/audit_dicom.py --data-root "$RSNA_DATA" --splits train test --out-dir work/audit_full
-python scripts/audit_dicom.py --data-root "$RSNA_DATA" --splits train test --out-dir work/audit_decode --decode-samples 2
-python -m pytest -q tests/test_audit_dicom.py
+python -m pytest -q tests/test_q017.py
+python scripts/smoke_studies.py \
+    --data-root "$RSNA_DATA" --split train \
+    --limit 30 --random-sample --seed 42 \
+    --out-dir work/q017_train
 ```
 
-Dataset expected: `train_series.csv`, `test_series.csv`, `train_series/<StudyInstanceUID>/<SeriesInstanceUID>/*.dcm`, similarly for test.
+On CPU-bound systems, first test with `--limit 3` and/or a reduced documented
+configuration `--size 224 --slices 16 --max-series 6`. Default configuration
+matches the current model contract (S=8 K=24 H=W=288). Test split:
 
-**Never use the smoke-test output directory for the full scan:** resume config forbids mixing `--limit`, decode settings, and different input CSV contents. Re-running the identical command resumes; `--retry-failed` retries statuses other than `ok` while preserving an append-only log. A terminated job may leave an incomplete final JSONL line; correct only that final line before resuming.
+```bash
+python scripts/smoke_studies.py --data-root "$RSNA_DATA" \
+    --split test --limit 10 --random-sample --out-dir work/q017_test
+```
 
-Outputs for each split:
-- `manifest_{split}.jsonl`: append-only per-series progress checkpoint (private work directory).
-- `manifest_{split}.parquet`: latest per-series manifest (atomically replaced).
-- `audit_{split}_summary.json`: counts, codec/vendor breakdown, error rates and geometry flags.
-- `manifest_{split}.config.json`: guard against incorrectly resuming a different audit run.
+Reports: `q017_summary.json` (aggregated timings/shape/plane results) and
+`q017_results.jsonl` (per-study progress). Exit status is nonzero if any
+sampled study fails. The log is restarted for each command invocation;
+previous runs should use separate `--out-dir` directories.
 
-`--decode-samples 2` tests only two distributed slices per valid series; header-only run is the default. Decoding every slice is intentionally avoided during initial audit. The scanner does not read pixel data in header mode. Per-series file scanning uses a bounded list of file paths, but the output stores all series in memory to write Parquet at the end. Patient IDs are omitted by default. For grouped splitting, `--patient-salt-env RSNA_PATIENT_SALT` hashes `PatientID` (set a private >=16 character environment secret, do not log/commit it). Identical patient IDs map to identical hashes *within a scan using the same salt*; pseudonymization does not alone make manifests public-safe.
+## Optional cache experiment (not a full production caching system)
 
-Header errors record only basename, stage and exception class, never raw exception messages. Inspect `status=missing/partial/failed` and `flags` before beginning training. This is metadata validation, not validation of medical labels, model predictions, or complete pixel integrity. `--no-parquet` is useful if pyarrow is unavailable.
+```bash
+python scripts/smoke_studies.py --data-root "$RSNA_DATA" \
+    --limit 3 --size 224 --slices 16 --max-series 6 \
+    --cache --out-dir work/q017_cache
+# Repeat the exact command to compare cache misses vs hits.
+```
+
+A strong SHA256 hash scans ALL input DICOM bytes for a study before each cache
+lookup. The uncompressed NPZ stores complete float32 tensors, potentially
+hundreds of MiB per study. This opt-in mode is only a *benchmark*; avoid enabling
+it for all ~4k studies or on shared storage until cost and throughput have been
+measured. Cache manifests contain input hash, preprocessing version, config,
+selected series UIDs, true selected slice indices, checksum, and reserved
+backbone hash field. The current cache is full preprocessed MRI tensors, **not**
+a pretrained-backbone feature cache. No legacy NPZ is accepted as equivalent.
+
+## Acceptance
+
+- Actual train/test MRI decode and whole-study preprocessing work.
+- `[S,K,3,H,W]` tensor shape, finite values, correct series/slice padding,
+  separate fluid/fat flags, geometry-mask validity, and available plane
+  coverage (unless a series fails decoding).
+- Throughput measured as median/p95 wall seconds per study.
+- Versioned cache write/read checksum equality; second run logs hit; edits
+  to DICOM invalidate the cache via source hash.
+- No reports or labels read, and no patient identifiers written.
+
+## Caveats
+
+- CPU memory for default studies can exceed 500 MB; audit one study first.
+- Full Kaggle offline reconstruction parity remains a future integration test.
+- Source hashing is intentionally expensive and should not be used as the
+  production training hot path; this is evidence for choosing a cache design.
+- The DICOM reader currently discovers only `*.dcm` under `train_series/<study>/<series>`.
+  Verify directory structure and extensions before proceeding.

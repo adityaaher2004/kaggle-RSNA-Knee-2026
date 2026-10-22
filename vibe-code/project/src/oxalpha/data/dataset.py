@@ -153,6 +153,7 @@ class StudyTensor:
     selected_series_uids: list[str] = field(default_factory=list)
     excluded_series_uids: list[str] = field(default_factory=list)
     failures: dict[str, str] = field(default_factory=dict)
+    selected_slice_indices: dict[str, list[int]] = field(default_factory=dict)
 
     def inference_inputs(self) -> dict[str, Any]:
         """Whitelist only the exact spec-defined inference fields."""
@@ -213,7 +214,8 @@ def assemble_study(study_uid: str, records: Sequence[SeriesRecord],
     if not retained:
         raise ValueError(f'no usable MRI series in study {study_uid}')
     return StudyTensor(images, slice_mask, series_mask, plane, fluid, fat,
-                       geom, geom_mask, study_uid, retained, list(excluded), dict(failures or {}))
+                       geom, geom_mask, study_uid, retained, list(excluded), dict(failures or {}),
+                       {uid: np.asarray(tensors[uid].selected_indices).astype(int).tolist() for uid in retained})
 
 
 def preprocess_study(study_uid: str, records: Sequence[SeriesRecord], *,
